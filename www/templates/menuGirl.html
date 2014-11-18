@@ -1,0 +1,147 @@
+<ion-side-menus >
+
+    <ion-pane ion-side-menu-content>
+        <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+            <ion-nav-back-button ><i class="icon ion-chevron-left"></i></ion-nav-back-button>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+    </ion-pane>
+
+    <ion-side-menu side="left" expose-aside-when="large">
+        <!--
+      <header class="bar bar-header bar-stable">
+        <h1 class="title">Left</h1>
+      </header>
+      -->
+
+        <button id="volume" class="button button-icon icon ion-volume-high" ng-click="volumOnorOff()"></button>
+        <a id="girlnavbacktobond" href="#/app/bonds"> <span class="ion-chevron-left"></span></a>
+        <!--<button class="button button-icon icon ion-volume-high" ng-click="volumOnorOff()"></button>-->
+
+        <button id="backtobond" class="button button-icon icon ion-chevron-left" ng-click="volumOnorOff()"></button>
+        <audio id="jbaudio">
+            <source src="music/James Bond 007 Theme Tune (original).ogg" type="audio/ogg">
+            <source src="music/James Bond 007 Theme Tune (original).mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <ion-content class="has-header">
+            <ion-list>
+                <ion-item nav-clear menu-close class="navGirl1">
+                    <a href="#/girls/bondgirls/whoami/1">
+                        <div>URSULA ANDRESS</div>
+                    </a>
+                </ion-item>
+                <ion-item nav-clear menu-close class="navGirl2">
+                    <a href="#/girls/bondgirls/whoami/2">
+                        <div>DANIELA BIANCHI</div>
+                    </a>
+                </ion-item>
+                <ion-item nav-clear menu-close class="navGirl3">
+                    <a href="#/girls/bondgirls/whoami/3">
+                        <div>HONOR BLACKMAN</div>
+                    </a>
+                </ion-item>
+                <ion-item nav-clear menu-close class="navGirl4">
+                    <a href="#/girls/bondgirls/whoami/4">
+                        <div>CLAUDINE AUGER</div>
+                    </a>
+                </ion-item>
+                <ion-item nav-clear menu-close class="navGirl5">
+                    <a href="#/girls/bondgirls/whoami/5">
+                        <div>MIE HAMA</div>
+                    </a>
+                </ion-item>
+                <ion-item nav-clear menu-close class="navGirl6">
+                    <a href="#/girls/bondgirls/whoami/6">
+                        <div>DIANA RIGG</div>
+                    </a>
+                </ion-item>
+                <ion-item nav-clear menu-close class="navGirl7">
+                    <a href="#/girls/bondgirls/whoami/7">
+                        <div>JILL ST. JOHN</div>
+                    </a>
+                </ion-item>
+                <ion-item nav-clear menu-close class="navGirl8">
+                    <a href="#/girls/bondgirls/whoami/8">
+                        <div>JANE SEYMOUR</div>
+                    </a>
+                </ion-item>
+                <ion-item nav-clear menu-close class="navGirl9">
+                    <a href="#/girls/bondgirls/whoami/9">
+                        <div>BRITT EKLAND</div>
+                    </a>
+                </ion-item>
+                <ion-item nav-clear menu-close class="navGirl10">
+                    <a href="#/girls/bondgirls/whoami/10">
+                        <div>BARBARA BACH</div>
+                    </a>
+                </ion-item>
+                <ion-item nav-clear menu-close class="navGirl11">
+                    <a href="#/girls/bondgirls/whoami/11">
+                        <div>LOIS CHILES</div>
+                    </a>
+                </ion-item>
+                <ion-item nav-clear menu-close class="navGirl12">
+                    <a href="#/girls/bondgirls/whoami/12">
+                        <div>CAROLE BOUQUET</div>
+                    </a>
+                </ion-item>
+                <ion-item nav-clear menu-close class="navGirl13">
+                    <a href="#/girls/bondgirls/whoami/13">
+                        <div>MAUD ADAMS</div>
+                    </a>
+                </ion-item>
+                <ion-item nav-clear menu-close class="navGirl14">
+                    <a href="#/girls/bondgirls/whoami/14">
+                        <div>TANYA ROBERTS</div>
+                    </a>
+                </ion-item>
+                <ion-item nav-clear menu-close class="navGirl15">
+                    <a href="#/girls/bondgirls/whoami/15">
+                        <div>MARYAM D'ABO</div>
+                    </a>
+                </ion-item>
+                <ion-item nav-clear menu-close class="navGirl16">
+                    <a href="#/girls/bondgirls/whoami/16">
+                        <div>CAREY LOWELL</div>
+                    </a>
+                </ion-item>
+                <ion-item nav-clear menu-close class="navGirl17">
+                    <a href="#/girls/bondgirls/whoami/17">
+                        <div>IZABELLA SCORUPCO</div>
+                    </a>
+                </ion-item>
+                <ion-item nav-clear menu-close class="navGirl18">
+                    <a href="#/girls/bondgirls/whoami/18">
+                        <div>MICHELLE YEOH</div>
+                    </a>
+                </ion-item>
+                <ion-item nav-clear menu-close class="navGirl19">
+                    <a href="#/girls/bondgirls/whoami/19">
+                        <div>DENISE RICHARDS</div>
+                    </a>
+                </ion-item>
+                <ion-item nav-clear menu-close class="navGirl20">
+                    <a href="#/girls/bondgirls/whoami/20">
+                        <div>HALLE BERRY</div>
+                    </a>
+                </ion-item>
+                <ion-item nav-clear menu-close class="navGirl21">
+                    <a href="#/girls/bondgirls/whoami/21">
+                        <div>EVA GREEN</div>
+                    </a>
+                </ion-item>
+                <ion-item nav-clear menu-close class="navGirl22">
+                    <a href="#/girls/bondgirls/whoami/22">
+                        <div>OLGA KURYLENKO</div>
+                    </a>
+                </ion-item>
+                <ion-item nav-clear menu-close class="navGirl23">
+                    <a href="#/girls/bondgirls/whoami/23">
+                        <div>BÉRÉNICE MARLOHE</div>
+                    </a>
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

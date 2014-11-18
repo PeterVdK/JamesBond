@@ -1,0 +1,978 @@
+/*      NAVIGATIE ITEMS    */
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+.navItemBond {
+  text-align: center;
+  padding: 0px;
+  background-image: url("../img/BondNavigation.png");
+  background-repeat: no-repeat;
+  background-size: 110%;
+  padding-top: 100px;
+  position: relative; }
+  .navItemBond a {
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    padding-left: 100px;
+    padding-right: 120px;
+    padding-bottom: 50px;
+    padding-top: 40px;
+    color: white;
+    text-decoration: none;
+    font-family: Gulim;
+    font-size: 30px;
+    letter-spacing: -2px; }
+    .navItemBond a div {
+      background: transparent;
+      width: 100px;
+      height: 1.3em;
+      margin-left: 2px; }
+
+.navItemGirls {
+  text-align: center;
+  padding: 0px;
+  background-image: url("../img/Bondgirl.png");
+  background-repeat: no-repeat;
+  background-size: 110%;
+  padding-top: 100px;
+  position: relative; }
+  .navItemGirls a {
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    padding-left: 70px;
+    padding-right: 120px;
+    padding-bottom: 50px;
+    padding-top: 40px;
+    color: white;
+    text-decoration: none;
+    font-family: Gulim;
+    font-size: 30px;
+    letter-spacing: -2px; }
+    .navItemGirls a div {
+      background: transparent;
+      width: 160px;
+      height: 1.3em;
+      margin-left: 2px; }
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif; }
+
+a {
+  text-decoration: none;
+  color: #333; }
+
+@keyframes yes {
+  0% {
+    transform: scale(1) rotateZ(0deg);
+    left: 0; }
+
+  30% {
+    transform: scale(1.05) rotateZ(0deg);
+    left: 0; }
+
+  100% {
+    transform: rotateZ(45deg);
+    left: 400px; } }
+.animateYes {
+  animation-fill-mode: both;
+  animation: yes 0.6s linear; }
+  .animateYes:before {
+    transform: rotateZ(-35deg);
+    background: url(http://i.imgur.com/Zkwj970.png) no-repeat center 10px; }
+
+@keyframes no {
+  0% {
+    transform: rotateZ(360deg);
+    right: 0; }
+
+  30% {
+    transform: scale(1.05) rotateZ(360deg);
+    right: 0; }
+
+  100% {
+    transform: rotateZ(315deg);
+    right: 400px; } }
+.animateNo {
+  animation-fill-mode: both;
+  animation: no 0.6s linear; }
+  .animateNo:before {
+    transform: rotateZ(35deg);
+    background: url(http://i.imgur.com/XqQZ4KR.png) no-repeat center 10px; }
+
+#control {
+  position: relative;
+  margin: 15px auto 0;
+  width: 250px; }
+  #control .button {
+    width: 65px;
+    height: 65px;
+    background: #eee;
+    position: absolute;
+    top: 5px;
+    border-radius: 50%;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05); }
+    #control .button .trigger {
+      background: white;
+      display: block;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      margin: 0 -5px;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all .1s;
+      text-align: center;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); }
+      #control .button .trigger:active {
+        transform: translateY(-50%) scale(0.75);
+        transition: all .05s linear; }
+      #control .button .trigger:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        font-family: 'FontAwesome'; }
+  #control .no {
+    left: 38px; }
+    #control .no .trigger:before {
+      content: "\f00d";
+      font-size: 28px;
+      color: #c33; }
+  #control .yes {
+    right: 30px; }
+    #control .yes .trigger:before {
+      content: "\f004";
+      font-size: 22px;
+      color: #3b7; }
+  #control .info {
+    top: 17px;
+    left: 103px;
+    height: 52px;
+    width: 46px; }
+    #control .info .trigger {
+      width: 35px;
+      height: 35px; }
+      #control .info .trigger:before {
+        content: "\f05a";
+        font-size: 16px;
+        color: #3498db; }
+
+.navGirl1, .navGirl2, .navGirl3, .navGirl4, .navGirl5, .navGirl6, .navGirl7, .navGirl8, .navGirl9, .navGirl10, .navGirl11, .navGirl12, .navGirl13,
+.navGirl14, .navGirl15, .navGirl16, .navGirl17, .navGirl18, .navGirl19, .navGirl20, .navGirl21, .navGirl22, .navGirl23 {
+  background-image: url("../img/Bondgirls/UrsulaAndress.jpg");
+  padding-top: 90px;
+  background-size: 110%; }
+  .navGirl1 a, .navGirl2 a, .navGirl3 a, .navGirl4 a, .navGirl5 a, .navGirl6 a, .navGirl7 a, .navGirl8 a, .navGirl9 a, .navGirl10 a, .navGirl11 a, .navGirl12 a, .navGirl13 a,
+  .navGirl14 a, .navGirl15 a, .navGirl16 a, .navGirl17 a, .navGirl18 a, .navGirl19 a, .navGirl20 a, .navGirl21 a, .navGirl22 a, .navGirl23 a {
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    left: -45px;
+    padding-left: 60px;
+    padding-right: 105px;
+    padding-bottom: 36px;
+    padding-top: 37px;
+    color: white;
+    text-decoration: none;
+    font-family: Gulim;
+    font-size: 30px;
+    letter-spacing: -2px; }
+    .navGirl1 a div, .navGirl2 a div, .navGirl3 a div, .navGirl4 a div, .navGirl5 a div, .navGirl6 a div, .navGirl7 a div, .navGirl8 a div, .navGirl9 a div, .navGirl10 a div, .navGirl11 a div, .navGirl12 a div, .navGirl13 a div,
+    .navGirl14 a div, .navGirl15 a div, .navGirl16 a div, .navGirl17 a div, .navGirl18 a div, .navGirl19 a div, .navGirl20 a div, .navGirl21 a div, .navGirl22 a div, .navGirl23 a div {
+      background: transparent;
+      width: 240px;
+      height: 1.3em;
+      margin-left: 2px; }
+
+.navGirl2 {
+  background-image: url("../img/Bondgirls/DanielaBianchi.jpg"); }
+  .navGirl2 a {
+    padding-left: 63px;
+    padding-right: 102px; }
+    .navGirl2 a div {
+      width: 226px; }
+
+.navGirl3 {
+  background-image: url("../img/Bondgirls/HonorBlackman.png"); }
+  .navGirl3 a {
+    padding-left: 50px;
+    padding-right: 42px; }
+    .navGirl3 a div {
+      width: 254px; }
+
+.navGirl4 {
+  background-image: url("../img/Bondgirls/ClaudineAuger.jpg"); }
+  .navGirl4 a {
+    padding-left: 60px;
+    padding-right: 5px; }
+    .navGirl4 a div {
+      width: 237px; }
+
+.navGirl5 {
+  background-image: url("../img/Bondgirls/MieHama.jpg"); }
+  .navGirl5 a {
+    padding-left: 109px;
+    padding-right: 95px; }
+    .navGirl5 a div {
+      width: 134px; }
+
+.navGirl6 {
+  background-image: url("../img/Bondgirls/DianaRigg.jpg"); }
+  .navGirl6 a {
+    padding-left: 100px;
+    padding-right: 84px; }
+    .navGirl6 a div {
+      width: 155px; }
+
+.navGirl7 {
+  background-image: url("../img/Bondgirls/JillStJohn.jpg"); }
+  .navGirl7 a {
+    padding-left: 89px;
+    padding-right: 51px; }
+    .navGirl7 a div {
+      width: 174px; }
+
+.navGirl8 {
+  background-image: url("../img/Bondgirls/JaneSeymour.jpg"); }
+  .navGirl8 a {
+    padding-left: 75px;
+    padding-right: 35px; }
+    .navGirl8 a div {
+      width: 207px; }
+
+.navGirl9 {
+  background-image: url("../img/Bondgirls/BrittEkland.jpg"); }
+  .navGirl9 a {
+    padding-left: 87px;
+    padding-right: 45px; }
+    .navGirl9 a div {
+      width: 187px; }
+
+.navGirl10 {
+  background-image: url("../img/Bondgirls/BarbaraBach.jpg"); }
+  .navGirl10 a {
+    padding-left: 73px;
+    padding-right: 36px; }
+    .navGirl10 a div {
+      width: 209px; }
+
+.navGirl11 {
+  background-image: url("../img/Bondgirls/LoisChiles.jpg"); }
+  .navGirl11 a {
+    padding-left: 97px;
+    padding-right: 59px; }
+    .navGirl11 a div {
+      width: 162px; }
+
+.navGirl12 {
+  background-image: url("../img/Bondgirls/CaroleBouquet.jpg"); }
+  .navGirl12 a {
+    padding-left: 55px;
+    padding-right: 15px; }
+    .navGirl12 a div {
+      width: 248px; }
+
+.navGirl13 {
+  background-image: url("../img/Bondgirls/MaudAdams.jpg"); }
+  .navGirl13 a {
+    padding-left: 92px;
+    padding-right: 44px; }
+    .navGirl13 a div {
+      width: 182px; }
+
+.navGirl14 {
+  background-image: url("../img/Bondgirls/TanyaRoberts.jpg"); }
+  .navGirl14 a {
+    padding-left: 72px;
+    padding-right: 26px; }
+    .navGirl14 a div {
+      width: 220px; }
+
+.navGirl15 {
+  background-image: url("../img/Bondgirls/MaryamDabo.jpg"); }
+  .navGirl15 a {
+    padding-left: 76px;
+    padding-right: 36px; }
+    .navGirl15 a div {
+      width: 206px; }
+
+.navGirl16 {
+  background-image: url("../img/Bondgirls/CareyLowell.jpg"); }
+  .navGirl16 a {
+    padding-left: 80px;
+    padding-right: 33px; }
+    .navGirl16 a div {
+      width: 205px; }
+
+.navGirl17 {
+  background-image: url("../img/Bondgirls/IzabellaScorupco.jpg"); }
+  .navGirl17 a {
+    padding-left: 48px;
+    padding-right: 9px;
+    font-size: 28px; }
+    .navGirl17 a div {
+      width: 262px; }
+
+.navGirl18 {
+  background-image: url("../img/Bondgirls/MichelleYeoh.jpg"); }
+  .navGirl18 a {
+    padding-left: 74px;
+    padding-right: 29px; }
+    .navGirl18 a div {
+      width: 215px; }
+
+.navGirl19 {
+  background-image: url("../img/Bondgirls/DeniseRichards.jpg"); }
+  .navGirl19 a {
+    padding-left: 58px;
+    padding-right: 21px; }
+    .navGirl19 a div {
+      width: 240px; }
+
+.navGirl20 {
+  background-image: url("../img/Bondgirls/HalleBerry.jpg"); }
+  .navGirl20 a {
+    padding-left: 93px;
+    padding-right: 45px; }
+    .navGirl20 a div {
+      width: 180px; }
+
+.navGirl21 {
+  background-image: url("../img/Bondgirls/EvaGreen.jpg"); }
+  .navGirl21 a {
+    padding-left: 100px;
+    padding-right: 66px; }
+    .navGirl21 a div {
+      width: 153px; }
+
+.navGirl22 {
+  background-image: url("../img/Bondgirls/OlgaKurylenko.jpg"); }
+  .navGirl22 a {
+    padding-left: 57px;
+    padding-right: 18px; }
+    .navGirl22 a div {
+      width: 243px; }
+
+.navGirl23 {
+  background-image: url("../img/Bondgirls/BereniceMarlohe.jpg"); }
+  .navGirl23 a {
+    padding-left: 49px;
+    padding-right: 15px;
+    font-size: 28px; }
+    .navGirl23 a div {
+      width: 254px; }
+
+.navItemCars {
+  text-align: center;
+  padding: 0px;
+  background-image: url("../img/BondCar.png");
+  background-repeat: no-repeat;
+  background-size: 110%;
+  padding-top: 100px;
+  position: relative; }
+  .navItemCars a {
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    padding-left: 115px;
+    padding-right: 120px;
+    padding-bottom: 50px;
+    padding-top: 40px;
+    color: white;
+    text-decoration: none;
+    font-family: Gulim;
+    font-size: 30px;
+    letter-spacing: -2px; }
+    .navItemCars a div {
+      background: transparent;
+      width: 80px;
+      height: 1.3em;
+      margin-left: 5px; }
+
+.navItemMap {
+  text-align: center;
+  padding: 0px;
+  background-image: url("../img/locatie.png");
+  background-repeat: no-repeat;
+  padding-top: 100px;
+  position: relative;
+  background-size: 110%; }
+  .navItemMap a {
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    padding-left: 125px;
+    padding-right: 120px;
+    padding-bottom: 50px;
+    padding-top: 40px;
+    color: white;
+    font-family: Gulim;
+    font-size: 30px;
+    letter-spacing: -2px;
+    text-decoration: none; }
+    .navItemMap a div {
+      background: transparent;
+      width: 60px;
+      height: 1.3em;
+      margin-left: 2px; }
+
+@-webkit-keyframes rotation {
+  0% {
+    background-position: 0 0; }
+
+  100% {
+    background-position: -400px 0; } }
+@keyframes rotation {
+  0% {
+    background-position: 0 0; }
+
+  100% {
+    background-position: -400px 0; } }
+@keyframes rotationtwo {
+  0% {
+    background-position: -400px 0; }
+
+  100% {
+    background-position: -0 0; } }
+@-webkit-keyframes rotationtwo {
+  0% {
+    background-position: -400px 0; }
+
+  100% {
+    background-position: -0 0; } }
+.globe, .globe:before {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  margin-left: -150px;
+  margin-top: -150px;
+  background-image: url(http://fc09.deviantart.net/fs70/i/2010/323/8/4/defcon_world_map_wallpaper_by_gorillazxd-d335hxw.png);
+  background-repeat: repeat-x;
+  background-position: top left;
+  -webkit-border-radius: 400px;
+  border-radius: 400px;
+  -moz-border-radius: 400px;
+  background-size: auto 400px;
+  background-color: rgba(0, 0, 0, 0.03);
+  opacity: 1;
+  -webkit-animation: rotation 3s infinite;
+  animation: rotation 3s infinite; }
+
+.globe:before {
+  content: "";
+  top: 50%;
+  z-index: 0;
+  -webkit-animation: rotationtwo 3s infinite;
+  animation: rotationtwo 3s infinite;
+  opacity: 0.3; }
+
+.globe {
+  position: relative;
+  margin-top: 50px; }
+
+#map50 {
+  width: auto;
+  height: 600px;
+  overflow: hidden;
+  padding: 0px;
+  border: 15px inset #131211;
+  margin-top: 100px;
+  margin-left: 20px;
+  margin-right: 16px; }
+
+#map25 {
+  padding-right: 50px; }
+
+/*      NAVIGATIE ITEMS HOVER    */
+.navItemBond a div:hover, .navItemGirls a div:hover, .navItemCars a div:hover, .navItemMap a div:hover, .navGirl1 a div:hover,
+.navGirl2 a div:hover, .navGirl3 a div:hover, .navGirl4 a div:hover, .navGirl5 a div:hover, .navGirl6 a div:hover, .navGirl7 a div:hover,
+.navGirl8 a div:hover, .navGirl9 a div:hover, .navGirl10 a div:hover, .navGirl11 a div:hover, .navGirl12 a div:hover, .navGirl13 a div:hover,
+.navGirl14 a div:hover, .navGirl15 a div:hover, .navGirl16 a div:hover, .navGirl17 a div:hover, .navGirl18 a div:hover, .navGirl19 a div:hover,
+.navGirl20 a div:hover, .navGirl21 a div:hover, .navGirl22 a div:hover, .navGirl23 a div:hover {
+  border-bottom: 2px solid transparent;
+  animation: underlineNav 2s;
+  -o-animation: underlineNav 2s;
+  -webkit-animation: underlineNav 2s; }
+
+.navItemMap:hover, .navItemGirls:hover, .navItemBond:hover, .navItemCars:hover, .navGirl1:hover, .navGirl2:hover, .navGirl3:hover, .navGirl4:hover,
+.navGirl5:hover, .navGirl6:hover, .navGirl7:hover, .navGirl8:hover, .navGirl9:hover, .navGirl10:hover, .navGirl11:hover, .navGirl12:hover, .navGirl13:hover,
+.navGirl14:hover, .navGirl15:hover, .navGirl16:hover, .navGirl17:hover, .navGirl18:hover, .navGirl19:hover, .navGirl20:hover, .navGirl21:hover,
+.navGirl22:hover, .navGirl23:hover {
+  animation: scaleNav 2s;
+  -o-animation: scaleNav 2s;
+  -webkit-animation: scaleNav 2s; }
+
+/*      NAVIGATIE ITEMS KEYFRAMES    */
+@-webkit-keyframes underlineNav {
+  100% {
+    border-bottom: 2px solid #b10a0a; } }
+@-o-keyframes underlineNav {
+  100% {
+    border-bottom: 2px solid #b10a0a; } }
+@keyframes underlineNav {
+  100% {
+    border-bottom: 2px solid #b10a0a; } }
+@-webkit-keyframes scaleNav {
+  from {
+    background-size: 110%; }
+
+  to {
+    background-size: 120%; } }
+@-o-keyframes scaleNav {
+  from {
+    background-size: 110%; }
+
+  to {
+    background-size: 120%; } }
+@keyframes scaleNav {
+  from {
+    background-size: 110%; }
+
+  to {
+    background-size: 120%; } }
+/*      SCHERM 1 (BONDS)    */
+.bonds, .girls {
+  text-align: center;
+  background-color: #faf2f2; }
+
+.bondImage {
+  height: 93vh;
+  z-index: -1; }
+
+.bondNames {
+  position: absolute;
+  margin-top: -38em;
+  width: 100%; }
+  .bondNames .bondFirstname {
+    font-family: franchise;
+    font-size: 5em;
+    margin-left: -350px;
+    margin-top: 25px;
+    text-shadow: 2px -2px 4px rgba(28, 28, 28, 0.45); }
+  .bondNames .bondName {
+    font-family: franchise;
+    font-size: 5em;
+    margin-left: 370px;
+    margin-top: -30px;
+    text-shadow: 2px -2px 4px rgba(28, 28, 28, 0.45); }
+  .bondNames #leftScroll {
+    margin-top: -140px;
+    margin-left: 30px; }
+  .bondNames #rightScroll {
+    margin-top: -140px;
+    margin-left: 550px; }
+
+.dotWie {
+  background: none repeat scroll 0 0 #3c3c3c;
+  border-radius: 9px;
+  box-shadow: 0 0 0 3px white;
+  height: 18px;
+  margin: 40% -34%;
+  position: absolute;
+  transition: all 0.8s ease 0.1s;
+  width: 18px;
+  display: inline-block; }
+  .dotWie:hover {
+    width: 10px;
+    height: 10px;
+    margin: 40% -33.8%;
+    background: none repeat scroll 0 0 #b10a0a;
+    box-shadow: 0 0 0 10px white; }
+
+.wie {
+  position: absolute;
+  margin: 37% -36.5%;
+  background-color: transparent;
+  color: black;
+  font-family: Gulim;
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.8s ease 0.1s; }
+  .wie:hover {
+    color: #b10a0a;
+    text-decoration: none; }
+
+.dotPics {
+  background: none repeat scroll 0 0 #3c3c3c;
+  border-radius: 9px;
+  box-shadow: 0 0 0 3px white;
+  height: 18px;
+  margin: 8.5% -43.5%;
+  position: absolute;
+  transition: all 0.8s ease 0.1s;
+  width: 18px;
+  display: inline-block; }
+  .dotPics:hover {
+    width: 10px;
+    height: 10px;
+    margin: 8.5% -43%;
+    background: none repeat scroll 0 0 #b10a0a;
+    box-shadow: 0 0 0 10px white; }
+
+.pics {
+  position: absolute;
+  margin: 5.5% -45.3%;
+  background-color: transparent;
+  color: black;
+  font-family: Gulim;
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.8s ease 0.1s; }
+  .pics:hover {
+    color: #b10a0a;
+    text-decoration: none; }
+
+.dotFilms {
+  background: none repeat scroll 0 0 #3c3c3c;
+  border-radius: 9px;
+  box-shadow: 0 0 0 3px white;
+  height: 18px;
+  margin: 8.5%;
+  position: absolute;
+  transition: all 0.8s ease 0.1s;
+  width: 18px;
+  display: inline-block; }
+  .dotFilms:hover {
+    width: 10px;
+    height: 10px;
+    margin: 8.5%;
+    background: none repeat scroll 0 0 #b10a0a;
+    box-shadow: 0 0 0 10px white; }
+
+.films {
+  position: absolute;
+  margin: 7% 8.5%;
+  background-color: transparent;
+  color: black;
+  font-family: Gulim;
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.8s ease 0.1s; }
+  .films:hover {
+    color: #b10a0a;
+    text-decoration: none; }
+
+.deckgrid[deckgrid]::before {
+  /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
+  content: '4 .column.column-1-4';
+  font-size: 0;
+  /* See https://github.com/akoenig/angular-deckgrid/issues/14#issuecomment-35728861 */
+  visibility: hidden; }
+
+.deckgrid .column {
+  float: left; }
+
+.deckgrid .column-1-4 {
+  width: 25%; }
+
+.bondfoto {
+  max-width: 100%; }
+
+.banvan.fadein {
+  -webkit-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s;
+  -moz-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s;
+  -o-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s;
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s;
+  opacity: 1;
+  /* Default value but added for clarity */ }
+
+#rowbonds {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%; }
+
+.films {
+  position: absolute;
+  margin: 4.3em 5.5em;
+  background-color: transparent;
+  color: black;
+  font-family: Gulim;
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.8s ease 0.1s; }
+  .films:hover {
+    color: #b10a0a;
+    text-decoration: none; }
+
+/*nav on top*/
+.bar.bar-stable {
+  background-color: #131211;
+  -webkit-box-shadow: 0 5px 20px -5px #131211;
+  -o-box-shadow: 0 5px 20px -5px #131211;
+  box-shadow: 0 5px 20px -5px #131211;
+  border-color: #131211;
+  background-color: #131211; }
+  .bar.bar-stable .button {
+    color: transparent;
+    display: none; }
+
+td-cards {
+  display: block; }
+
+td-card {
+  position: absolute;
+  left: 50%;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  margin-left: -125px;
+  width: 250px;
+  height: 200px;
+  border: 1px solid #999;
+  border-radius: 6px; }
+
+td-card h1 {
+  margin-top: 0px;
+  height: 200px; }
+
+td-card .image {
+  position: relative; }
+
+td-card img {
+  max-width: 100%;
+  border-radius: 6px; }
+
+.yes-text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 30px;
+  color: #6ffa6f;
+  opacity: 1; }
+
+.no-text {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: #ff7373;
+  opacity: 1; }
+
+#logo {
+  width: 233px;
+  height: 34px;
+  position: absolute;
+  left: 41%; }
+
+/*side-menu*/
+.menu {
+  background-color: #131211;
+  opacity: .9;
+  -o-box-shadow: 0 5px 20px -5px #131211;
+  -webkit-box-shadow: 5px 0px 20px -5px #131211;
+  box-shadow: 5px 0px 20px -5px #131211; }
+
+#girlnavbacktobond {
+  position: absolute;
+  top: 4px;
+  left: 240px;
+  text-decoration: none; }
+  #girlnavbacktobond > span {
+    font-size: 28px;
+    color: #faf2f2; }
+
+#backbutton {
+  margin-top: 3px;
+  padding-right: 7px;
+  text-decoration: none; }
+  #backbutton > span {
+    font-size: 29px;
+    color: #faf2f2; }
+
+#volume {
+  display: block;
+  color: #faf2f2; }
+
+/*      SCHERM 2 (BONDGIRLS)    */
+/*      MEDIAQUERIES    */
+/*mediaquery vanaf 1200px */
+@media screen and (max-width: 1200px) {
+  #logo {
+    left: 37%; }
+
+  .dotWie {
+    margin: 68% -46%; }
+    .dotWie:hover {
+      margin: 68% -45.3%; }
+
+  .wie {
+    margin: 64% -50%; }
+
+  .dotPics {
+    margin: 15% -50.5%; }
+    .dotPics:hover {
+      margin: 15% -49.8%; }
+
+  .pics {
+    margin: 11% -53%; }
+
+  .dotFilms {
+    margin: 15% 10%; }
+    .dotFilms:hover {
+      margin: 15% 10.7%; }
+
+  .films {
+    margin: 11% 7.7%; } }
+/*950*/
+@media screen and (max-width: 950px) {
+  #logo {
+    left: 32%; }
+
+  .deckgrid[deckgrid]::before {
+    /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
+    content: '3 .column.column-1-3';
+    font-size: 0;
+    /* See https://github.com/akoenig/angular-deckgrid/issues/14#issuecomment-35728861 */
+    visibility: hidden; }
+
+  .deckgrid .column {
+    float: left; }
+
+  .deckgrid .column-1-3 {
+    width: 33.33333%; }
+
+  .bondNames #leftScroll {
+    margin-left: 53px; }
+
+  .bondFirstname {
+    display: none; }
+
+  .bondName {
+    display: none; }
+
+  .scrollBonds {
+    margin-top: 17em;
+    margin-left: -12em;
+    width: 100%; }
+
+  .dotFilms {
+    margin: 19% 3%; }
+    .dotFilms:hover {
+      margin: 19% 3.7%; }
+
+  .films {
+    margin: 13% 0%; }
+
+  .dotPics {
+    margin: 19% -56%; }
+    .dotPics:hover {
+      margin: 19% -55.3%; }
+
+  .pics {
+    margin: 13% -60%; }
+
+  .dotWie {
+    margin: 92% -60%; }
+    .dotWie:hover {
+      margin: 92% -59.3%; }
+
+  .wie {
+    margin: 86% -65%; } }
+/*mediaquery vanaf 768px */
+@media screen and (max-width: 768px) {
+  #logo {
+    left: 33%; }
+
+  .bar.bar-stable .button {
+    color: #faf2f2;
+    display: block; }
+
+  .scrollBonds {
+    margin-top: 17em;
+    margin-left: -3em;
+    width: 100%; }
+
+  .dotWie {
+    margin: 71% -49%; }
+    .dotWie:hover {
+      margin: 71% -48.3%; }
+
+  .wie {
+    margin: 66% -53%; }
+
+  .dotPics {
+    margin: 15% -50%; }
+    .dotPics:hover {
+      margin: 15% -49.3%; }
+
+  .pics {
+    margin: 10% -53%; }
+
+  .dotFilms {
+    margin: 15% 7%; }
+    .dotFilms:hover {
+      margin: 15% 7.7%; }
+
+  .films {
+    margin: 10% 5%; } }
+@media screen and (max-width: 620px) {
+  .bondNames #leftScroll {
+    margin-left: 13px;
+    left: -194px; } }
+/*644*/
+@media screen and (max-width: 500px) {
+  #logo {
+    left: 26%; }
+
+  .scrollBonds {
+    width: 100%;
+    margin-left: -13em; }
+
+  .bondNames #leftScroll {
+    margin-left: 13px;
+    left: 19px; }
+
+  .deckgrid[deckgrid]::before {
+    /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
+    content: '2 .column.column-1-2';
+    font-size: 0;
+    /* See https://github.com/akoenig/angular-deckgrid/issues/14#issuecomment-35728861 */
+    visibility: hidden; }
+
+  .deckgrid .column {
+    float: left; }
+
+  .deckgrid .column-1-2 {
+    width: 49%; }
+
+  .dotWie {
+    margin: 105% -5%; }
+    .dotWie:hover {
+      margin: 105% -4.3%; }
+
+  .wie {
+    margin: 97% -12%;
+    color: #b10a0a; }
+
+  .dotPics {
+    margin: 23% -67%; }
+    .dotPics:hover {
+      margin: 23% -66.3%; }
+
+  .pics {
+    margin: 15% -71.5%;
+    color: #b10a0a; }
+
+  .dotFilms {
+    margin: 23% -5%; }
+    .dotFilms:hover {
+      margin: 23% -4.3%; }
+
+  .films {
+    margin: 15% -9%;
+    color: #b10a0a; } }
+@media screen and (max-width: 500px) {
+  .bondNames #leftScroll {
+    margin-left: 13px;
+    left: 70px; }
+
+  .bondNames #rightScroll {
+    margin-left: 13px;
+    left: 279px; } }

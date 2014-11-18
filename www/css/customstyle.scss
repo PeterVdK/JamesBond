@@ -1,0 +1,1246 @@
+$rood : #b10a0a;
+$achtergrond: #faf2f2;
+$jbblack:#131211;
+
+
+/*      NAVIGATIE ITEMS    */
+
+//BOND
+.navItemBond{
+  text-align: center;
+  padding: 0px;
+  background-image: url('../img/BondNavigation.png');
+  background-repeat: no-repeat;
+  background-size: 110%;
+  padding-top: 100px;
+  position: relative;
+
+  a{
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    padding-left: 100px;
+    padding-right: 120px;
+    padding-bottom: 50px;
+    padding-top: 40px;
+    color: white;
+    text-decoration: none;
+    font-family: Gulim;
+    font-size:30px;
+    letter-spacing: -2px;
+
+    div{
+      background: transparent;
+      width: 100px;
+      height: 1.3em;
+      margin-left: 2px;
+    }
+  }
+}
+
+
+//GIRLS
+.navItemGirls{
+  text-align: center;
+  padding: 0px;
+  background-image: url('../img/Bondgirl.png');
+  background-repeat: no-repeat;
+  background-size: 110%;
+  padding-top: 100px;
+  position: relative;
+
+  a{
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    padding-left: 70px;
+    padding-right: 120px;
+    padding-bottom: 50px;
+    padding-top: 40px;
+    color: white;
+    text-decoration: none;
+    font-family: Gulim;
+    font-size:30px;
+    letter-spacing: -2px;
+
+    div{
+      background: transparent;
+      width: 160px;
+      height: 1.3em;
+      margin-left: 2px;
+    }
+  }
+}
+ //girltinder
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+$bg: #eee;
+$phoneDetails: #d3d3d3;
+$phoneColor: #dfdfdf;
+$phoneWidth: 320px;
+$phoneHeight: 560px;
+
+
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+$distance: 400px;
+
+@keyframes yes {
+  0% {
+    transform: scale(1) rotateZ(0deg);
+    left: 0;
+  }
+  30% {
+    transform: scale(1.05) rotateZ(0deg);
+    left: 0;
+  }
+  100% {
+    transform: rotateZ(45deg);
+    left: $distance;
+  }
+}
+
+.animateYes {
+  animation-fill-mode: both;
+  animation: yes 0.6s linear;
+  &:before {
+    transform: rotateZ(-35deg);
+    background: url(http://i.imgur.com/Zkwj970.png) no-repeat center 10px;
+  }
+}
+
+@keyframes no {
+  0% {
+    transform: rotateZ(360deg);
+    right: 0;
+  }
+  30% {
+    transform: scale(1.05) rotateZ(360deg);
+    right: 0;
+  }
+  100% {
+    transform: rotateZ(315deg);
+    right: $distance;
+  }
+}
+
+.animateNo {
+  animation-fill-mode: both;
+  animation: no 0.6s linear;
+  &:before {
+    transform: rotateZ(35deg);
+    background: url(http://i.imgur.com/XqQZ4KR.png) no-repeat center 10px;
+  }
+}
+
+#control {
+  position: relative;
+  margin: 15px auto 0;
+  width: 250px;
+  .button {
+    width: 65px;
+    height: 65px;
+    background: #eee;
+    position: absolute;
+    top: 5px;
+    border-radius: 50%;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    .trigger {
+      background: white;
+      display: block;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      margin: 0 -5px;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all .1s;
+      text-align: center;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+      &:active {
+        transform: translateY(-50%) scale(0.75);
+        transition: all .05s linear;
+      }
+      &:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        font-family: 'FontAwesome';
+      }
+    }
+  }
+
+  .no {
+    left: 38px;
+    .trigger:before {
+      content: "\f00d";
+      font-size: 28px;
+      color: #c33;
+    }
+  }
+
+  .yes {
+    right: 30px;
+    .trigger:before {
+      content: "\f004";
+      font-size: 22px;
+      color: #3b7;
+    }
+  }
+
+  .info {
+ 
+    top: 17px;
+    left: 103px;
+    height: 52px;
+    width: 46px;
+    .trigger {
+      width: 35px;
+      height: 35px;
+      &:before {
+        content: "\f05a";
+        font-size: 16px;
+        color: #3498db;
+      }
+    }
+  }
+}
+
+
+//girltinder
+
+
+
+
+
+.navGirl1,.navGirl2,.navGirl3,.navGirl4,.navGirl5,.navGirl6,.navGirl7,.navGirl8,.navGirl9,.navGirl10,.navGirl11,.navGirl12,.navGirl13,
+.navGirl14,.navGirl15,.navGirl16,.navGirl17,.navGirl18,.navGirl19,.navGirl20,.navGirl21,.navGirl22,.navGirl23{
+  background-image: url('../img/Bondgirls/UrsulaAndress.jpg');
+  padding-top: 90px;
+  background-size: 110%;
+
+  a{
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    left: -45px;
+    padding-left: 60px;
+    padding-right: 105px;
+    padding-bottom: 36px;
+    padding-top: 37px;
+    color: white;
+    text-decoration: none;
+    font-family: Gulim;
+    font-size:30px;
+    letter-spacing: -2px;
+
+    div{
+      background: transparent;
+      width: 240px;
+      height: 1.3em;
+      margin-left: 2px;
+    }
+  }
+}
+
+.navGirl2{
+  background-image: url('../img/Bondgirls/DanielaBianchi.jpg');
+  a{
+    padding-left: 63px;
+    padding-right: 102px;
+    div{
+      width: 226px;
+    }
+  }
+}
+.navGirl3{
+  background-image: url('../img/Bondgirls/HonorBlackman.png');
+  a{
+    padding-left: 50px;
+    padding-right: 42px;
+    div{
+      width: 254px;
+    }
+  }
+}
+.navGirl4{
+  background-image: url('../img/Bondgirls/ClaudineAuger.jpg');
+  a{
+    padding-left: 60px;
+    padding-right: 5px;
+    div{
+      width: 237px;
+    }
+  }
+}
+.navGirl5{
+  background-image: url('../img/Bondgirls/MieHama.jpg');
+  a{
+    padding-left: 109px;
+    padding-right: 95px;
+    div{
+      width: 134px;
+    }
+  }
+}
+.navGirl6{
+  background-image: url('../img/Bondgirls/DianaRigg.jpg');
+  a{
+    padding-left: 100px;
+    padding-right: 84px;
+    div{
+      width: 155px;
+    }
+  }
+}
+.navGirl7{
+  background-image: url('../img/Bondgirls/JillStJohn.jpg');
+  a{
+    padding-left: 89px;
+    padding-right: 51px;
+    div{
+      width: 174px;
+    }
+  }
+}
+.navGirl8{
+  background-image: url('../img/Bondgirls/JaneSeymour.jpg');
+  a{
+    padding-left: 75px;
+    padding-right: 35px;
+    div{
+      width: 207px;
+    }
+  }
+}
+.navGirl9{
+  background-image: url('../img/Bondgirls/BrittEkland.jpg');
+  a{
+    padding-left: 87px;
+    padding-right: 45px;
+    div{
+      width: 187px;
+    }
+  }
+}
+.navGirl10{
+  background-image: url('../img/Bondgirls/BarbaraBach.jpg');
+  a{
+    padding-left: 73px;
+    padding-right: 36px;
+    div{
+      width: 209px;
+    }
+  }
+}
+.navGirl11{
+  background-image: url('../img/Bondgirls/LoisChiles.jpg');
+  a{
+    padding-left: 97px;
+    padding-right: 59px;
+    div{
+      width: 162px;
+    }
+  }
+}
+.navGirl12{
+  background-image: url('../img/Bondgirls/CaroleBouquet.jpg');
+  a{
+    padding-left: 55px;
+    padding-right: 15px;
+    div{
+      width: 248px;
+    }
+  }
+}
+.navGirl13{
+  background-image: url('../img/Bondgirls/MaudAdams.jpg');
+  a{
+    padding-left: 92px;
+    padding-right: 44px;
+    div{
+      width: 182px;
+    }
+  }
+}
+.navGirl14{
+  background-image: url('../img/Bondgirls/TanyaRoberts.jpg');
+  a{
+    padding-left: 72px;
+    padding-right: 26px;
+    div{
+      width: 220px;
+    }
+  }
+}
+.navGirl15{
+  background-image: url('../img/Bondgirls/MaryamDabo.jpg');
+  a{
+    padding-left: 76px;
+    padding-right: 36px;
+    div{
+      width: 206px;
+    }
+  }
+}
+.navGirl16{
+  background-image: url('../img/Bondgirls/CareyLowell.jpg');
+  a{
+    padding-left: 80px;
+    padding-right: 33px;
+    div{
+      width: 205px;
+    }
+  }
+}
+.navGirl17{
+  background-image: url('../img/Bondgirls/IzabellaScorupco.jpg');
+  a{
+    padding-left: 48px;
+    padding-right: 9px;
+    font-size: 28px;
+    div{
+      width: 262px;
+    }
+  }
+}
+.navGirl18{
+  background-image: url('../img/Bondgirls/MichelleYeoh.jpg');
+  a{
+    padding-left: 74px;
+    padding-right: 29px;
+    div{
+      width: 215px;
+    }
+  }
+}
+.navGirl19{
+  background-image: url('../img/Bondgirls/DeniseRichards.jpg');
+  a{
+    padding-left: 58px;
+    padding-right: 21px;
+    div{
+      width: 240px;
+    }
+  }
+}
+.navGirl20{
+  background-image: url('../img/Bondgirls/HalleBerry.jpg');
+  a{
+    padding-left: 93px;
+    padding-right: 45px;
+    div{
+      width: 180px;
+    }
+  }
+}
+.navGirl21{
+  background-image: url('../img/Bondgirls/EvaGreen.jpg');
+  a{
+    padding-left: 100px;
+    padding-right: 66px;
+    div{
+      width: 153px;
+    }
+  }
+}
+.navGirl22{
+  background-image: url('../img/Bondgirls/OlgaKurylenko.jpg');
+  a{
+    padding-left: 57px;
+    padding-right: 18px;
+    div{
+      width: 243px;
+    }
+  }
+}
+.navGirl23{
+  background-image: url('../img/Bondgirls/BereniceMarlohe.jpg');
+  a{
+    padding-left: 49px;
+    padding-right: 15px;
+    font-size: 28px;
+    div{
+      width: 254px;
+    }
+  }
+}
+
+//CARS
+.navItemCars{
+  text-align: center;
+  padding: 0px;
+  background-image: url('../img/BondCar.png');
+  background-repeat: no-repeat;
+  background-size: 110%;
+  padding-top: 100px;
+  position: relative;
+
+  a{
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    padding-left: 115px;
+    padding-right: 120px;
+    padding-bottom: 50px;
+    padding-top: 40px;
+    color: white;
+    text-decoration: none;
+    font-family: Gulim;
+    font-size:30px;
+    letter-spacing: -2px;
+
+    div{
+      background: transparent;
+      width: 80px;
+      height: 1.3em;
+      margin-left: 5px;
+    }
+  }
+}
+
+//MAP
+.navItemMap{
+  text-align: center;
+  padding: 0px;
+  background-image: url('../img/locatie.png');
+  background-repeat: no-repeat;
+  padding-top: 100px;
+  position: relative;
+  background-size: 110%;
+
+  a{
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    padding-left: 125px;
+    padding-right: 120px;
+    padding-bottom: 50px;
+    padding-top: 40px;
+    color: white;
+    font-family: Gulim;
+    font-size:30px;
+    letter-spacing: -2px;
+    text-decoration: none;
+
+    div{
+      background: transparent;
+      width: 60px;
+      height: 1.3em;
+      margin-left: 2px;
+    }
+  }
+}
+
+//globe in map
+
+@-webkit-keyframes rotation {
+  0%   { background-position: 0 0; }
+  100% { background-position: -400px 0; }
+}
+@keyframes rotation {
+  0%   { background-position: 0 0; }
+  100% { background-position: -400px 0; }
+}
+@keyframes rotationtwo {
+  0%   { background-position: -400px 0; }
+  100% { background-position: -0 0; }
+}
+@-webkit-keyframes rotationtwo {
+  0%   { background-position: -400px 0; }
+  100% { background-position: -0 0; }
+}
+
+.globe, .globe:before {
+  position: absolute;
+  z-index: 1;
+
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  margin-left: -150px;
+  margin-top: -150px;
+ background-image: url(http://fc09.deviantart.net/fs70/i/2010/323/8/4/defcon_world_map_wallpaper_by_gorillazxd-d335hxw.png);
+
+  background-repeat: repeat-x;
+  background-position: top left;
+  -webkit-border-radius: 400px;
+  border-radius: 400px;
+  -moz-border-radius:400px;
+  background-size: auto 400px;
+
+  background-color: rgba( 0, 0, 0, 0.03 );
+  opacity: 1;
+  -webkit-animation: rotation 3s infinite;
+  animation: rotation 3s infinite;
+
+}
+
+.globe:before {
+  content: "";
+  top: 50%;
+  z-index: 0;
+  -webkit-animation: rotationtwo 3s infinite;
+  animation: rotationtwo 3s infinite;
+  opacity: 0.3;
+}
+
+.globe
+{
+  position: relative;
+  margin-top: 50px;
+}
+
+#map50{
+  width: auto;
+  height: 600px;
+  overflow: hidden;
+  padding:0px;
+  border: 15px inset $jbblack;
+  margin-top: 100px;
+  margin-left: 20px;
+  margin-right: 16px;
+}
+
+#map25{
+  padding-right: 50px;
+
+}
+
+
+
+
+
+/*      NAVIGATIE ITEMS HOVER    */
+.navItemBond a div:hover, .navItemGirls a div:hover, .navItemCars a div:hover, .navItemMap a div:hover,.navGirl1 a div:hover,
+.navGirl2 a div:hover,.navGirl3 a div:hover,.navGirl4 a div:hover,.navGirl5 a div:hover,.navGirl6 a div:hover,.navGirl7 a div:hover,
+.navGirl8 a div:hover,.navGirl9 a div:hover,.navGirl10 a div:hover,.navGirl11 a div:hover,.navGirl12 a div:hover,.navGirl13 a div:hover,
+.navGirl14 a div:hover,.navGirl15 a div:hover,.navGirl16 a div:hover,.navGirl17 a div:hover,.navGirl18 a div:hover,.navGirl19 a div:hover,
+.navGirl20 a div:hover,.navGirl21 a div:hover,.navGirl22 a div:hover,.navGirl23 a div:hover{
+  border-bottom: 2px solid transparent;
+  animation: underlineNav 2s;
+  -o-animation: underlineNav 2s ;
+  -webkit-animation: underlineNav 2s ;
+}
+
+.navItemMap:hover, .navItemGirls:hover,.navItemBond:hover,.navItemCars:hover, .navGirl1:hover,.navGirl2:hover,.navGirl3:hover,.navGirl4:hover,
+.navGirl5:hover,.navGirl6:hover,.navGirl7:hover,.navGirl8:hover,.navGirl9:hover,.navGirl10:hover,.navGirl11:hover,.navGirl12:hover,.navGirl13:hover,
+.navGirl14:hover,.navGirl15:hover,.navGirl16:hover,.navGirl17:hover,.navGirl18:hover,.navGirl19:hover,.navGirl20:hover,.navGirl21:hover,
+.navGirl22:hover,.navGirl23:hover{
+  animation: scaleNav 2s;
+  -o-animation: scaleNav 2s;
+  -webkit-animation: scaleNav 2s;
+}
+
+/*      NAVIGATIE ITEMS KEYFRAMES    */
+@-webkit-keyframes underlineNav {
+  100% {
+    border-bottom: 2px solid $rood;
+  }
+}
+
+@-o-keyframes underlineNav {
+  100% {
+    border-bottom: 2px solid $rood;
+  }
+}
+
+@keyframes underlineNav {
+  100% {
+    border-bottom: 2px solid $rood;
+  }
+}
+
+@-webkit-keyframes scaleNav {
+  from {background-size: 110%;}
+  to {background-size: 120%;}
+}
+
+@-o-keyframes scaleNav {
+  from {background-size: 110%;}
+  to {background-size: 120%;}
+}
+
+@keyframes scaleNav {
+  from {background-size: 110%;}
+  to {background-size: 120%;}
+}
+
+/*      SCHERM 1 (BONDS)    */
+.bonds, .girls{
+  text-align: center;
+  background-color: $achtergrond;
+}
+//Image en naam
+.bondImage{
+  height: 93vh;
+  z-index: -1;
+
+}
+.bondNames{
+  position: absolute;
+  margin-top: -38em;
+  width: 100%;
+
+  .bondFirstname{
+    font-family: franchise;
+    font-size: 5em;
+    margin-left: -350px;
+    margin-top: 25px;
+    text-shadow: 2px -2px 4px rgba(28, 28, 28, 0.45);
+  }
+  .bondName{
+    font-family: franchise;
+    font-size: 5em;
+    margin-left: 370px;
+    margin-top: -30px;
+    text-shadow: 2px -2px 4px rgba(28, 28, 28, 0.45);
+  }
+  #leftScroll{
+    margin-top: -140px;
+    margin-left: 30px;
+  }
+  #rightScroll{
+    margin-top: -140px;
+    margin-left: 550px;
+  }
+}
+//Bollen
+.dotWie {
+  background: none repeat scroll 0 0 #3c3c3c;
+  border-radius: 9px;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 1);
+  height: 18px;
+  margin: 40% -34%;
+  position: absolute;
+  transition: all 0.8s ease 0.1s;
+  width: 18px;
+  display: inline-block;
+&:hover {
+    width: 10px;
+    height: 10px;
+    margin: 40% -33.8%;
+    background: none repeat scroll 0 0 $rood;
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 1);
+  }
+}
+
+.wie{
+  position: absolute;
+  margin: 37% -36.5%;
+  background-color: transparent;
+  color: black;
+  font-family: Gulim;
+  text-decoration: none;
+  font-size:15px;
+  transition: all 0.8s ease 0.1s;
+ &:hover{
+    color: $rood;
+    text-decoration: none;
+ }
+}
+
+.dotPics {
+  background: none repeat scroll 0 0 #3c3c3c;
+  border-radius: 9px;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 1);
+  height: 18px;
+  margin: 8.5% -43.5%;
+  position: absolute;
+  transition: all 0.8s ease 0.1s;
+  width: 18px;
+  display: inline-block;
+  &:hover {
+    width: 10px;
+    height: 10px;
+    margin: 8.5% -43%;
+    background: none repeat scroll 0 0 $rood;
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 1);
+  }
+}
+
+.pics{
+  position: absolute;
+  margin: 5.5% -45.3%;
+  background-color: transparent;
+  color: black;
+  font-family: Gulim;
+  text-decoration: none;
+  font-size:15px;
+  transition: all 0.8s ease 0.1s;
+  &:hover{
+    color: $rood;
+    text-decoration: none;
+  }
+}
+
+.dotFilms {
+  background: none repeat scroll 0 0 #3c3c3c;
+  border-radius: 9px;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 1);
+  height: 18px;
+  margin: 8.5%;
+  position: absolute;
+  transition: all 0.8s ease 0.1s;
+  width: 18px;
+  display: inline-block;
+  &:hover {
+    width: 10px;
+    height: 10px;
+    margin: 8.5%;
+    background: none repeat scroll 0 0 $rood;
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 1);
+  }
+}
+.films{
+  position: absolute;
+  margin: 7% 8.5%;
+  background-color: transparent;
+  color: black;
+  font-family: Gulim;
+  text-decoration: none;
+  font-size:15px;
+  transition: all 0.8s ease 0.1s;
+  &:hover{
+    color: $rood;
+    text-decoration: none;
+  }
+}
+
+.deckgrid[deckgrid]::before {
+  /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
+  content: '4 .column.column-1-4';
+  font-size: 0; /* See https://github.com/akoenig/angular-deckgrid/issues/14#issuecomment-35728861 */
+  visibility: hidden;
+}
+
+.deckgrid .column {
+  float: left;
+}
+
+.deckgrid .column-1-4 {
+  width: 25%;
+}
+
+.bondfoto{
+  max-width: 100%;
+}
+.banvan.fadein {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  opacity: 1; /* Default value but added for clarity */
+}
+
+#rowbonds{
+margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+}
+
+
+.films{
+  position: absolute;
+  margin: 4.3em 5.5em;
+  background-color: transparent;
+  color: black;
+  font-family: Gulim;
+  text-decoration: none;
+  font-size:15px;
+  transition: all 0.8s ease 0.1s;
+  &:hover{
+    color: $rood;
+    text-decoration: none;
+  }
+}
+ /*nav on top*/
+.bar.bar-stable
+{
+  background-color: $jbblack;
+  -webkit-box-shadow: 0 5px 20px -5px $jbblack;
+  -o-box-shadow: 0 5px 20px -5px $jbblack;
+  box-shadow: 0 5px 20px -5px $jbblack;
+  border-color: $jbblack;
+  background-color: $jbblack;
+   .button
+   {
+     color: transparent;
+     display: none;
+   }
+}
+
+
+td-cards {
+  display: block;
+}
+
+td-card {
+  position: absolute;
+  left: 50%;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  margin-left: -125px;
+  width: 250px;
+  height: 200px;
+
+  border: 1px solid #999;
+
+  border-radius: 6px;
+}
+td-card h1{
+  margin-top: 0px;
+  height: 200px;
+}
+
+td-card .image {
+  position: relative;
+}
+
+td-card img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+.yes-text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 30px;
+  color: rgb(111, 250, 111);
+  opacity: 1;
+}
+.no-text {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: rgb(255, 115, 115);
+  opacity: 1;
+}
+
+
+
+#logo{
+width: 233px;
+  height: 34px;
+  position: absolute;
+  left:41%;
+}
+/*side-menu*/
+.menu {
+  background-color: $jbblack;
+  opacity: .9;
+  -o-box-shadow: 0 5px 20px -5px $jbblack;
+  -webkit-box-shadow: 5px 0px 20px -5px #131211;
+  box-shadow: 5px 0px 20px -5px #131211;
+
+
+}
+#girlnavbacktobond{
+  position: absolute;
+  top: 4px;
+  left:240px;
+  text-decoration: none;
+  > span{
+    font-size: 28px;
+    color: $achtergrond;
+  }
+}
+
+#backbutton{
+  margin-top: 3px;
+  padding-right: 7px;
+  text-decoration: none;
+> span{
+  font-size: 29px;
+  color: $achtergrond;
+}
+}
+
+
+
+#volume{
+  display: block;
+  color: $achtergrond;
+
+}
+
+/*      SCHERM 2 (BONDGIRLS)    */
+
+
+/*      MEDIAQUERIES    */
+
+/*mediaquery vanaf 1200px */
+@media screen and (max-width: 1200px) {
+  #logo{
+    left:37%;
+  }
+
+  //Bollen
+  .dotWie {
+    margin: 68% -46%;
+    &:hover {
+      margin: 68% -45.3%;
+    }
+  }
+  .wie{
+    margin: 64% -50%;
+  }
+
+  .dotPics {
+    margin: 15% -50.5%;
+    &:hover {
+      margin: 15% -49.8%;
+    }
+  }
+  .pics{
+    margin: 11% -53%;
+  }
+
+  .dotFilms {
+    margin: 15% 10%;
+    &:hover {
+      margin: 15% 10.7%;
+    }
+  }
+  .films{
+    margin: 11% 7.7%;
+  }
+}
+
+
+/*950*/
+@media screen and (max-width: 950px) {
+  #logo{
+    left:32%;
+  }
+
+//bondimages
+  .deckgrid[deckgrid]::before {
+    /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
+    content: '3 .column.column-1-3';
+    font-size: 0; /* See https://github.com/akoenig/angular-deckgrid/issues/14#issuecomment-35728861 */
+    visibility: hidden;
+  }
+
+  .deckgrid .column {
+    float: left;
+  }
+
+  .deckgrid .column-1-3 {
+    width: 33.33333%;
+  }
+
+//pijlen
+
+  .bondNames #leftScroll{
+margin-left: 53px;
+  }
+
+
+
+
+
+  // image en naam
+  .bondFirstname{
+    display:none;
+  }
+  .bondName{
+    display:none;
+  }
+  .scrollBonds{
+    margin-top: 17em;
+    margin-left: -12em;
+    width: 100%;
+  }
+  //Bollen
+  .dotFilms {
+    margin: 19% 3%;
+    &:hover {
+      margin: 19% 3.7%;
+    }
+  }
+  .films{
+    margin: 13% 0%;
+  }
+
+  .dotPics {
+    margin: 19% -56%;
+    &:hover {
+      margin: 19% -55.3%;
+    }
+  }
+  .pics{
+    margin: 13% -60%;
+  }
+
+  .dotWie {
+    margin: 92% -60%;
+    &:hover {
+      margin: 92% -59.3%;
+    }
+  }
+  .wie{
+    margin: 86% -65%;
+  }
+}
+
+/*mediaquery vanaf 768px */
+@media screen and (max-width: 768px) {
+  #logo{
+    left:33%;
+  }
+  .bar.bar-stable .button
+  {
+    color: $achtergrond;
+    display: block;
+  }
+  //Image en naam
+  .scrollBonds{
+    margin-top: 17em;
+    margin-left: -3em;
+    width: 100%;
+  }
+
+  //Bollen
+  .dotWie {
+    margin: 71% -49%;
+    &:hover {
+      margin: 71% -48.3%;
+    }
+  }
+  .wie{
+    margin: 66% -53%;
+  }
+
+  .dotPics {
+    margin: 15% -50%;
+    &:hover {
+      margin: 15% -49.3%;
+    }
+  }
+  .pics{
+    margin: 10% -53%;
+  }
+
+  .dotFilms {
+    margin: 15% 7%;
+    &:hover {
+      margin: 15% 7.7%;
+    }
+  }
+  .films{
+    margin: 10% 5%;
+  }
+}
+
+@media screen and (max-width:620px) {
+  //pijlen
+
+  .bondNames #leftScroll{
+    margin-left:13px;
+    left:-194px;
+  }
+}
+
+
+/*644*/
+@media screen and (max-width: 500px) {
+  #logo{
+    left:26%;
+  }
+  //image en naam
+  .scrollBonds {
+    width: 100%;
+    margin-left: -13em;
+  }
+  .bondNames #leftScroll{
+    margin-left:13px;
+    left:19px;
+  }
+//bondimages
+
+  .deckgrid[deckgrid]::before {
+    /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
+    content: '2 .column.column-1-2';
+    font-size: 0; /* See https://github.com/akoenig/angular-deckgrid/issues/14#issuecomment-35728861 */
+    visibility: hidden;
+  }
+
+  .deckgrid .column {
+    float: left;
+  }
+
+  .deckgrid .column-1-2 {
+    width: 49%;
+  }
+
+
+
+
+
+  //Bollen
+  .dotWie {
+    margin: 105% -5%;
+    &:hover {
+      margin: 105% -4.3%;
+    }
+  }
+
+  .wie{
+    margin: 97% -12%;
+    color: $rood;
+  }
+
+  .dotPics {
+    margin: 23% -67%;
+    &:hover {
+      margin: 23% -66.3%;
+    }
+  }
+
+  .pics{
+    margin: 15% -71.5%;
+    color: $rood;
+  }
+
+  .dotFilms {
+    margin: 23% -5%;
+    &:hover {
+      margin: 23% -4.3%;
+    }
+  }
+
+  .films{
+    margin: 15% -9%;
+    color: $rood;
+  }
+}
+
+//mediaquery 330px
+@media screen and (max-width: 500px) {
+  .bondNames #leftScroll{
+    margin-left:13px;
+    left:70px;
+  }
+  .bondNames #rightScroll{
+    margin-left:13px;
+    left:279px;
+  }
+}
