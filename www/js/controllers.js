@@ -568,7 +568,6 @@ console.log(data);
 $scope.lastgirl=document.getElementsByClassName("td-cards")[0].lastChild;
 
 
-
 $timeout(function()
 {
 
@@ -584,7 +583,8 @@ $timeout(function()
         console.log(getid[1]);
         $scope.cardSwipedLeft(getid[1]);
 
-
+        var no = document.getElementById("triggerNo");
+        no.style.backgroundColor = "red";
     };
 
     $scope.addthecard = function() {
@@ -595,7 +595,8 @@ $timeout(function()
         console.log(getid[1]);
         $scope.cardSwipedRight(getid[1]);
 
-
+        var yes = document.getElementById("triggerYes");
+        yes.style.backgroundColor = "green";
     };
 
     $scope.cardSwipedLeft = function(index) {
@@ -680,9 +681,6 @@ $timeout(function()
                 $scope.cards.push(angular.extend({}, newCard));
             }
         }
-
-
-
     })
 
 

@@ -6,6 +6,7 @@
 
         <img id="logo" class="Responsive image"  src="img/logo_james_bond_site_logo_white.png"/>
     </ion-nav-buttons>
+    <div class="girl">
     <ion-content class="has-header">
         <div ng-show="loading" style="width: 60px; margin-right: auto; margin-left: auto; padding-top: 150px;"><span class="ion-loading-a" style="font-size: 130px;"></span></div>
         <div class="girls" >
@@ -18,9 +19,7 @@
                       <!--  <div class="yes-text" ng-style="leftTextOpacity" ng-click="addCard()">LIKE</div>-->
 
                         <img ng-src="{{card.profile_path}}">
-
-
-                      <!--  <div class="no-text" ng-style="rightTextOpacity" ng-click="cardDestroyed()">NOPE</div>-->
+                        <!--  <div class="no-text" ng-style="rightTextOpacity" ng-click="cardDestroyed()">NOPE</div>-->
                     </div>
                     <h1 style="background-color: white;">{{card.name}}</h1>
 
@@ -28,14 +27,15 @@
             </td-cards>
             <div id="control"  ng-controller="CardCtrl">
                 <div class="button no"  ng-click="destroythecard()">
-                    <a href="#" class="trigger" ></a>
+                    <a href="#" class="trigger" id="triggerNo"></a>
                 </div>
 
                 <div class="button yes" ng-click="addthecard()">
-                    <a href="#" class="trigger" ></a>
+                    <a href="#" class="trigger" id="triggerYes"></a>
                 </div>
         </div>
             </div>
 
     </ion-content>
+    </div>
 </ion-view>

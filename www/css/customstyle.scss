@@ -199,29 +199,9 @@ $distance: 400px;
       color: #3b7;
     }
   }
-
-  .info {
- 
-    top: 17px;
-    left: 103px;
-    height: 52px;
-    width: 46px;
-    .trigger {
-      width: 35px;
-      height: 35px;
-      &:before {
-        content: "\f05a";
-        font-size: 16px;
-        color: #3498db;
-      }
-    }
-  }
 }
 
-
 //girltinder
-
-
 
 
 
@@ -869,6 +849,26 @@ margin-top: 30px;
     text-decoration: none;
   }
 }
+
+.bond{
+  background-image: url(../img/bondWallpaper.jpg);
+  background-size: cover;
+  height:100%;
+}
+
+.girl{
+  background-image: url(../img/bondgirlWallpaper.jpg);
+  background-size: cover;
+  height:100%;
+}
+
+.cardImg{
+  margin-top: 1.8%;
+}
+
+.card{
+  opacity: 0.85;
+}
  /*nav on top*/
 .bar.bar-stable
 {
@@ -905,15 +905,22 @@ td-card {
 }
 td-card h1{
   margin-top: 0px;
-  height: 200px;
+  height: 92px;
+  font-family: Gulim;
+  font-size: 30px;
+  padding-top: 10px;
+  background-color: black;
+  width: 120%;
+  margin-left: -9%;
 }
 
 td-card .image {
   position: relative;
+  width: 120%;
+  margin-left: -9%;
 }
 
 td-card img {
-  max-width: 100%;
   border-radius: 6px;
 }
 
@@ -1243,4 +1250,5 @@ margin-left: 53px;
     margin-left:13px;
     left:279px;
   }
+
 }
