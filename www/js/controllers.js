@@ -728,6 +728,10 @@ if(kk) {
 
 
     })
+    .controller('CarsCtrl', function($scope, $stateParams) {
+console.log("kkkkk");
+
+    })
 
 
 
