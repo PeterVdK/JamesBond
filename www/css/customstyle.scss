@@ -73,137 +73,6 @@ $jbblack:#131211;
     }
   }
 }
- //girltinder
-@import url(http://weloveiconfonts.com/api/?family=fontawesome);
-
-[class*="fontawesome-"]:before {
-  font-family: 'FontAwesome', sans-serif;
-}
-
-$bg: #eee;
-$phoneDetails: #d3d3d3;
-$phoneColor: #dfdfdf;
-$phoneWidth: 320px;
-$phoneHeight: 560px;
-
-
-
-a {
-  text-decoration: none;
-  color: #333;
-}
-
-$distance: 400px;
-
-@keyframes yes {
-  0% {
-    transform: scale(1) rotateZ(0deg);
-    left: 0;
-  }
-  30% {
-    transform: scale(1.05) rotateZ(0deg);
-    left: 0;
-  }
-  100% {
-    transform: rotateZ(45deg);
-    left: $distance;
-  }
-}
-
-.animateYes {
-  animation-fill-mode: both;
-  animation: yes 0.6s linear;
-  &:before {
-    transform: rotateZ(-35deg);
-    background: url(http://i.imgur.com/Zkwj970.png) no-repeat center 10px;
-  }
-}
-
-@keyframes no {
-  0% {
-    transform: rotateZ(360deg);
-    right: 0;
-  }
-  30% {
-    transform: scale(1.05) rotateZ(360deg);
-    right: 0;
-  }
-  100% {
-    transform: rotateZ(315deg);
-    right: $distance;
-  }
-}
-
-.animateNo {
-  animation-fill-mode: both;
-  animation: no 0.6s linear;
-  &:before {
-    transform: rotateZ(35deg);
-    background: url(http://i.imgur.com/XqQZ4KR.png) no-repeat center 10px;
-  }
-}
-
-#control {
-  position: relative;
-  margin: 15px auto 0;
-  width: 250px;
-  .button {
-    width: 65px;
-    height: 65px;
-    background: #eee;
-    position: absolute;
-    top: 5px;
-    border-radius: 50%;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-    .trigger {
-      background: white;
-      display: block;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      margin: 0 -5px;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      transition: all .1s;
-      text-align: center;
-      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-      &:active {
-        transform: translateY(-50%) scale(0.75);
-        transition: all .05s linear;
-      }
-      &:before {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateY(-50%) translateX(-50%);
-        font-family: 'FontAwesome';
-      }
-    }
-  }
-
-  .no {
-    left: 38px;
-    .trigger:before {
-      content: "\f00d";
-      font-size: 28px;
-      color: #c33;
-    }
-  }
-
-  .yes {
-    right: 30px;
-    .trigger:before {
-      content: "\f004";
-      font-size: 22px;
-      color: #3b7;
-    }
-  }
-}
-
-//girltinder
-
-
 
 .navGirl1,.navGirl2,.navGirl3,.navGirl4,.navGirl5,.navGirl6,.navGirl7,.navGirl8,.navGirl9,.navGirl10,.navGirl11,.navGirl12,.navGirl13,
 .navGirl14,.navGirl15,.navGirl16,.navGirl17,.navGirl18,.navGirl19,.navGirl20,.navGirl21,.navGirl22,.navGirl23{
@@ -661,7 +530,7 @@ $distance: 400px;
 }
 
 /*      SCHERM 1 (BONDS)    */
-.bonds, .girls{
+.bonds{
   text-align: center;
   background-color: $achtergrond;
 }
@@ -834,7 +703,6 @@ margin-top: 30px;
   width: 95%;
 }
 
-
 .films{
   position: absolute;
   margin: 4.3em 5.5em;
@@ -856,18 +724,27 @@ margin-top: 30px;
   height:100%;
 }
 
-.girl{
-  background-image: url(../img/bondgirlWallpaper.jpg);
-  background-size: cover;
-  height:100%;
-}
-
-.cardImg{
-  margin-top: 1.8%;
+.item-image{
+  width: 271px;
+  height: 370px;
 }
 
 .card{
   opacity: 0.85;
+}
+.item-body img{
+  position: relative;
+  height: 230px;
+  width: 150px;
+  padding-bottom: 10px;
+}
+.biografie{
+  vertical-align: top;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+.bondfoto {
+  height: 100%;
 }
  /*nav on top*/
 .bar.bar-stable
@@ -989,6 +866,248 @@ width: 233px;
 }
 
 /*      SCHERM 2 (BONDGIRLS)    */
+.girl{
+  background-image: url(../img/bondgirlWallpaper.jpg);
+  background-size: cover;
+  height:100%;
+}
+
+//girltinder
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+#girls, .girlCard {
+  width: 250px;
+  height: 380px;
+}
+
+#girls {
+  position: relative;
+  margin: 0 auto;
+}
+
+.girlCard {
+  position: absolute;
+  background-color: transparent;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: all .1s linear;
+  margin-top: 20%;
+  &:nth-child(1){
+    z-index: 5;
+    //animation: no 0.6s infinite;
+  }
+  &:nth-child(2){
+    z-index: 4;
+    top: 7px;
+    transform: scale(0.98);
+  }
+  &:nth-child(3){
+    z-index: 3;
+    top: 14px;
+    transform: scale(0.96);
+  }
+  &:nth-child(n+4){
+    z-index: 2;
+    transform: scale(0.7);
+  }
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    content: '';
+  }
+}
+
+.girlCard img {
+  width: 100%;
+}
+
+.girlCard span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: white;
+  width: 100%;
+  padding: 10px;
+  font: 24px "Gulim";
+  text-align:center;
+  line-height: 30px;
+  color: #555;
+}
+
+$distance: 400px;
+
+@keyframes yes {
+  0% {
+    transform: scale(1) rotateZ(0deg);
+    left: 0;
+  }
+  30% {
+    transform: scale(1.05) rotateZ(0deg);
+    left: 0;
+  }
+  100% {
+    transform: rotateZ(45deg);
+    left: $distance;
+  }
+}
+
+.animateYes {
+  animation-fill-mode: both;
+  animation: yes 0.6s linear;
+  &:before {
+    transform: rotateZ(-35deg);
+    background: url(http://i.imgur.com/Zkwj970.png) no-repeat center 10px;
+  }
+}
+
+@keyframes no {
+  0% {
+    transform: rotateZ(360deg);
+    right: 0;
+  }
+  30% {
+    transform: scale(1.05) rotateZ(360deg);
+    right: 0;
+  }
+  100% {
+    transform: rotateZ(315deg);
+    right: $distance;
+  }
+}
+
+.animateNo {
+  animation-fill-mode: both;
+  animation: no 0.6s linear;
+  &:before {
+    transform: rotateZ(35deg);
+    background: url(http://i.imgur.com/XqQZ4KR.png) no-repeat center 10px;
+  }
+}
+
+#control {
+  position: relative;
+  margin: 70px auto 0;
+  width: 250px;
+  .button {
+    width: 65px;
+    height: 65px;
+    background: #eee;
+    position: absolute;
+    top: 5px;
+    border-radius: 50%;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    .trigger {
+      background: white;
+      display: block;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      margin: 0 -5px;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all .1s;
+      text-align: center;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+      &:active {
+        transform: translateY(-50%) scale(0.75);
+        transition: all .05s linear;
+      }
+      &:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        font-family: 'FontAwesome';
+      }
+    }
+  }
+
+  .no {
+    left: 38px;
+    .trigger:before {
+      content: "\f00d";
+      font-size: 28px;
+      color: #c33;
+    }
+  }
+
+  .yes {
+    right: 30px;
+    .trigger:before {
+      content: "\f004";
+      font-size: 22px;
+      color: #3b7;
+    }
+  }
+}
+
+/*      SCHERM 4 (MAP)  */
+.mapList{
+  margin-top: 10px;
+}
+.mapList div{
+  position: relative;
+  margin: auto;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.checkbox,.checkbox2,.checkbox3,.checkbox4,.checkbox5,.checkbox6 {display: none;}
+.label,.label2,.label3,.label4,.label5,.label6 {
+  font-family: Helvetica, Arial;
+  padding: .25em 0 0 0;
+  display: block;
+  color: #999;
+  text-transform: uppercase;
+  font-size: .8em;
+  text-align: center;
+  line-height: 2.2;
+  text-indent: .5em;
+}
+.label::after,.label2::after,.label3::after,.label4::after,.label5::after,.label6::after  {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2.5em;
+  border: 3px solid #999;
+  border-radius: .4em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: box-border;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+
+/*state change*/
+.checkbox:checked + .label, .checkbox2:checked + .label2, .checkbox3:checked + .label3, .checkbox4:checked + .label4
+, .checkbox5:checked + .label5, .checkbox6:checked + .label6{
+  color: rgba(20,185,20,1);
+}
+.checkbox:checked + .label::after, .checkbox2:checked + .label2::after, .checkbox3:checked + .label3::after
+, .checkbox4:checked + .label4::after, .checkbox5:checked + .label5::after, .checkbox6:checked + .label6::after{
+  background: rgba(55,185,55,.2);
+  border: 3px solid rgba(100,185,100,.8);
+}
+
 
 
 /*      MEDIAQUERIES    */
@@ -1199,9 +1318,6 @@ margin-left: 53px;
   }
 
 
-
-
-
   //Bollen
   .dotWie {
     margin: 105% -5%;
@@ -1212,7 +1328,6 @@ margin-left: 53px;
 
   .wie{
     margin: 97% -12%;
-    color: $rood;
   }
 
   .dotPics {
@@ -1224,7 +1339,6 @@ margin-left: 53px;
 
   .pics{
     margin: 15% -71.5%;
-    color: $rood;
   }
 
   .dotFilms {
@@ -1236,7 +1350,6 @@ margin-left: 53px;
 
   .films{
     margin: 15% -9%;
-    color: $rood;
   }
 }
 

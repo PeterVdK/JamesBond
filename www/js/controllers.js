@@ -562,7 +562,10 @@ console.log(data);
 
 
 //card controller is een controller in de bondgirlctrl om aan de kaarten te kunnen
+
+
     .controller('CardCtrl', function($scope, TDCardDelegate,$timeout) {
+        /*
         console.log("k");
 
 $scope.lastgirl=document.getElementsByClassName("td-cards")[0].lastChild;
@@ -616,7 +619,7 @@ $timeout(function()
 
 
 
-
+*/
     })
 
 
@@ -651,6 +654,7 @@ $timeout(function()
 
 
         }
+
         function girls(){
             cardTypes=$scope.cardTypes;
             console.log(cardTypes);
@@ -658,6 +662,7 @@ $timeout(function()
 
             $scope.cards = Array.prototype.slice.call(cardTypes, 0);
 
+            /*
             $scope.cardDestroyed = function(index) {
                 $scope.degirlid=index;
                 $scope.cards.splice(index, 1);
@@ -680,6 +685,54 @@ $timeout(function()
                 $scope.cards.push(angular.extend({},saveCard));
                 $scope.cards.push(angular.extend({}, newCard));
             }
+            */
+
+
+            var animationEndEvent = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
+
+            var Girl = {
+                wrap: $('#girls'),
+                girls: $scope.cards,
+                add: function(){
+                    var random = this.girls[Math.floor(Math.random() * this.girls.length)];
+                    this.wrap.append("<div class='girlCard'><img alt='" + random.name + "' src='" + random.profile_path + "' /><span>" + random.name + "</span></div>");
+                }
+            }
+
+            var App = {
+                yesButton: $('.button.yes .trigger'),
+                noButton: $('.button.no .trigger'),
+                blocked: false,
+                like: function(liked){
+                    var animate = liked ? 'animateYes' : 'animateNo';
+                    var self = this;
+                    if(!this.blocked){
+                        this.blocked = true;
+                        $('.girlCard').eq(0).addClass(animate).one(animationEndEvent, function(){
+                            $(this).remove();
+                            Girl.add();
+                            self.blocked = false;
+                        });
+                    }
+                }
+            };
+
+            App.yesButton.on('mousedown', function(){
+                App.like(true);
+                console.log("yesbutton");
+            });
+
+            App.noButton.on('mousedown', function(){
+                App.like(false);
+                console.log("nobutton");
+            });
+
+            $(document).ready(function(){
+                Girl.add();
+                Girl.add();
+                Girl.add();
+                Girl.add();
+            })
         }
     })
 
