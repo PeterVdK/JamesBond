@@ -7,20 +7,10 @@
 
 
 
-
+<div class="girl">
     <div class="row " id="rowbonds">
 
-
-        <div class="card " style="width: 2200px;">
-            <div class="item item-image">
-
-                <img  ng-src="http://image.tmdb.org/t/p/w500/{{allgirlinfo.profileimage}}">
-            </div>
-        </div>
-
-        <ion-scroll zooming="false" direction="y" style="width: auto; height: 600px" >
-
-            <div class="card ">
+            <div class="card">
 
                 <div class="item">
 
@@ -29,35 +19,25 @@
                     <p>{{allgirlinfo.birthday}}</p>
                     <p>{{allgirlinfo.place_of_birth}}</p>
                 </div>
+            <ion-scroll zooming="false" direction="y" style="width: auto; height: 350px" >
 
-                <div class="item item-body">
-
-                    <p>
-                        {{ allgirlinfo.biografie  }}
-                    </p>
-                    <!-- <p>
-                         <a href="#" class="subdued">1 Like</a>
-                         <a href="#" class="subdued">5 Comments</a>
-                     </p>-->
-                </div>
-
-                <div class="item tabs tabs-secondary tabs-icon-left">
-                    <a class="tab-item" href="#">
-                        <i class="icon ion-thumbsup"></i>
-                        Like
-                    </a>
-                    <a class="tab-item" href="#">
-                        <i class="icon ion-chatbox"></i>
-                        Comment
-                    </a>
-                    <a class="tab-item" href="#">
-                        <i class="icon ion-share"></i>
-                        Share
-                    </a>
-                </div>
+                <table class="item item-body item-table">
+                    <tr>
+                        <td>
+                            <img  ng-src="http://image.tmdb.org/t/p/w500/{{allgirlinfo.profileimage}}">
+                            <div class="item tabs tabs-secondary tabs-icon-left">
+                                <a class="tab-item" href="http://www.imdb.com">
+                                    <img src="img/IMDb.png" style="height:52px;padding:0" />
+                                </a>
+                            </div>
+                        </td>
+                        <td class="biografie"><div>{{ allgirlinfo.biografie  }}</div></td>
+                    </tr>
+                </table>
+            </ion-scroll>
 
             </div>
-        </ion-scroll>
     </div>
+</div>
 
 </ion-view>

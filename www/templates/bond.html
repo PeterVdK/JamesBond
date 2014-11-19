@@ -7,57 +7,37 @@
 
 
 
+<div class="bond">
 
     <div class="row " id="rowbonds">
 
+            <div class="card">
 
-                <div class="card " style="width: 2200px;">
-                    <div class="item item-image">
+                <div class="item">
 
-                <img  ng-src="http://image.tmdb.org/t/p/w500/{{bonds.profileimage}}">
-                    </div>
+                    <h2>{{bonds.name}}</h2>
+
+                    <p>{{bonds.birthday}}</p>
+                    <p>{{bonds.place_of_birth}}</p>
                 </div>
-
-        <ion-scroll zooming="false" direction="y" style="width: auto; height: 600px" >
-
-                        <div class="card ">
-
-                            <div class="item">
-
-                                <h2>{{bonds.name}}</h2>
-
-                                <p>{{bonds.birthday}}</p>
-                                <p>{{bonds.place_of_birth}}</p>
-                            </div>
-
-                            <div class="item item-body">
-
-                                <p>
-                                    {{ bonds.biografie  }}
-                                </p>
-                               <!-- <p>
-                                    <a href="#" class="subdued">1 Like</a>
-                                    <a href="#" class="subdued">5 Comments</a>
-                                </p>-->
-                            </div>
-
-                            <div class="item tabs tabs-secondary tabs-icon-left">
-                                <a class="tab-item" href="#">
-                                    <i class="icon ion-thumbsup"></i>
-                                    Like
-                                </a>
-                                <a class="tab-item" href="#">
-                                    <i class="icon ion-chatbox"></i>
-                                    Comment
-                                </a>
-                                <a class="tab-item" href="#">
-                                    <i class="icon ion-share"></i>
-                                    Share
-                                </a>
-                            </div>
-
-                        </div>
-        </ion-scroll>
+                <ion-scroll zooming="false" direction="y" style="width: auto; height: 350px" >
+                    <table class="item item-body item-table">
+                        <tr>
+                            <td>
+                                <img ng-src="http://image.tmdb.org/t/p/w500/{{bonds.profileimage}}">
+                                <div class="item tabs tabs-secondary tabs-icon-left">
+                                    <a class="tab-item" href="http://www.imdb.com">
+                                        <img src="img/IMDb.png" style="height:52px;padding:0" />
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="biografie">{{ bonds.biografie  }}</td>
+                        </tr>
+                    </table>
+                </ion-scroll>
+            </div>
     </div>
+</div>
 
-    </ion-view>
+
+</ion-view>
