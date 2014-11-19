@@ -949,28 +949,53 @@ a {
   color: #555;
 }
 
-$distance: 400px;
+$distance: 600px;
 
 @keyframes yes {
   0% {
     transform: scale(1) rotateZ(0deg);
+    -webkit-transform:scale(1) rotateZ(0deg);
     left: 0;
   }
   30% {
     transform: scale(1.05) rotateZ(0deg);
+    -webkit-transform: scale(1.05) rotateZ(0deg);
     left: 0;
   }
   100% {
     transform: rotateZ(45deg);
+    -webkit-transform:rotateZ(45deg);
+    left: $distance;
+  }
+}
+@-webkit-keyframes  yes {
+  0% {
+    transform: scale(1) rotateZ(0deg);
+    -webkit-transform:scale(1) rotateZ(0deg);
+    left: 0;
+  }
+  30% {
+    transform: scale(1.05) rotateZ(0deg);
+    -webkit-transform: scale(1.05) rotateZ(0deg);
+    left: 0;
+  }
+  100% {
+    transform: rotateZ(45deg);
+    -webkit-transform:rotateZ(45deg);
     left: $distance;
   }
 }
 
 .animateYes {
+  -webkit-animation-fill-mode: both;
+  -webkit-animation:yes 0.6s linear;
+
   animation-fill-mode: both;
   animation: yes 0.6s linear;
+
   &:before {
     transform: rotateZ(-35deg);
+    -webkit-transform:rotateZ(-35deg);
     background: url(http://i.imgur.com/Zkwj970.png) no-repeat center 10px;
   }
 }
@@ -978,23 +1003,48 @@ $distance: 400px;
 @keyframes no {
   0% {
     transform: rotateZ(360deg);
+    -webkit-transform:rotateZ(360deg);
     right: 0;
   }
   30% {
     transform: scale(1.05) rotateZ(360deg);
+    -webkit-transform:scale(1.05) rotateZ(360deg);
     right: 0;
   }
   100% {
     transform: rotateZ(315deg);
+    -webkit-transform:rotateZ(315deg);
+    right: $distance;
+  }
+}
+@-webkit-keyframes no {
+  0% {
+    transform: rotateZ(360deg);
+    -webkit-transform:rotateZ(360deg);
+    right: 0;
+  }
+  30% {
+    transform: scale(1.05) rotateZ(360deg);
+    -webkit-transform:scale(1.05) rotateZ(360deg);
+    right: 0;
+  }
+  100% {
+    transform: rotateZ(315deg);
+    -webkit-transform:rotateZ(315deg);
     right: $distance;
   }
 }
 
 .animateNo {
+  -webkit-animation-fill-mode: both;
+  -webkit-animation:no 0.6s linear;
+
   animation-fill-mode: both;
   animation: no 0.6s linear;
+
   &:before {
     transform: rotateZ(35deg);
+    -webkit-transform:rotateZ(35deg);
     background: url(http://i.imgur.com/XqQZ4KR.png) no-repeat center 10px;
   }
 }
