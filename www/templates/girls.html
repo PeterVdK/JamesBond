@@ -10,12 +10,12 @@
     <ion-content class="has-header">
 
 
-            <td-cards>
-                <!--<td-card  ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe-left="cardSwipedLeft($index)"
-                         on-swipe-right="cardSwipedRight($index)" on-partial-swipe="cardPartialSwipe(amt)" class="card-{{$index}}" ng-controller="CardCtrl">
+        <!-- <td-cards>
+            <!-card  ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe-left="cardSwipedLeft($index)"
+                     on-swipe-right="cardSwipedRight($index)" on-partial-swipe="cardPartialSwipe(amt)" class="card-{{$index}}" ng-controller="CardCtrl">
 
-                    <!--<div class="image">
-                      <!--  <div class="yes-text" ng-style="leftTextOpacity" ng-click="addCard()">LIKE</div>-->
+                <!--<div class="image">
+                  <!--  <div class="yes-text" ng-style="leftTextOpacity" ng-click="addCard()">LIKE</div>-->
 
                         <!--<img ng-src="{{card.profile_path}}">
                         <!--  <div class="no-text" ng-style="rightTextOpacity" ng-click="cardDestroyed()">NOPE</div>-->
@@ -23,18 +23,22 @@
                     <h1 style="background-color: white;">{{card.name}}</h1>
 
                 </td-card>
-                -->
-            </td-cards>
+
+            </td-cards> -->
 
             <div id="girls"></div>
             <div id="control"  ng-controller="BondgirlsCtrl">
-                <div class="button no">
+                <div class="button no" ng-click="nofunc()">
                     <a href="#" class="trigger"></a>
                 </div>
 
-                <div class="button yes">
+                <div class="button yes"  ng-click="yesfunc()">
                     <a href="#" class="trigger"></a>
                 </div>
+                <div ng-repeat="n in naam track by $index"  >
+                    <span>{{n}}</span>
+                </div>
+
             </div>
 
     </ion-content>

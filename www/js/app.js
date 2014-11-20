@@ -118,6 +118,15 @@ console.log(elem);
               }
           }
       })
+      .state('app.cars', {
+          url: "/cars",
+          views: {
+              'menuContent' :{
+                  templateUrl: "templates/cars.html",
+                  controller: 'CarsCtrl'
+              }
+          }
+      })
 
     .state('girls', {
         url: "/girls",

@@ -76,7 +76,21 @@ angular.module('starter.service', [])
             return deferred.promise;
         }
 
-    });
+    })
+
+.service('carsservice', function ($http, $q) {
+    this.getcars = function () {
+        var deferred = $q.defer();
+
+        $http.get('').success(function (data) {
+            deferred.resolve(data);
+
+        });
+
+        return deferred.promise;
+    }
+
+});
 
 
 

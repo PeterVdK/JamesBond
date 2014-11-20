@@ -689,13 +689,17 @@ $timeout(function()
 
 
             var animationEndEvent = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
-
+            var d, n,leeftijd,
+             d = new Date();
+            n= d.getFullYear();
             var Girl = {
                 wrap: $('#girls'),
                 girls: $scope.cards,
                 add: function(){
+
                     var random = this.girls[Math.floor(Math.random() * this.girls.length)];
-                    this.wrap.append("<div class='girlCard'><img alt='" + random.name + "' src='" + random.profile_path + "' /><span>" + random.name + "</span></div>");
+                    leeftijd=n-random.birthday.substring(0,4);
+                    this.wrap.append("<div class='girlCard'><img alt='" + random.name + "' src='" + random.profile_path + "' /><span>" + random.name +" , " +leeftijd  + "</span></div>");
                 }
             }
 
@@ -708,24 +712,41 @@ $timeout(function()
                     var self = this;
                     if(!this.blocked){
                         this.blocked = true;
+                        var getgirl=document.getElementsByClassName("girlCard")[0];
                         $('.girlCard').eq(0).addClass(animate).one(animationEndEvent, function(){
+                           console.log("kkkk");
                             $(this).remove();
+
                             Girl.add();
                             self.blocked = false;
                         });
                     }
                 }
             };
+            $scope.naam=[];
+        var getgirlsss,getfirstgril,thegirlname;
 
-            App.yesButton.on('mousedown', function(){
+            $scope.yesfunc=function(){
                 App.like(true);
-                console.log("yesbutton");
-            });
+                getgirlsss =document.getElementById("girls");
+                getfirstgril =getgirlsss.firstChild;
 
-            App.noButton.on('mousedown', function(){
+                thegirlname=getfirstgril.children[1].innerHTML;
+                console.log(thegirlname.split(" , ")[0]);
+                pushtoarray(thegirlname.split(" , ")[0]);
+
+                console.log(Girl);
+                console.log("yesbutton");
+            };
+            $scope.nofunc=function(){
                 App.like(false);
                 console.log("nobutton");
-            });
+            };
+
+            function pushtoarray(denaamvandegirl){
+                $scope.naam.push(denaamvandegirl);
+                console.log($scope.naam);
+            }
 
             $(document).ready(function(){
                 Girl.add();
@@ -733,6 +754,7 @@ $timeout(function()
                 Girl.add();
                 Girl.add();
             })
+
         }
     })
 
@@ -777,6 +799,10 @@ if(kk) {
 
         L.marker([39.905687,-75.166955], {icon: mapIcon}).addTo(map).bindPopup('Baseball!!').openPopup();
 
+
+    })
+    .controller('CarsCtrl', function($scope, $stateParams) {
+console.log("kkkkk");
 
     })
 
