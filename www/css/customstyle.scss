@@ -471,8 +471,9 @@ $jbblack:#131211;
 }
 
 
-
-
+.navItemBond a div{
+  border-bottom: 2px solid $rood;
+}
 
 /*      NAVIGATIE ITEMS HOVER    */
 .navItemBond a div:hover, .navItemGirls a div:hover, .navItemCars a div:hover, .navItemMap a div:hover,.navGirl1 a div:hover,
@@ -481,18 +482,18 @@ $jbblack:#131211;
 .navGirl14 a div:hover,.navGirl15 a div:hover,.navGirl16 a div:hover,.navGirl17 a div:hover,.navGirl18 a div:hover,.navGirl19 a div:hover,
 .navGirl20 a div:hover,.navGirl21 a div:hover,.navGirl22 a div:hover,.navGirl23 a div:hover{
   border-bottom: 2px solid transparent;
-  animation: underlineNav 2s;
-  -o-animation: underlineNav 2s ;
-  -webkit-animation: underlineNav 2s ;
+  animation: underlineNav 2s forwards;
+  -o-animation: underlineNav 2s forwards;
+  -webkit-animation: underlineNav 2s forwards;
 }
 
 .navItemMap:hover, .navItemGirls:hover,.navItemBond:hover,.navItemCars:hover, .navGirl1:hover,.navGirl2:hover,.navGirl3:hover,.navGirl4:hover,
 .navGirl5:hover,.navGirl6:hover,.navGirl7:hover,.navGirl8:hover,.navGirl9:hover,.navGirl10:hover,.navGirl11:hover,.navGirl12:hover,.navGirl13:hover,
 .navGirl14:hover,.navGirl15:hover,.navGirl16:hover,.navGirl17:hover,.navGirl18:hover,.navGirl19:hover,.navGirl20:hover,.navGirl21:hover,
 .navGirl22:hover,.navGirl23:hover{
-  animation: scaleNav 2s;
-  -o-animation: scaleNav 2s;
-
+  animation: scaleNav 2s forwards;
+  -o-animation: scaleNav 2s forwards;
+  -webkit-animation: scaleNav 2s forwards;
 }
 
 /*      NAVIGATIE ITEMS KEYFRAMES    */
@@ -722,11 +723,6 @@ margin-top: 30px;
   background-image: url(../img/bondWallpaper.jpg);
   background-size: cover;
   height:100%;
-}
-
-.item-image{
-  width: 271px;
-  height: 370px;
 }
 
 .card{

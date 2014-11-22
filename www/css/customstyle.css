@@ -382,6 +382,9 @@
 #map25 {
   padding-right: 50px; }
 
+.navItemBond a div {
+  border-bottom: 2px solid #b10a0a; }
+
 /*      NAVIGATIE ITEMS HOVER    */
 .navItemBond a div:hover, .navItemGirls a div:hover, .navItemCars a div:hover, .navItemMap a div:hover, .navGirl1 a div:hover,
 .navGirl2 a div:hover, .navGirl3 a div:hover, .navGirl4 a div:hover, .navGirl5 a div:hover, .navGirl6 a div:hover, .navGirl7 a div:hover,
@@ -389,17 +392,17 @@
 .navGirl14 a div:hover, .navGirl15 a div:hover, .navGirl16 a div:hover, .navGirl17 a div:hover, .navGirl18 a div:hover, .navGirl19 a div:hover,
 .navGirl20 a div:hover, .navGirl21 a div:hover, .navGirl22 a div:hover, .navGirl23 a div:hover {
   border-bottom: 2px solid transparent;
-  animation: underlineNav 2s;
-  -o-animation: underlineNav 2s;
-  -webkit-animation: underlineNav 2s; }
+  animation: underlineNav 2s forwards;
+  -o-animation: underlineNav 2s forwards;
+  -webkit-animation: underlineNav 2s forwards; }
 
 .navItemMap:hover, .navItemGirls:hover, .navItemBond:hover, .navItemCars:hover, .navGirl1:hover, .navGirl2:hover, .navGirl3:hover, .navGirl4:hover,
 .navGirl5:hover, .navGirl6:hover, .navGirl7:hover, .navGirl8:hover, .navGirl9:hover, .navGirl10:hover, .navGirl11:hover, .navGirl12:hover, .navGirl13:hover,
 .navGirl14:hover, .navGirl15:hover, .navGirl16:hover, .navGirl17:hover, .navGirl18:hover, .navGirl19:hover, .navGirl20:hover, .navGirl21:hover,
 .navGirl22:hover, .navGirl23:hover {
-  animation: scaleNav 2s;
-  -o-animation: scaleNav 2s;
-  -webkit-animation: scaleNav 2s; }
+  animation: scaleNav 2s forwards;
+  -o-animation: scaleNav 2s forwards;
+  -webkit-animation: scaleNav 2s forwards; }
 
 /*      NAVIGATIE ITEMS KEYFRAMES    */
 @-webkit-keyframes underlineNav {
@@ -596,10 +599,6 @@
   background-size: cover;
   height: 100%; }
 
-.item-image {
-  width: 271px;
-  height: 370px; }
-
 .card {
   opacity: 0.85; }
 
@@ -778,82 +777,77 @@ a {
   text-align: center;
   line-height: 30px;
   color: #555; }
-@-webkit-keyframes yes {
-0% {
-    transform: scale(1) rotateZ(0deg);
-    -webkit-transform:scale(1) rotateZ(0deg);
-    left: 0;
-}
-30% {
-    transform: scale(1.05) rotateZ(0deg);
-    -webkit-transform: scale(1.05) rotateZ(0deg);
-    left: 0;
-}
-100% {
-    transform: rotateZ(45deg);
-    -webkit-transform:rotateZ(45deg);
-    left: 600px;;
-}
-}
+
 @keyframes yes {
   0% {
     transform: scale(1) rotateZ(0deg);
+    -webkit-transform: scale(1) rotateZ(0deg);
     left: 0; }
   30% {
     transform: scale(1.05) rotateZ(0deg);
+    -webkit-transform: scale(1.05) rotateZ(0deg);
     left: 0; }
   100% {
     transform: rotateZ(45deg);
+    -webkit-transform: rotateZ(45deg);
     left: 600px; } }
-
-
-
+@-webkit-keyframes yes {
+  0% {
+    transform: scale(1) rotateZ(0deg);
+    -webkit-transform: scale(1) rotateZ(0deg);
+    left: 0; }
+  30% {
+    transform: scale(1.05) rotateZ(0deg);
+    -webkit-transform: scale(1.05) rotateZ(0deg);
+    left: 0; }
+  100% {
+    transform: rotateZ(45deg);
+    -webkit-transform: rotateZ(45deg);
+    left: 600px; } }
 .animateYes {
-    -webkit-animation-fill-mode: both;
-    -webkit-animation:yes 0.6s linear;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation: yes 0.6s linear;
   animation-fill-mode: both;
   animation: yes 0.6s linear; }
   .animateYes:before {
-      -webkit-transform:rotateZ(-35deg);
     transform: rotateZ(-35deg);
+    -webkit-transform: rotateZ(-35deg);
     background: url(http://i.imgur.com/Zkwj970.png) no-repeat center 10px; }
 
 @keyframes no {
   0% {
     transform: rotateZ(360deg);
+    -webkit-transform: rotateZ(360deg);
     right: 0; }
   30% {
     transform: scale(1.05) rotateZ(360deg);
+    -webkit-transform: scale(1.05) rotateZ(360deg);
     right: 0; }
   100% {
     transform: rotateZ(315deg);
+    -webkit-transform: rotateZ(315deg);
     right: 600px; } }
-
 @-webkit-keyframes no {
-    0% {
-        transform: rotateZ(360deg);
-        -webkit-transform:rotateZ(360deg);
-        right: 0;
-    }
-    30% {
-        transform: scale(1.05) rotateZ(360deg);
-        -webkit-transform:scale(1.05) rotateZ(360deg);
-        right: 0;
-    }
-    100% {
-        transform: rotateZ(315deg);
-        -webkit-transform:rotateZ(315deg);
-        right: 600px;
-    }
-}
+  0% {
+    transform: rotateZ(360deg);
+    -webkit-transform: rotateZ(360deg);
+    right: 0; }
+  30% {
+    transform: scale(1.05) rotateZ(360deg);
+    -webkit-transform: scale(1.05) rotateZ(360deg);
+    right: 0; }
+  100% {
+    transform: rotateZ(315deg);
+    -webkit-transform: rotateZ(315deg);
+    right: 600px; } }
 .animateNo {
-    -webkit-animation-fill-mode: both;
-    -webkit-animation:no 0.6s linear;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation: no 0.6s linear;
   animation-fill-mode: both;
   animation: no 0.6s linear; }
   .animateNo:before {
     transform: rotateZ(35deg);
-      -webkit-transform:rotateZ(35deg);
+    -webkit-transform: rotateZ(35deg);
     background: url(http://i.imgur.com/XqQZ4KR.png) no-repeat center 10px; }
 
 #control {

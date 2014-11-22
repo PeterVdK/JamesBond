@@ -437,107 +437,185 @@ console.log("ss");
 
         console.log($stateParams);
         //  [9871,9896,9907,9919,10070,10168,10190,10223,10341,10458,10475,10500,10342,10660,10670,10679,10695,1620,9205,4587,10912,18182,1030261];
+
+        var girl1 = document.getElementById("navGirl1");
+        var girl2 = document.getElementById("navGirl2");
+        var girl3 = document.getElementById("navGirl3");
+        var girl4 = document.getElementById("navGirl4");
+        var girl5 = document.getElementById("navGirl5");
+        var girl6 = document.getElementById("navGirl6");
+        var girl7 = document.getElementById("navGirl7");
+        var girl8 = document.getElementById("navGirl8");
+        var girl9 = document.getElementById("navGirl9");
+        var girl10 = document.getElementById("navGirl10");
+        var girl11 = document.getElementById("navGirl11");
+        var girl12 = document.getElementById("navGirl12");
+        var girl13 = document.getElementById("navGirl13");
+        var girl14 = document.getElementById("navGirl14");
+        var girl15 = document.getElementById("navGirl15");
+        var girl16 = document.getElementById("navGirl16");
+        var girl17 = document.getElementById("navGirl17");
+        var girl18 = document.getElementById("navGirl18");
+        var girl19 = document.getElementById("navGirl19");
+        var girl20 = document.getElementById("navGirl20");
+        var girl21 = document.getElementById("navGirl21");
+        var girl22 = document.getElementById("navGirl22");
+        var girl23 = document.getElementById("navGirl23");
+
+
+
+        function RemoveUnderline(){
+            girl1.style.borderBottom = "2px solid transparent";
+            girl2.style.borderBottom = "2px solid transparent";
+            girl3.style.borderBottom = "2px solid transparent";
+            girl4.style.borderBottom = "2px solid transparent";
+            girl5.style.borderBottom = "2px solid transparent";
+            girl6.style.borderBottom = "2px solid transparent";
+            girl7.style.borderBottom = "2px solid transparent";
+            girl8.style.borderBottom = "2px solid transparent";
+            girl9.style.borderBottom = "2px solid transparent";
+            girl10.style.borderBottom = "2px solid transparent";
+            girl11.style.borderBottom = "2px solid transparent";
+            girl12.style.borderBottom = "2px solid transparent";
+            girl13.style.borderBottom = "2px solid transparent";
+            girl14.style.borderBottom = "2px solid transparent";
+            girl15.style.borderBottom = "2px solid transparent";
+            girl16.style.borderBottom = "2px solid transparent";
+            girl17.style.borderBottom = "2px solid transparent";
+            girl18.style.borderBottom = "2px solid transparent";
+            girl19.style.borderBottom = "2px solid transparent";
+            girl20.style.borderBottom = "2px solid transparent";
+            girl21.style.borderBottom = "2px solid transparent";
+            girl22.style.borderBottom = "2px solid transparent";
+            girl23.style.borderBottom = "2px solid transparent";
+        }
+
         switch ($stateParams.girlId)
         {
             case "1":
-
                 GetTheGirlbyId(9871);
-
+                RemoveUnderline();
+                girl1.style.borderBottom = "2px solid #b10a0a";
                 //undefined
                 break;
             case "2":
                 GetTheGirlbyId(9896);
+                RemoveUnderline();
+                girl2.style.borderBottom = "2px solid #b10a0a";
                 break;
             case "3":
                 GetTheGirlbyId(9907);
-
+                RemoveUnderline();
+                girl3.style.borderBottom = "2px solid #b10a0a";
                 break;
             case "4":
                 GetTheGirlbyId(9919);
-
+                RemoveUnderline();
+                girl4.style.borderBottom = "2px solid #b10a0a";
                 break;
             case "5":
                 GetTheGirlbyId(10070);
-
+                RemoveUnderline();
+                girl5.style.borderBottom = "2px solid #b10a0a";
                 break;
             case "6":
                 GetTheGirlbyId(10168);
-
+                RemoveUnderline();
+                girl6.style.borderBottom = "2px solid #b10a0a";
                 break;
             case "7":
                 GetTheGirlbyId(10190);
                 // 10223,10341,10458,10475,10500,10342,10660,10670,10679,10695,1620,9205,4587,10912,18182,1030261];
+                RemoveUnderline();
+                girl7.style.borderBottom = "2px solid #b10a0a";
                 break;
             case "8":
-
                 GetTheGirlbyId(10223);
-
+                RemoveUnderline();
+                girl8.style.borderBottom = "2px solid #b10a0a";
                 //undefined
                 break;
             case "9":
                 GetTheGirlbyId(10341);
+                RemoveUnderline();
+                girl9.style.borderBottom = "2px solid #b10a0a";
                 break;
             case "10":
                 GetTheGirlbyId(10458);
-
+                RemoveUnderline();
+                girl10.style.borderBottom = "2px solid #b10a0a";
                 break;
             case "11":
                 GetTheGirlbyId(10475);
-
+                RemoveUnderline();
+                girl11.style.borderBottom = "2px solid #b10a0a";
                 break;
             case "12":
                 GetTheGirlbyId(10500);
-
+                RemoveUnderline();
+                girl12.style.borderBottom = "2px solid #b10a0a";
                 break;
             case "13":
                 GetTheGirlbyId(10342);
-
+                RemoveUnderline();
+                girl13.style.borderBottom = "2px solid #b10a0a";
                 break;
             case "14":
                 GetTheGirlbyId(10660);
-
+                RemoveUnderline();
+                girl14.style.borderBottom = "2px solid #b10a0a";
                 break;
             case "15":
                 // 10670,10679,10695,1620,9205,4587,10912,18182,1030261];
                 GetTheGirlbyId(10670);
-
+                RemoveUnderline();
+                girl15.style.borderBottom = "2px solid #b10a0a";
                 //undefined
                 break;
             case "16":
                 GetTheGirlbyId(10679);
+                RemoveUnderline();
+                girl16.style.borderBottom = "2px solid #b10a0a";
                 break;
             case "17":
                 GetTheGirlbyId(10695);
-
+                RemoveUnderline();
+                girl17.style.borderBottom = "2px solid #b10a0a";
                 break;
             case "18":
                 GetTheGirlbyId(1620);
-
+                RemoveUnderline();
+                girl18.style.borderBottom = "2px solid #b10a0a";
                 break;
             case "19":
                 GetTheGirlbyId(9205);
-
+                RemoveUnderline();
+                girl19.style.borderBottom = "2px solid #b10a0a";
                 break;
             case "20":
                 GetTheGirlbyId(4587);
-
+                RemoveUnderline();
+                girl20.style.borderBottom = "2px solid #b10a0a";
                 break;
             case "21":
                 GetTheGirlbyId(10912);
-
+                RemoveUnderline();
+                girl21.style.borderBottom = "2px solid #b10a0a";
                 break;
             case "22":
                 GetTheGirlbyId(18182);
-
+                RemoveUnderline();
+                girl22.style.borderBottom = "2px solid #b10a0a";
                 break;
             case "23":
                 GetTheGirlbyId(1030261);
-
+                RemoveUnderline();
+                girl23.style.borderBottom = "2px solid #b10a0a";
                 break;
-
-
         }
+
         $scope.allgirlinfo=[];
+
         function GetTheGirlbyId(girlid) {
 
 
@@ -556,7 +634,6 @@ console.log(data);
 
             });
         }
-
     })
 
 
@@ -724,14 +801,14 @@ $timeout(function()
                 }
             };
             $scope.naam=[];
-        var getgirlsss,getfirstgril,thegirlname;
+        var getgirlsss,getfirstgirl,thegirlname;
 
             $scope.yesfunc=function(){
                 App.like(true);
                 getgirlsss =document.getElementById("girls");
-                getfirstgril =getgirlsss.firstChild;
+                getfirstgirl =getgirlsss.firstChild;
 
-                thegirlname=getfirstgril.children[1].innerHTML;
+                thegirlname=getfirstgirl.children[1].innerHTML;
                 console.log(thegirlname.split(" , ")[0]);
                 pushtoarray(thegirlname.split(" , ")[0]);
 
