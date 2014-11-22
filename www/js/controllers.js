@@ -700,7 +700,7 @@ $timeout(function()
     })
 
 
-    .controller('BondgirlsCtrl', function($scope, $http,$q,$stateParams,bondgirlsservice,TDCardDelegate,$timeout) {
+    .controller('BondgirlsCtrl', function($scope, $http,$q,$stateParams,bondgirlsservice,TDCardDelegate,$timeout,girlratingservice) {
         var i;
 
         $scope.thegirls=new Array(22);
@@ -806,10 +806,44 @@ $timeout(function()
             $scope.yesfunc=function(){
                 App.like(true);
                 getgirlsss =document.getElementById("girls");
+<<<<<<< HEAD
                 getfirstgirl =getgirlsss.firstChild;
 
                 thegirlname=getfirstgirl.children[1].innerHTML;
+=======
+                getfirstgril =getgirlsss.firstChild;
+                thegirlname=getfirstgril.children[1].innerHTML;
+                girlratingservice.girlrating().then(function(data){
+                    for(var i = 0; i < data.length; i++)
+                    {
+                        console.log(thegirlname + "   " + data[i].Naam);
+                        console.log("no");
+                        if(data[i].Naam == thegirlname.split(" , ")[0])
+                        {
+                          var  nieuwe_punten=parseFloat(data[i].Punten) +1;
+                           data[i].Punten= String(nieuwe_punten);
+                        changeThemarks( data[i].Punten,i);
+
+
+
+                            return console.log("ja" + data[i].Punten);
+                        }
+                    }
+
+
+
+                });
+//#######################################################
+                function changeThemarks (nieuwe_punten,id)
+                {
+                    //http://stackoverflow.com/questions/21477881/use-javascript-to-update-a-json-file
+                    //hoe moet ik dit nu opslaan in een JSON???????
+console.log(id);
+                }
+//#########################################################"
+>>>>>>> 3c7f2d7909ea7bfc2abf080527458c2b8a4b99f9
                 console.log(thegirlname.split(" , ")[0]);
+
                 pushtoarray(thegirlname.split(" , ")[0]);
 
                 console.log(Girl);

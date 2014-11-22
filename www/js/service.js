@@ -78,6 +78,21 @@ angular.module('starter.service', [])
 
     })
 
+.service('girlratingservice', function ($http, $q) {
+    this.girlrating = function () {
+        var deferred = $q.defer();
+
+        $http.get('./data_assets/girl_rating.json').success(function (data) {
+            console.log(data);
+            deferred.resolve(data);
+
+        });
+
+        return deferred.promise;
+    }
+
+})
+
 .service('carsservice', function ($http, $q) {
     this.getcars = function () {
         var deferred = $q.defer();
