@@ -628,37 +628,7 @@
     color: transparent;
     display: none; }
 
-td-cards {
-  display: block; }
 
-td-card {
-  position: absolute;
-  left: 50%;
-  margin-top: 80px;
-  margin-bottom: 40px;
-  margin-left: -125px;
-  width: 250px;
-  height: 200px;
-  border: 1px solid #999;
-  border-radius: 6px; }
-
-td-card h1 {
-  margin-top: 0px;
-  height: 92px;
-  font-family: Gulim;
-  font-size: 30px;
-  padding-top: 10px;
-  background-color: black;
-  width: 120%;
-  margin-left: -9%; }
-
-td-card .image {
-  position: relative;
-  width: 120%;
-  margin-left: -9%; }
-
-td-card img {
-  border-radius: 6px; }
 
 .yes-text {
   position: absolute;

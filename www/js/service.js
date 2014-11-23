@@ -97,7 +97,7 @@ angular.module('starter.service', [])
     this.getcars = function () {
         var deferred = $q.defer();
 
-        $http.get('').success(function (data) {
+        $http.get('./data_assets/cars.json').success(function (data) {
             deferred.resolve(data);
 
         });
