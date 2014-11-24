@@ -801,6 +801,7 @@ $timeout(function()
                 }
             };
             $scope.naam=[];
+
         var getgirlsss,getfirstgirl,thegirlname;
 
             $scope.yesfunc=function(){
@@ -812,6 +813,7 @@ $timeout(function()
                 getfirstgirl =getgirlsss.firstChild;
                 thegirlname=getfirstgirl.children[1].innerHTML;
                 girlratingservice.girlrating().then(function(data){
+
                     for(var i = 0; i < data.length; i++)
                     {
                         console.log(thegirlname + "   " + data[i].Naam);
@@ -831,11 +833,14 @@ $timeout(function()
 
 
                 });
+
                 function changeThemarks (nieuwe_punten,id)
                 {
+
+
                     //http://stackoverflow.com/questions/21477881/use-javascript-to-update-a-json-file
                     //hoe moet ik dit nu opslaan in een JSON???????
-                    console.log(id);
+                    console.log("hier is het id" + id);
                 }
                 console.log(thegirlname.split(" , ")[0]);
 

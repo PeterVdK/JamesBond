@@ -77,7 +77,19 @@ angular.module('starter.service', [])
         }
 
     })
+    .service('girlratingservice', function ($http, $q) {
+        this.girlrating = function () {
+            var deferred = $q.defer();
+        $http({method: 'GET', url: './php/girl_rates.php'}).success(function(data) {
 
+            console.log(data);
+        });
+            return deferred.promise;
+        }
+
+    })
+
+/*
 .service('girlratingservice', function ($http, $q) {
     this.girlrating = function () {
         var deferred = $q.defer();
@@ -91,7 +103,7 @@ angular.module('starter.service', [])
         return deferred.promise;
     }
 
-})
+})*/
 
 .service('carsservice', function ($http, $q) {
     this.getcars = function () {
