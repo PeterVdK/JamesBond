@@ -868,22 +868,26 @@ $timeout(function()
     .controller('MapsCtrl', function($scope, $stateParams,$ionicLoading, $compile,leafletEvents) {
         console.log("kk");
 
-
         var map = L.map('map').setView([
-            39.905687,-75.166955], 2);
+            0,50], 2);
 
 // add MapQuest tile layer, must give proper OpenStreetMap attribution according to MapQuest terms
        // 'http://{s}.tiles.mapbox.com/v3/moklick.gf03ihjf/{z}/{x}/{y}.png'
 
 
+/*
         L.tileLayer('http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
+        */
+
+
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png?{foo}', {foo: 'bar'}).addTo(map);
 
         $scope.checker=function(kk){
             console.log(kk);
 if(kk) {
-   m= L.marker([50.5, 30.5]).addTo(map);
+   m= L.marker([18.1095810,-77.2975080]).addTo(map);
 }
             else{
     map.removeLayer(m);

@@ -947,6 +947,13 @@ a {
   background: rgba(55, 185, 55, 0.2);
   border: 3px solid rgba(100, 185, 100, 0.8); }
 
+#map {
+  postion: absolute;
+  width: 1200px;
+  height: 800px;
+  left: 0px;
+  top: -50px; }
+
 /*      MEDIAQUERIES    */
 /*mediaquery vanaf 1200px */
 @media screen and (max-width: 1200px) {
