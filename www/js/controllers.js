@@ -801,6 +801,7 @@ $timeout(function()
                 }
             };
             $scope.naam=[];
+
         var getgirlsss,getfirstgirl,thegirlname;
 
             $scope.yesfunc=function(){
@@ -812,6 +813,7 @@ $timeout(function()
                 getfirstgirl =getgirlsss.firstChild;
                 thegirlname=getfirstgirl.children[1].innerHTML;
                 girlratingservice.girlrating().then(function(data){
+
                     for(var i = 0; i < data.length; i++)
                     {
                         console.log(thegirlname + "   " + data[i].Naam);
@@ -831,11 +833,14 @@ $timeout(function()
 
 
                 });
+
                 function changeThemarks (nieuwe_punten,id)
                 {
+
+
                     //http://stackoverflow.com/questions/21477881/use-javascript-to-update-a-json-file
                     //hoe moet ik dit nu opslaan in een JSON???????
-                    console.log(id);
+                    console.log("hier is het id" + id);
                 }
                 console.log(thegirlname.split(" , ")[0]);
 
@@ -911,8 +916,78 @@ if(kk) {
 
 
     })
-    .controller('CarsCtrl', function($scope, $stateParams) {
-console.log("kkkkk");
+    .controller('CarsCtrl', function($scope, $stateParams,carsservice) {
+        $scope.cars=[];
+
+        carsservice.getcars().then(function (data) {
+$scope.cars=data;
+           console.log($scope.cars);
+
+
+            var animationEndEvent = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
+            var d, n,leeftijd,
+                d = new Date();
+            n= d.getFullYear();
+            var Girl = {
+                wrap: $('#girls'),
+                girls: $scope.cars,
+                add: function(){
+
+                    var random = this.girls[Math.floor(Math.random() * this.girls.length)];
+
+                    this.wrap.append("<div class='girlCard'><img alt='" + random.name + "' src='" + random.image + "' /><span>" + random.merk +" " +random.serie  + "</span></div>");
+                }
+            }
+
+            var App = {
+                yesButton: $('.button.yes .trigger'),
+                noButton: $('.button.no .trigger'),
+                blocked: false,
+                like: function(liked){
+                    var animate = liked ? 'animateYes' : 'animateNo';
+                    var self = this;
+                    if(!this.blocked){
+                        this.blocked = true;
+                        var getgirl=document.getElementsByClassName("girlCard")[0];
+                        $('.girlCard').eq(0).addClass(animate).one(animationEndEvent, function(){
+                            console.log("kkkk");
+                            $(this).remove();
+
+                            Girl.add();
+                            self.blocked = false;
+                        });
+                    }
+                }
+            };
+            $scope.naam=[];
+            var getgirlsss,getfirstgril,thegirlname;
+
+            $scope.yesfunc=function() {
+                App.like(true);
+
+
+
+                console.log("yesbutton");
+            };
+            $scope.nofunc=function(){
+                App.like(false);
+                console.log("nobutton");
+            };
+
+            function pushtoarray(denaamvandegirl){
+                $scope.naam.push(denaamvandegirl);
+                console.log($scope.naam);
+            }
+
+            $(document).ready(function(){
+                Girl.add();
+                Girl.add();
+                Girl.add();
+                Girl.add();
+            })
+
+        });
+
 
     })
 

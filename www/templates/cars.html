@@ -5,11 +5,27 @@
 
         <img id="logo" class="Responsive image"  src="img/logo_james_bond_site_logo_white.png"/>
     </ion-nav-buttons>
+    <div class="girl">
     <ion-content class="has-header">
 
-        //cars komen hier
+
+        <div id="girls"></div>
+        <div id="control">
+            <div class="button no" ng-click="nofunc()">
+                <a href="#" class="trigger"></a>
+            </div>
+
+            <div class="button yes"  ng-click="yesfunc()">
+                <a href="#" class="trigger"></a>
+            </div>
+            <div ng-repeat="n in naam track by $index"  >
+                <span>{{n}}</span>
+            </div>
+
+        </div>
 
 
 
         </ion-content>
+    </div>
     </ion-view>
