@@ -1,5 +1,45 @@
-/*      NAVIGATIE ITEMS    */
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
+.loadingGirl {
+  background-image: url("../img/bondgirlWallpaper.jpg");
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: 100; }
+
+.loadingBond {
+  background-image: url("../img/bondWallpaper.jpg");
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: 100; }
+
+.loadingCars {
+  background-image: url("../img/carWallpaper.jpg");
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: 100; }
+
+.loadingMap {
+  background-image: url("../img/mapWallpaper.jpg");
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: 100; }
+
+.loadingGirl span, .loadingBond span, .loadingCars span, .loadingMap span {
+  margin-left: 45%;
+  margin-top: 25%; }
+
+/*      NAVIGATIE ITEMS    */
 .navItemBond {
   text-align: center;
   padding: 0px;
@@ -932,7 +972,7 @@ a {
   background-color: red; }
 
 .locatie {
-  background-image: url("http://elitefon.ru/images/201211/elitefon.ru_22014.jpg");
+  background-image: url("../img/mapWallpaper.jpg");
   background-size: cover;
   height: 100%;
   margin-top: 3%; }

@@ -269,11 +269,10 @@ $scope.linkfunction=function(){
 
     })
 
-    .controller('SingleBondPictureCtrl', function($scope,$http,picturebondservice, $stateParams) {
-
-
+    .controller('SingleBondPictureCtrl', function($scope,$http,picturebondservice, $stateParams,$timeout) {
 
         $scope.ide=$stateParams.bondId;
+        $scope.loading=true;
 
         switch ($scope.ide)
         {
@@ -316,19 +315,12 @@ $scope.linkfunction=function(){
 console.log("ss");
 
                 $scope.pictures = data;
-
-
-
-
+                $timeout(function(){$scope.loading=false;},1000) ;
             });
-
         }
-
-
-
     })
 
-    .controller('SingleBondMovieCtrl', function($scope, $http,$q,moviesbondservice ,$stateParams) {
+    .controller('SingleBondMovieCtrl', function($scope, $http,$q,moviesbondservice ,$stateParams,$timeout) {
 
 
         //........................................................
@@ -348,7 +340,7 @@ console.log("ss");
                     newItem = ($scope.items.length+1)+". "+data[line];
                     $scope.items.push(newItem);
                 }
-                $scope.loading = false;
+                $timeout(function(){$scope.loading=false;},1000) ;
             });
         };
 
@@ -422,7 +414,6 @@ console.log("ss");
 
 
     .controller('GirlsCtrl', function($scope,$stateParams) {
-
 //menu van de girls
 
     })
@@ -732,34 +723,7 @@ $timeout(function()
             cardTypes=$scope.cardTypes;
             console.log(cardTypes);
 
-
             $scope.cards = Array.prototype.slice.call(cardTypes, 0);
-
-            /*
-            $scope.cardDestroyed = function(index) {
-                $scope.degirlid=index;
-                $scope.cards.splice(index, 1);
-            };
-
-            $scope.addCard = function(index) {
-                console.log("kkkkkk" + index);
-                $scope.degirlid=index;
-
-
-                var index2=index %cardTypes.length;
-                if(index2==0)
-                {
-                    index2=1;
-                }
-                var newCard = cardTypes[Math.floor(Math.random() * cardTypes.length)];
-                var saveCard = cardTypes[index2];
-                newCard.id = Math.random();
-
-                $scope.cards.push(angular.extend({},saveCard));
-                $scope.cards.push(angular.extend({}, newCard));
-            }
-            */
-
 
             var animationEndEvent = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
             var d, n,leeftijd,
@@ -825,9 +789,6 @@ $timeout(function()
                             return console.log("ja" + data[i].Punten);
                         }
                     }
-
-
-
                 });
 
                 function changeThemarks (nieuwe_punten,id)
@@ -866,8 +827,9 @@ $timeout(function()
     })
 
 
-    .controller('MapsCtrl', function($scope, $stateParams,$ionicLoading, $compile,leafletEvents) {
+    .controller('MapsCtrl', function($scope, $stateParams,$ionicLoading, $compile,leafletEvents,$timeout) {
         console.log("kk");
+        $scope.loading = true;
 
         var map = L.map('map').setView([0,50], 2);
         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png?{foo}', {foo: 'bar'}).addTo(map);
@@ -1234,81 +1196,87 @@ $timeout(function()
             iconSize: [25,41]
         });
 
+        $timeout(function(){$scope.loading=false;},1000) ;
+
     })
 
-    .controller('CarsCtrl', function($scope, $stateParams,carsservice) {
+    .controller('CarsCtrl', function($scope, $stateParams,carsservice,$timeout) {
         $scope.cars=[];
+        $scope.loading = true;
 
         carsservice.getcars().then(function (data) {
 $scope.cars=data;
            console.log($scope.cars);
 
+            if($scope.cars.length == 21){
+                var animationEndEvent = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
+                var d, n,leeftijd,
+                    d = new Date();
+                n= d.getFullYear();
+                var Car = {
+                    wrap: $('#cars'),
+                    cars: $scope.cars,
+                    add: function(){
 
-            var animationEndEvent = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
-            var d, n,leeftijd,
-                d = new Date();
-            n= d.getFullYear();
-            var Car = {
-                wrap: $('#cars'),
-                cars: $scope.cars,
-                add: function(){
+                        var random = this.cars[Math.floor(Math.random() * this.cars.length)];
 
-                    var random = this.cars[Math.floor(Math.random() * this.cars.length)];
-
-                    this.wrap.append("<div class='carCard'><img alt='" + random.name + "' src='" + random.image + "' /><span>" + random.merk +" " +random.serie  + "</span></div>");
-                }
-            }
-
-            var App = {
-                yesButton: $('.button.yes .trigger'),
-                noButton: $('.button.no .trigger'),
-                blocked: false,
-                like: function(liked){
-                    var animate = liked ? 'animateYes' : 'animateNo';
-                    var self = this;
-                    if(!this.blocked){
-                        this.blocked = true;
-                        var getcar =document.getElementsByClassName("carCard")[0];
-                        $('.carCard').eq(0).addClass(animate).one(animationEndEvent, function(){
-                            console.log("kkkk");
-                            $(this).remove();
-
-                            Car.add();
-                            self.blocked = false;
-                        });
+                        this.wrap.append("<div class='carCard'><img alt='" + random.name + "' src='" + random.image + "' /><span>" + random.merk +" " +random.serie  + "</span></div>");
                     }
                 }
-            };
-            $scope.naam=[];
-            var getgirlsss,getfirstgril,thegirlname;
 
-            $scope.yesfunc=function() {
-                App.like(true);
+                var App = {
+                    yesButton: $('.button.yes .trigger'),
+                    noButton: $('.button.no .trigger'),
+                    blocked: false,
+                    like: function(liked){
+                        var animate = liked ? 'animateYes' : 'animateNo';
+                        var self = this;
+                        if(!this.blocked){
+                            this.blocked = true;
+                            var getcar =document.getElementsByClassName("carCard")[0];
+                            $('.carCard').eq(0).addClass(animate).one(animationEndEvent, function(){
+                                console.log("kkkk");
+                                $(this).remove();
+
+                                Car.add();
+                                self.blocked = false;
+                            });
+                        }
+                    }
+                };
+                $scope.naam=[];
+                var getgirlsss,getfirstgril,thegirlname;
+
+                $scope.yesfunc=function() {
+                    App.like(true);
 
 
 
-                console.log("yesbutton");
-            };
-            $scope.nofunc=function(){
-                App.like(false);
-                console.log("nobutton");
-            };
+                    console.log("yesbutton");
+                };
+                $scope.nofunc=function(){
+                    App.like(false);
+                    console.log("nobutton");
+                };
 
-            function pushtoarray(denaamvandecar){
-                $scope.naam.push(denaamvandecar);
-                console.log($scope.naam);
+                function pushtoarray(denaamvandecar){
+                    $scope.naam.push(denaamvandecar);
+                    console.log($scope.naam);
+                }
+
+                $(document).ready(function(){
+                    Car.add();
+                    Car.add();
+                    Car.add();
+                    Car.add();
+                })
+
+                $timeout(function(){$scope.loading=false;},1000) ;
             }
-
-            $(document).ready(function(){
-                Car.add();
-                Car.add();
-                Car.add();
-                Car.add();
-            })
-
+            else{
+                $scope.loading.true;
+            }
         });
-
-
     })
 
 
