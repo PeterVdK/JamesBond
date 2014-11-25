@@ -4,10 +4,6 @@ angular.module('starter.controllers', [])
 
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
-
-
-
-
        document.getElementById("jbaudio").load();
         document.getElementById("jbaudio").pause();
         //document.getElementById("jbaudio").play();
@@ -27,7 +23,7 @@ angular.module('starter.controllers', [])
                 document.getElementById("jbaudio").play();
             }
         };
-})
+    })
 
 
     .controller('BondsCtrl', function($scope) {
@@ -873,49 +869,373 @@ $timeout(function()
     .controller('MapsCtrl', function($scope, $stateParams,$ionicLoading, $compile,leafletEvents) {
         console.log("kk");
 
-        var map = L.map('map').setView([
-            0,50], 2);
-
-// add MapQuest tile layer, must give proper OpenStreetMap attribution according to MapQuest terms
-       // 'http://{s}.tiles.mapbox.com/v3/moklick.gf03ihjf/{z}/{x}/{y}.png'
-
-
-/*
-        L.tileLayer('http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
-        */
-
-
+        var map = L.map('map').setView([0,50], 2);
         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png?{foo}', {foo: 'bar'}).addTo(map);
 
-        $scope.checker=function(kk){
-            console.log(kk);
-if(kk) {
-   m= L.marker([18.1095810,-77.2975080]).addTo(map);
-}
-            else{
-    map.removeLayer(m);
-}
-
-        }
-        var mapIcon = L.icon({
-            iconUrl: 'http://profile.ak.fbcdn.net/hprofile-ak-ash4/373528_124230297591358_127600844_q.jpg',
-            iconRetinaUrl: 'http://profile.ak.fbcdn.net/hprofile-ak-ash4/373528_124230297591358_127600844_q.jpg',
-            iconSize: [50, 50],
-            iconAnchor: [22, 50],
-            popupAnchor: [0, -56],
-            shadowUrl: '',
-            shadowRetinaUrl: '',
-            shadowSize: [68, 95],
-            shadowAnchor: [22, 94]
+        var hqIcon = L.icon({
+            iconUrl: 'http://icons.iconarchive.com/icons/hydrattz/multipurpose-alphabet/256/Letter-M-black-icon.png',
+            iconRetinaUrl: 'http://icons.iconarchive.com/icons/hydrattz/multipurpose-alphabet/256/Letter-M-black-icon.png',
+            iconAnchor: [5, 20],
+            popupAnchor: [0, -30],
+            iconSize: [25,25]
         });
 
+        hq= L.marker([51.5073510,-0.1277580],{icon: hqIcon}).addTo(map).bindPopup('<b>UK (London)</b> <ul><li>HQ James Bond</li></ul>',{closeButton: false});
 
-        L.marker([39.905687,-75.166955], {icon: mapIcon}).addTo(map).bindPopup('Baseball!!').openPopup();
+        hq.on('mouseover', function(e){
+            hq.openPopup();
+        });
+        hq.on('mouseout', function (e) {
+            hq.closePopup();
+        });
 
+        //Markers Sean Connery
+        $scope.markerSC=function(sc){
+            console.log(sc);
+            if(sc) {
+                jam= L.marker([18.1095810,-77.2975080], {icon: greenIcon}).addTo(map).bindPopup('<b>Jamaica</b> <ul><li>Dr. No</li></ul>',{closeButton: false}); //Jamaica
+                srv= L.marker([44.0165210,21.0058590], {icon: greenIcon}).addTo(map).bindPopup('<b>Serbia</b> <ul><li>From Russia With Love</li></ul>',{closeButton: false}); //Servië
+                kro= L.marker([45.1000000,15.2000000], {icon: greenIcon}).addTo(map).bindPopup('<b>Croatia</b> <ul><li>From Russia With Love</li></ul>',{closeButton: false}); //Kroatië
+                trkSC= L.marker([38.9637450,35.2433220], {icon: greenIcon}).addTo(map).bindPopup('<b>Turkey</b> <ul><li>From Russia With Love</li></ul>',{closeButton: false}); //Turkije
+                usaSC= L.marker([37.0902400,-95.7128910], {icon: greenIcon}).addTo(map).bindPopup('<b>USA</b> <ul><li>Goldfinger</li><li>Diamonds Are Forever</li></ul>',{closeButton: false}); //USA
+                zwiSC= L.marker([46.8181880,8.2275120], {icon: greenIcon}).addTo(map).bindPopup('<b>Switzerland</b> <ul><li>Goldfinger</li></ul>',{closeButton: false}); //Zwitserland
+                bahSC= L.marker([25.0342800,-77.3962800], {icon: greenIcon}).addTo(map).bindPopup('<b>Bahamas</b> <ul><li>Thunderball</li></ul>',{closeButton: false}); // Bahamas
+                fraSC= L.marker([46.2276380,2.2137490], {icon: greenIcon}).addTo(map).bindPopup('<b>France</b> <ul><li>Thunderball</li><li>Diamonds Are Forever</li></ul>',{closeButton: false}); //Frankrijk
+                jap= L.marker([36.2048240,138.2529240], {icon: greenIcon}).addTo(map).bindPopup('<b>Japan</b> <ul><li>You Only Live Twice</li></ul>',{closeButton: false}); // Japan
+                mexSC= L.marker([23.6345010,-102.5527840], {icon: greenIcon}).addTo(map).bindPopup('<b>Mexico</b> <ul><li>Diamonds Are Forever</li></ul>',{closeButton: false}); // Mexico
+                saf= L.marker([-30.5594820,22.9375060], {icon: greenIcon}).addTo(map).bindPopup('<b>South Africa</b> <ul><li>Diamonds Are Forever</li></ul>',{closeButton: false}); // Zuid-Afrika
+                egySC= L.marker([26.8205530,30.8024980], {icon: greenIcon}).addTo(map).bindPopup('<b>Egypt</b> <ul><li>Diamonds Are Forever</li></ul>',{closeButton: false}); // Egypte
+                net= L.marker([52.1326330,5.2912660], {icon: greenIcon}).addTo(map).bindPopup('<b>Netherlands</b> <ul><li>Diamonds Are Forever</li></ul>',{closeButton: false}); // Nederland
+
+            }
+            else{
+                map.removeLayer(jam);
+                map.removeLayer(srv);
+                map.removeLayer(kro);
+                map.removeLayer(trkSC);
+                map.removeLayer(usaSC);
+                map.removeLayer(zwiSC);
+                map.removeLayer(bahSC);
+                map.removeLayer(fraSC);
+                map.removeLayer(jap);
+                map.removeLayer(mexSC);
+                map.removeLayer(saf);
+                map.removeLayer(egySC);
+                map.removeLayer(net);
+            }
+
+            jam.on('mouseover', function(e){jam.openPopup();});
+            jam.on('mouseout', function (e) {jam.closePopup();});
+            srv.on('mouseover', function(e){srv.openPopup();});
+            srv.on('mouseout', function (e) {srv.closePopup();});
+            kro.on('mouseover', function(e){kro.openPopup();});
+            kro.on('mouseout', function (e) {kro.closePopup();});
+            trkSC.on('mouseover', function(e){trkSC.openPopup();});
+            trkSC.on('mouseout', function (e) {trkSC.closePopup();});
+            usaSC.on('mouseover', function(e){usaSC.openPopup();});
+            usaSC.on('mouseout', function (e) {usaSC.closePopup();});
+            zwiSC.on('mouseover', function(e){zwiSC.openPopup();});
+            zwiSC.on('mouseout', function (e) {zwiSC.closePopup();});
+            bahSC.on('mouseover', function(e){bahSC.openPopup();});
+            bahSC.on('mouseout', function (e) {bahSC.closePopup();});
+            fraSC.on('mouseover', function(e){fraSC.openPopup();});
+            fraSC.on('mouseout', function (e) {trk.closePopup();});
+            jap.on('mouseover', function(e){jap.openPopup();});
+            jap.on('mouseout', function (e) {jap.closePopup();});
+            mexSC.on('mouseover', function(e){mexSC.openPopup();});
+            mexSC.on('mouseout', function (e) {mexSC.closePopup();});
+            saf.on('mouseover', function(e){saf.openPopup();});
+            saf.on('mouseout', function (e) {saf.closePopup();});
+            egySC.on('mouseover', function(e){egySC.openPopup();});
+            egySC.on('mouseout', function (e) {egySC.closePopup();});
+            net.on('mouseover', function(e){net.openPopup();});
+            net.on('mouseout', function (e) {net.closePopup();});
+        };
+
+        var greenIcon = L.icon({
+            iconUrl: 'http://test.gisline.no/runeberegner2/lib/leaflet/images/marker-icon_green.png',
+            iconRetinaUrl: 'http://test.gisline.no/runeberegner2/lib/leaflet/images/marker-icon_green.png',
+            iconAnchor: [5, 40],
+            popupAnchor: [0, -30],
+            iconSize: [25,41]
+        });
+
+        //Markers George Lazenby
+        $scope.markerGL=function(gl){
+            console.log(gl);
+            if(gl) {
+                por = L.marker([39.3998720,-8.2244540]).addTo(map).bindPopup('<strong>Portugal</strong> <ul><li>On Her Majestys Service</li></ul>'); //Portugal
+                zwiGL = L.marker([46.8181880,9.2275120]).addTo(map).bindPopup('<strong>Switzerland</strong> <ul><li>On Her Majestys Service</li></ul>'); //Zwitserland
+            }
+            else{
+                map.removeLayer(por);
+                map.removeLayer(zwiGL);
+            }
+
+            por.on('mouseover', function(e){por.openPopup();});
+            por.on('mouseout', function (e) {por.closePopup();});
+            zwiGL.on('mouseover', function(e){zwiGL.openPopup();});
+            zwiGL.on('mouseout', function (e) {zwiGL.closePopup();});
+        };
+
+        //Markers Roger Moore
+        $scope.markerRM=function(rm){
+            console.log(rm);
+            if(rm) {
+                usaRM= L.marker([37.0902400,-100.7128910], {icon: redIcon}).addTo(map).bindPopup('<b>USA</b> <ul><li>Live And Let Die</li><li>Moonraker</li></ul>',{closeButton: false}); //USA
+                chnRM= L.marker([35.8616600,104.1953970], {icon: redIcon}).addTo(map).bindPopup('<b>China</b> <ul><li>The Man With The Golden Gun</li></ul>',{closeButton: false}); //China
+                thaRM= L.marker([15.8700320,100.9925410], {icon: redIcon}).addTo(map).bindPopup('<b>Thailand</b> <ul><li>The Man With The Golden Gun</li></ul>',{closeButton: false}); //Thailand
+                egyRM= L.marker([26.8205530,28.8024980], {icon: redIcon}).addTo(map).bindPopup('<b>Egypt</b> <ul><li>The Spy Who Loved Me</li></ul>',{closeButton: false}); //Egypte
+                itaRM= L.marker([41.8719400,12.5673800], {icon: redIcon}).addTo(map).bindPopup('<b>Italy</b> <ul><li>The Spy Who Loved Me</li><li>Moonraker</li><li>For Your Eyes Only</li></ul>',{closeButton: false}); //Italië
+                bra= L.marker([-14.2350040,-51.9252800],{icon: redIcon}).addTo(map).bindPopup('<b>Brazil</b> <ul><li>Moonraker</li></ul>',{closeButton: false}); //Brazilië
+                fraRM= L.marker([43.2276380,2.2137490], {icon: redIcon}).addTo(map).bindPopup('<b>France</b> <ul><li>Moonraker</li><li>A View To A Kill</li></ul>',{closeButton: false}); // Frankrijk
+                spaRM= L.marker([40.4636670,-3.7492200], {icon: redIcon}).addTo(map).bindPopup('<b>Spain</b> <ul><li>For Your Eyes Only</li></ul>',{closeButton: false}); // Spanje
+                gre= L.marker([39.0742080,21.8243120], {icon: redIcon}).addTo(map).bindPopup('<b>Greece</b> <ul><li>For Your Eyes Only</li></ul>',{closeButton: false}); // Griekenland
+                duiRM= L.marker([51.1656910,10.4515260], {icon: redIcon}).addTo(map).bindPopup('<b>Germany</b> <ul><li>Octopussy</li></ul>',{closeButton: false}); // Duitsland
+                ind= L.marker([20.5936840,78.9628800], {icon: redIcon}).addTo(map).bindPopup('<b>India</b> <ul><li>Octopussy</li></ul>',{closeButton: false}); // India
+                rusRM= L.marker([61.5240100,105.3187560], {icon: redIcon}).addTo(map).bindPopup('<b>Russia</b> <ul><li>A View To A Kill</li></ul>',{closeButton: false}); // Rusland
+                ijsRM= L.marker([64.9630510,-19.0208350], {icon: redIcon}).addTo(map).bindPopup('<b>Iceland</b> <ul><li>A View To A Kill</li></ul>',{closeButton: false}); // IJsland
+            }
+            else{
+                map.removeLayer(usaRM);
+                map.removeLayer(chnRM);
+                map.removeLayer(thaRM);
+                map.removeLayer(egyRM);
+                map.removeLayer(itaRM);
+                map.removeLayer(bra);
+                map.removeLayer(fraRM);
+                map.removeLayer(spaRM);
+                map.removeLayer(gre);
+                map.removeLayer(duiRM);
+                map.removeLayer(ind);
+                map.removeLayer(rusRM);
+                map.removeLayer(ijsRM);
+            }
+
+            usaRM.on('mouseover', function(e){usaRM.openPopup();});
+            usaRM.on('mouseout', function (e) {usaRM.closePopup();});
+            chnRM.on('mouseover', function(e){chnRM.openPopup();});
+            chnRM.on('mouseout', function (e) {chnRM.closePopup();});
+            thaRM.on('mouseover', function(e){thaRM.openPopup();});
+            thaRM.on('mouseout', function (e) {thaRM.closePopup();});
+            egyRM.on('mouseover', function(e){egyRM.openPopup();});
+            egyRM.on('mouseout', function (e) {egyRM.closePopup();});
+            itaRM.on('mouseover', function(e){itaRM.openPopup();});
+            itaRM.on('mouseout', function (e) {itaRM.closePopup();});
+            bra.on('mouseover', function(e){bra.openPopup();});
+            bra.on('mouseout', function (e) {bra.closePopup();});
+            fraRM.on('mouseover', function(e){fraRM.openPopup();});
+            fraRM.on('mouseout', function (e) {fraRM.closePopup();});
+            spaRM.on('mouseover', function(e){spaRM.openPopup();});
+            spaRM.on('mouseout', function (e) {spaRM.closePopup();});
+            gre.on('mouseover', function(e){gre.openPopup();});
+            gre.on('mouseout', function (e) {gre.closePopup();});
+            duiRM.on('mouseover', function(e){duiRM.openPopup();});
+            duiRM.on('mouseout', function (e) {duiRM.closePopup();});
+            ind.on('mouseover', function(e){ind.openPopup();});
+            ind.on('mouseout', function (e) {ind.closePopup();});
+            rusRM.on('mouseover', function(e){rusRM.openPopup();});
+            rusRM.on('mouseout', function (e) {rusRM.closePopup();});
+            ijsRM.on('mouseover', function(e){ijsRM.openPopup();});
+            ijsRM.on('mouseout', function (e) {ijsRM.closePopup();});
+        };
+
+        var redIcon = L.icon({
+            iconUrl: 'http://www.abqjournal.com/maps/js/images/marker-red.png',
+            iconRetinaUrl: 'http://www.abqjournal.com/maps/js/images/marker-red.png',
+            iconAnchor: [5, 20],
+            popupAnchor: [0, -30],
+            iconSize: [25,41]
+        });
+
+        //Markers Timothy Dalton
+        $scope.markerTD=function(td){
+            console.log(td);
+            if(td) {
+                mor= L.marker([31.7917020,-7.0926200], {icon: yellowIcon}).addTo(map).bindPopup('<b>Morocco</b> <ul><li>The Living Daylights</li></ul>',{closeButton: false}); //Marokko
+                ausTD= L.marker([47.5162310,14.5500720], {icon: yellowIcon}).addTo(map).bindPopup('<b>Austria</b> <ul><li>The Living Daylights</li></ul>',{closeButton: false}); //Oostenrijk
+                svk= L.marker([48.6690260,19.6990240], {icon: yellowIcon}).addTo(map).bindPopup('<b>Slovakia</b> <ul><li>The Living Daylights</li></ul>',{closeButton: false}); //Slovakije
+                afgTD= L.marker([33.9391100,67.7099530], {icon: yellowIcon}).addTo(map).bindPopup('<b>Afghanistan</b> <ul><li>The Living Daylights</li></ul>',{closeButton: false}); //Afghanistan
+                usaTD= L.marker([37.0902400,-105.7128910], {icon: yellowIcon}).addTo(map).bindPopup('<b>USA</b> <ul><li>Licence To Kill</li></ul>',{closeButton: false}); //USA
+                bahTD= L.marker([25.0342800,-73.3962800],{icon: yellowIcon}).addTo(map).bindPopup('<b>Bahamas</b> <ul><li>Licence To Kill</li></ul>',{closeButton: false}); //Bahamas
+                mexTD= L.marker([20.6345010,-101.5527840], {icon: yellowIcon}).addTo(map).bindPopup('<b>Mexico</b> <ul><li>Licence To Kill</li></ul>',{closeButton: false}); // Mexico
+            }
+            else{
+                map.removeLayer(mor);
+                map.removeLayer(ausTD);
+                map.removeLayer(svk);
+                map.removeLayer(afgTD);
+                map.removeLayer(usaTD);
+                map.removeLayer(bahTD);
+                map.removeLayer(mexTD);
+            }
+
+            mor.on('mouseover', function(e){mor.openPopup();});
+            mor.on('mouseout', function (e) {mor.closePopup();});
+            ausTD.on('mouseover', function(e){ausTD.openPopup();});
+            ausTD.on('mouseout', function (e) {ausTD.closePopup();});
+            svk.on('mouseover', function(e){svk.openPopup();});
+            svk.on('mouseout', function (e) {svk.closePopup();});
+            afgTD.on('mouseover', function(e){afgTD.openPopup();});
+            afgTD.on('mouseout', function (e) {afgTD.closePopup();});
+            usaTD.on('mouseover', function(e){usaTD.openPopup();});
+            usaTD.on('mouseout', function (e) {usaTD.closePopup();});
+            bahTD.on('mouseover', function(e){bahTD.openPopup();});
+            bahTD.on('mouseout', function (e) {bahTD.closePopup();});
+            mexTD.on('mouseover', function(e){mexTD.openPopup();});
+            mexTD.on('mouseout', function (e) {mexTD.closePopup();});
+        };
+
+        var yellowIcon = L.icon({
+            iconUrl: 'http://www.inss-conf.org/2012/leaflet/images/marker_y.png',
+            iconRetinaUrl: 'http://www.inss-conf.org/2012/leaflet/images/marker_y.png',
+            iconAnchor: [5, 20],
+            popupAnchor: [0, -30],
+            iconSize: [25,41]
+        });
+
+        //Markers Pierce Brosnan
+        $scope.markerPB=function(pb){
+            console.log(pb);
+            if(pb) {
+                cub= L.marker([21.5217570,-77.7811670], {icon: purpleIcon}).addTo(map).bindPopup('<b>Cuba</b> <ul><li>GoldenEye</li><li>Die Another Day</li></ul>',{closeButton: false}); //Cuba
+                rusPB= L.marker([61.5240100,70.3187560], {icon: purpleIcon}).addTo(map).bindPopup('<b>Russia</b> <ul><li>GoldenEye</li></ul>',{closeButton: false}); //Rusland
+                fraPB= L.marker([44.2276380,2.2137490], {icon: purpleIcon}).addTo(map).bindPopup('<b>France</b> <ul><li>GoldenEye</li></ul>',{closeButton: false}); //Frankrijk
+                duiPB= L.marker([49.1387263,10.4515280], {icon: purpleIcon}).addTo(map).bindPopup('<b>Germany</b> <ul><li>Tomorrow Never Dies</li></ul>',{closeButton: false}); //Duitsland
+                afgPB= L.marker([31.8732074,63.8427675], {icon: purpleIcon}).addTo(map).bindPopup('<b>Afghanistan</b> <ul><li>Tomorrow Never Dies</li></ul>',{closeButton: false}); //Afghanistan
+                pak= L.marker([30.3753210,69.3451160],{icon: purpleIcon}).addTo(map).bindPopup('<b>Pakistan</b> <ul><li>Tomorrow Never Dies</li></ul>',{closeButton: false}); //Pakistan
+                chnPB= L.marker([34.7138312,89.9571177], {icon: purpleIcon}).addTo(map).bindPopup('<b>China</b> <ul><li>Tomorrow Never Dies</li></ul>',{closeButton: false}); // China
+                thaPB= L.marker([15.8700320,103.4534805], {icon: purpleIcon}).addTo(map).bindPopup('<b>Thailand</b> <ul><li>Tomorrow Never Dies</li></ul>',{closeButton: false}); // Thailand
+                vie= L.marker([14.0583240,108.2771990], {icon: purpleIcon}).addTo(map).bindPopup('<b>Vietnam</b> <ul><li>Tomorrow Never Dies</li></ul>',{closeButton: false}); // Vietnam
+                spaPB= L.marker([43.0134769,-2.7492180], {icon: purpleIcon}).addTo(map).bindPopup('<b>Spain</b> <ul><li>The World Is Not Enough</li></ul>',{closeButton: false}); // Spanje
+                trkPB= L.marker([38.0005572,29.9698865], {icon: purpleIcon}).addTo(map).bindPopup('<b>Turkey</b> <ul><li>The World Is Not Enough</li></ul>',{closeButton: false}); // Turkije
+                aze= L.marker([40.1431050,47.5769270], {icon: purpleIcon}).addTo(map).bindPopup('<b>Azerbaijan</b> <ul><li>The World Is Not Enough</li></ul>',{closeButton: false}); // Azerbeidzjan
+                kaz= L.marker([48.0195730,66.9236840], {icon: purpleIcon}).addTo(map).bindPopup('<b>Kazakhstan</b> <ul><li>The World Is Not Enough</li></ul>',{closeButton: false}); // Kazahkstan
+                ijsPB= L.marker([63.9011058,-19.0208330], {icon: purpleIcon}).addTo(map).bindPopup('<b>Iceland</b> <ul><li>Die Another Day</li></ul>',{closeButton: false}); // IJsland
+                nor= L.marker([78.5536040,15.6702720], {icon: purpleIcon}).addTo(map).bindPopup('<b>Norway (Svalbarg)</b> <ul><li>Die Another Day</li></ul>',{closeButton: false}); // Noorwegen
+            }
+            else{
+                map.removeLayer(cub);
+                map.removeLayer(rusPB);
+                map.removeLayer(fraPB);
+                map.removeLayer(duiPB);
+                map.removeLayer(afgPB);
+                map.removeLayer(pak);
+                map.removeLayer(chnPB);
+                map.removeLayer(thaPB);
+                map.removeLayer(vie);
+                map.removeLayer(spaPB);
+                map.removeLayer(trkPB);
+                map.removeLayer(aze);
+                map.removeLayer(kaz);
+                map.removeLayer(ijsPB);
+                map.removeLayer(nor);
+            }
+
+            cub.on('mouseover', function(e){cub.openPopup();});
+            cub.on('mouseout', function (e) {cub.closePopup();});
+            rusPB.on('mouseover', function(e){rusPB.openPopup();});
+            rusPB.on('mouseout', function (e) {rusPB.closePopup();});
+            fraPB.on('mouseover', function(e){fraPB.openPopup();});
+            fraPB.on('mouseout', function (e) {fraPB.closePopup();});
+            duiPB.on('mouseover', function(e){duiPB.openPopup();});
+            duiPB.on('mouseout', function (e) {duiPB.closePopup();});
+            afgPB.on('mouseover', function(e){afgPB.openPopup();});
+            afgPB.on('mouseout', function (e) {afgPB.closePopup();});
+            pak.on('mouseover', function(e){pak.openPopup();});
+            pak.on('mouseout', function (e) {pak.closePopup();});
+            chnPB.on('mouseover', function(e){chnPB.openPopup();});
+            chnPB.on('mouseout', function (e) {chnPB.closePopup();});
+            thaPB.on('mouseover', function(e){thaPB.openPopup();});
+            thaPB.on('mouseout', function (e) {thaPB.closePopup();});
+            vie.on('mouseover', function(e){vie.openPopup();});
+            vie.on('mouseout', function (e) {vie.closePopup();});
+            spaPB.on('mouseover', function(e){spaPB.openPopup();});
+            spaPB.on('mouseout', function (e) {spaPB.closePopup();});
+            trkPB.on('mouseover', function(e){trkPB.openPopup();});
+            trkPB.on('mouseout', function (e) {trkPB.closePopup();});
+            aze.on('mouseover', function(e){aze.openPopup();});
+            aze.on('mouseout', function (e) {aze.closePopup();});
+            kaz.on('mouseover', function(e){kaz.openPopup();});
+            kaz.on('mouseout', function (e) {kaz.closePopup();});
+            ijsPB.on('mouseover', function(e){ijsPB.openPopup();});
+            ijsPB.on('mouseout', function (e) {ijsPB.closePopup();});
+            nor.on('mouseover', function(e){nor.openPopup();});
+            nor.on('mouseout', function (e) {nor.closePopup();});
+        };
+
+        var purpleIcon = L.icon({
+            iconUrl: 'http://stuff.samat.org/Test-Cases/Leaflet/881-Marker-Subclassing/marker-icon-purple.png',
+            iconRetinaUrl: 'http://stuff.samat.org/Test-Cases/Leaflet/881-Marker-Subclassing/marker-icon-purple.png',
+            iconAnchor: [5, 20],
+            popupAnchor: [0, -30],
+            iconSize: [25,41]
+        });
+
+        //Markers Daniel Craig
+        $scope.markerDC=function(dc){
+            console.log(dc);
+            if(dc) {
+                usaDC= L.marker([37.0902400,-110.7128910], {icon: orangeIcon}).addTo(map).bindPopup('<b>USA</b> <ul><li>Casino Royale</li></ul>',{closeButton: false});
+                mad= L.marker([-18.7669470,46.8691070], {icon: orangeIcon}).addTo(map).bindPopup('<b>Madagascar</b> <ul><li>Casino Royale</li></ul>',{closeButton: false});
+                uga= L.marker([1.3733330,32.2902750], {icon: orangeIcon}).addTo(map).bindPopup('<b>Uganda</b> <ul><li>Casino Royale</li></ul>',{closeButton: false});
+                itaDC= L.marker([41.8719400,12.5673800], {icon: orangeIcon}).addTo(map).bindPopup('<b>Italy</b> <ul><li>Casino Royale</li></ul>',{closeButton: false});
+                cze= L.marker([49.8174920,15.4729620], {icon: orangeIcon}).addTo(map).bindPopup('<b>Czech Republic</b> <ul><li>Casino Royale</li></ul>',{closeButton: false});
+                hti= L.marker([18.9711870,-72.2852150],{icon: orangeIcon}).addTo(map).bindPopup('<b>Haïti</b> <ul><li>Quantum Of Solace</li></ul>',{closeButton: false});
+                rusDC= L.marker([66.0191392,133.6195393], {icon: orangeIcon}).addTo(map).bindPopup('<b>Russia</b> <ul><li>Quantum Of Solace</li></ul>',{closeButton: false});
+                bol= L.marker([-16.2901540,-63.5886530], {icon: orangeIcon}).addTo(map).bindPopup('<b>Bolivia</b> <ul><li>Quantum Of Solace</li></ul>',{closeButton: false});
+                ausDC = L.marker([47.5162310,14.5500720], {icon: orangeIcon}).addTo(map).bindPopup('<b>Austria</b> <ul><li>Quantum Of Solace</li></ul>',{closeButton: false});
+                trkDC = L.marker([38.9637450,35.2433220], {icon: orangeIcon}).addTo(map).bindPopup('<b>Turkey</b> <ul><li>Skyfall</li></ul>',{closeButton: false});
+                chnDC = L.marker([35.8616600,104.1953970], {icon: orangeIcon}).addTo(map).bindPopup('<b>China</b> <ul><li>Skyfall</li></ul>',{closeButton: false});
+            }
+            else{
+                map.removeLayer(usaDC);
+                map.removeLayer(mad);
+                map.removeLayer(uga);
+                map.removeLayer(itaDC);
+                map.removeLayer(cze);
+                map.removeLayer(hti);
+                map.removeLayer(rusDC);
+                map.removeLayer(bol);
+                map.removeLayer(ausDC);
+                map.removeLayer(trkDC);
+                map.removeLayer(chnDC);
+            }
+
+            usaDC.on('mouseover', function(e){usaDC.openPopup();});
+            usaDC.on('mouseout', function (e) {usaDC.closePopup();});
+            mad.on('mouseover', function(e){mad.openPopup();});
+            mad.on('mouseout', function (e) {mad.closePopup();});
+            uga.on('mouseover', function(e){uga.openPopup();});
+            uga.on('mouseout', function (e) {uga.closePopup();});
+            itaDC.on('mouseover', function(e){itaDC.openPopup();});
+            itaDC.on('mouseout', function (e) {itaDC.closePopup();});
+            cze.on('mouseover', function(e){cze.openPopup();});
+            cze.on('mouseout', function (e) {cze.closePopup();});
+            hti.on('mouseover', function(e){hti.openPopup();});
+            hti.on('mouseout', function (e) {hti.closePopup();});
+            rusDC.on('mouseover', function(e){rusDC.openPopup();});
+            rusDC.on('mouseout', function (e) {rusDC.closePopup();});
+            bol.on('mouseover', function(e){bol.openPopup();});
+            bol.on('mouseout', function (e) {bol.closePopup();});
+            ausDC.on('mouseover', function(e){ausDC.openPopup();});
+            ausDC.on('mouseout', function (e) {ausDC.closePopup();});
+            trkDC.on('mouseover', function(e){trkDC.openPopup();});
+            trkDC.on('mouseout', function (e) {trkDC.closePopup();});
+            chnDC.on('mouseover', function(e){chnDC.openPopup();});
+            chnDC.on('mouseout', function (e) {chnDC.closePopup();});
+        };
+
+        var orangeIcon = L.icon({
+            iconUrl: 'http://46.105.103.225/wstatic/images/marker-orange.png',
+            iconRetinaUrl: 'http://46.105.103.225/wstatic/images/marker-orange.png',
+            iconAnchor: [5, 20],
+            popupAnchor: [0, -30],
+            iconSize: [25,41]
+        });
 
     })
+
     .controller('CarsCtrl', function($scope, $stateParams,carsservice) {
         $scope.cars=[];
 
@@ -928,14 +1248,14 @@ $scope.cars=data;
             var d, n,leeftijd,
                 d = new Date();
             n= d.getFullYear();
-            var Girl = {
-                wrap: $('#girls'),
-                girls: $scope.cars,
+            var Car = {
+                wrap: $('#cars'),
+                cars: $scope.cars,
                 add: function(){
 
-                    var random = this.girls[Math.floor(Math.random() * this.girls.length)];
+                    var random = this.cars[Math.floor(Math.random() * this.cars.length)];
 
-                    this.wrap.append("<div class='girlCard'><img alt='" + random.name + "' src='" + random.image + "' /><span>" + random.merk +" " +random.serie  + "</span></div>");
+                    this.wrap.append("<div class='carCard'><img alt='" + random.name + "' src='" + random.image + "' /><span>" + random.merk +" " +random.serie  + "</span></div>");
                 }
             }
 
@@ -948,12 +1268,12 @@ $scope.cars=data;
                     var self = this;
                     if(!this.blocked){
                         this.blocked = true;
-                        var getgirl=document.getElementsByClassName("girlCard")[0];
-                        $('.girlCard').eq(0).addClass(animate).one(animationEndEvent, function(){
+                        var getcar =document.getElementsByClassName("carCard")[0];
+                        $('.carCard').eq(0).addClass(animate).one(animationEndEvent, function(){
                             console.log("kkkk");
                             $(this).remove();
 
-                            Girl.add();
+                            Car.add();
                             self.blocked = false;
                         });
                     }
@@ -974,16 +1294,16 @@ $scope.cars=data;
                 console.log("nobutton");
             };
 
-            function pushtoarray(denaamvandegirl){
-                $scope.naam.push(denaamvandegirl);
+            function pushtoarray(denaamvandecar){
+                $scope.naam.push(denaamvandecar);
                 console.log($scope.naam);
             }
 
             $(document).ready(function(){
-                Girl.add();
-                Girl.add();
-                Girl.add();
-                Girl.add();
+                Car.add();
+                Car.add();
+                Car.add();
+                Car.add();
             })
 
         });

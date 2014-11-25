@@ -317,80 +317,6 @@
       height: 1.3em;
       margin-left: 2px; }
 
-@-webkit-keyframes rotation {
-  0% {
-    background-position: 0 0; }
-  100% {
-    background-position: -400px 0; } }
-@keyframes rotation {
-  0% {
-    background-position: 0 0; }
-  100% {
-    background-position: -400px 0; } }
-@keyframes rotationtwo {
-  0% {
-    background-position: -400px 0; }
-  100% {
-    background-position: -0 0; } }
-@-webkit-keyframes rotationtwo {
-  0% {
-    background-position: -400px 0; }
-  100% {
-    background-position: -0 0; } }
-.globe, .globe:before {
-    position: absolute;
-    z-index: 1;
-
-    left:-17%;
-    width: 100px;
-    height: 100px;
-    margin-left: -109px;
-    margin-top: -150px;
-    background-image: url(../img/world_map.png);
-
-    background-repeat: repeat-x;
-    background-position: top left;
-    -webkit-border-radius: 400px;
-    border-radius: 400px;
-    -moz-border-radius:400px;
-    background-size: auto 100px;
-
-    background-color: rgba( 0, 0, 0, 0.03 );
-    opacity: 1;
-    -webkit-animation: rotation 3s infinite;
-    animation: rotation 3s infinite;
-
-}
-
-.globe:before {
-    content: "";
-    top: 149%;
-    z-index: 0;
-    -webkit-animation: rotationtwo 3s infinite;
-    animation: rotationtwo 3s infinite;
-    opacity: 0.3;
-    margin-left: 17px;
-}
-
-.globe
-{
-    position: relative;
-    margin-top: 122px;
-}
-
-#map50 {
-  width: auto;
-  height: 600px;
-  overflow: hidden;
-  padding: 0px;
-  border: 15px inset #131211;
-  margin-top: 100px;
-  margin-left: 20px;
-  margin-right: 16px; }
-
-#map25 {
-  padding-right: 50px; }
-
 .navItemBond a div {
   border-bottom: 2px solid #b10a0a; }
 
@@ -441,7 +367,9 @@
 /*      SCHERM 1 (BONDS)    */
 .bonds {
   text-align: center;
-  background-color: #faf2f2; }
+  background-color: #faf2f2;
+  height: 100%;
+  margin-top: 3%; }
 
 .bondImage {
   height: 93vh;
@@ -636,8 +564,6 @@
   .bar.bar-stable .button {
     color: transparent;
     display: none; }
-
-
 
 .yes-text {
   position: absolute;
@@ -876,14 +802,70 @@ a {
       font-size: 22px;
       color: #3b7; }
 
-/*      SCHERM 4 (MAP)  */
-.mapList {
-  margin-top: 10px; }
+/*      SCHERM 3 (CARS)    */
+.car {
+  background-image: url(../img/carWallpaper.jpg);
+  background-size: cover;
+  height: 100%; }
 
+#cars, .carCard {
+  width: 570px;
+  height: 370px; }
+
+#cars {
+  position: relative;
+  margin: 0 0 0 26%; }
+
+.carCard {
+  position: absolute;
+  background-color: transparent;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: all .1s linear;
+  margin-top: 5%; }
+  .carCard:nth-child(1) {
+    z-index: 5; }
+  .carCard:nth-child(2) {
+    z-index: 4;
+    top: 7px;
+    transform: scale(0.98); }
+  .carCard:nth-child(3) {
+    z-index: 3;
+    top: 14px;
+    transform: scale(0.96); }
+  .carCard:nth-child(n+4) {
+    z-index: 2;
+    transform: scale(0.7); }
+  .carCard:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    content: ''; }
+
+.carCard img {
+  width: 100%; }
+
+.carCard span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: white;
+  width: 100%;
+  padding: 10px;
+  font: 24px "Gulim";
+  text-align: center;
+  line-height: 30px;
+  color: #555; }
+
+/*      SCHERM 4 (MAP)  */
 .mapList div {
   position: relative;
   margin: auto;
-  margin-top: 10px;
   width: 100%; }
 
 .checkbox, .checkbox2, .checkbox3, .checkbox4, .checkbox5, .checkbox6 {
@@ -893,7 +875,7 @@ a {
   font-family: Helvetica, Arial;
   padding: .25em 0 0 0;
   display: block;
-  color: #999;
+  color: #fff;
   text-transform: uppercase;
   font-size: .8em;
   text-align: center;
@@ -911,6 +893,7 @@ a {
   top: 0;
   left: 0;
   box-sizing: box-border;
+  background-color: rgba(241, 238, 232, 0.4);
   -webkit-transition: all 400ms ease;
   -moz-transition: all 400ms ease;
   -o-transition: all 400ms ease;
@@ -919,19 +902,118 @@ a {
 /*state change*/
 .checkbox:checked + .label, .checkbox2:checked + .label2, .checkbox3:checked + .label3, .checkbox4:checked + .label4
 , .checkbox5:checked + .label5, .checkbox6:checked + .label6 {
-  color: #14b914; }
+  color: #999; }
 
-.checkbox:checked + .label::after, .checkbox2:checked + .label2::after, .checkbox3:checked + .label3::after
-, .checkbox4:checked + .label4::after, .checkbox5:checked + .label5::after, .checkbox6:checked + .label6::after {
+.checkbox:checked + .label::after {
   background: rgba(55, 185, 55, 0.2);
   border: 3px solid rgba(100, 185, 100, 0.8); }
 
+.checkbox2:checked + .label2::after {
+  background: rgba(100, 158, 230, 0.2);
+  border: 3px solid rgba(0, 101, 212, 0.8); }
+
+.checkbox3:checked + .label3::after {
+  background: rgba(255, 0, 0, 0.2);
+  border: 3px solid rgba(255, 0, 0, 0.2); }
+
+.checkbox4:checked + .label4::after {
+  background: rgba(215, 186, 44, 0.2);
+  border: 3px solid rgba(215, 186, 44, 0.8); }
+
+.checkbox5:checked + .label5::after {
+  background: rgba(132, 0, 255, 0.2);
+  border: 3px solid rgba(132, 0, 255, 0.8); }
+
+.checkbox6:checked + .label6::after {
+  background: rgba(230, 122, 0, 0.2);
+  border: 3px solid rgba(230, 122, 0, 0.8); }
+
+.leaflet-popup-content-wrapper {
+  background-color: red; }
+
+.locatie {
+  background-image: url("http://elitefon.ru/images/201211/elitefon.ru_22014.jpg");
+  background-size: cover;
+  height: 100%;
+  margin-top: 3%; }
+
+.leaflet-control-zoom {
+  display: none; }
+
+.leaflet-bottom {
+  display: none; }
+
 #map {
   postion: absolute;
-  width: 1200px;
-  height: 800px;
-  left: 0px;
-  top: -50px; }
+  width: 100%;
+  height: 660px;
+  left: 20px;
+  top: 10px; }
+
+@-webkit-keyframes rotation {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: -400px 0; } }
+@keyframes rotation {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: -400px 0; } }
+@keyframes rotationtwo {
+  0% {
+    background-position: -400px 0; }
+  100% {
+    background-position: -0 0; } }
+@-webkit-keyframes rotationtwo {
+  0% {
+    background-position: -400px 0; }
+  100% {
+    background-position: -0 0; } }
+.globe, .globe:before {
+  position: absolute;
+  z-index: 1;
+  left: -17%;
+  width: 100px;
+  height: 100px;
+  margin-left: -109px;
+  margin-top: -150px;
+  background-image: url(../img/world_map.png);
+  background-repeat: repeat-x;
+  background-position: top left;
+  -webkit-border-radius: 400px;
+  border-radius: 400px;
+  -moz-border-radius: 400px;
+  background-size: auto 100px;
+  background-color: rgba(0, 0, 0, 0.03);
+  opacity: 0.7;
+  -webkit-animation: rotation 3s infinite;
+  animation: rotation 3s infinite; }
+
+.globe:before {
+  content: "";
+  top: 149%;
+  z-index: 0;
+  -webkit-animation: rotationtwo 3s infinite;
+  animation: rotationtwo 3s infinite;
+  opacity: 0.3;
+  margin-left: 17px; }
+
+.globe {
+  position: relative;
+  margin-top: 15px; }
+
+#map50 {
+  width: auto;
+  overflow: cover;
+  padding: 0px;
+  margin-right: 45px; }
+
+#map25 {
+  padding-right: 50px; }
+
+.mapList {
+  margin-top: -46%; }
 
 /*      MEDIAQUERIES    */
 /*mediaquery vanaf 1200px */
