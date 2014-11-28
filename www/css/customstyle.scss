@@ -435,8 +435,10 @@ $jbblack:#131211;
     }
   }
 }
-
-.navItemBond a div{
+.pane{
+  background-color: $achtergrond;
+}
+.redline a div{
   border-bottom: 2px solid $rood;
 }
 
@@ -500,7 +502,7 @@ $jbblack:#131211;
   text-align: center;
   background-color: $achtergrond;
   height: 100%;
-  margin-top: 3%;
+  margin-top: 45px;
 }
 //Image en naam
 .bondImage{

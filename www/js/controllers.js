@@ -1,32 +1,136 @@
 angular.module('starter.controllers', [])
 
 
+    .controller('maincontroller', function($scope, $ionicModal, $timeout,$location) {
+        console.log("kk");
+        $timeout(function(){
+            document.getElementById("jbaudio").load();
+            document.getElementById("jbaudio").pause();
+            //document.getElementById("jbaudio").play();
+            $scope.volumOnorOff=function() {
+                var getvolume = document.getElementById("volume");
+
+                var volumelogo = getvolume.className;
+
+                if (volumelogo == "button button-icon icon ion-volume-high activated") {
+                    console.log("volumelogo");
+                    getvolume.className = "button button-icon icon ion-volume-mute";
+                    document.getElementById("jbaudio").pause();
+                }
+                if (volumelogo == "button button-icon icon ion-volume-mute activated") {
+                    console.log("volumelogo");
+                    getvolume.className = "button button-icon icon ion-volume-high";
+                    document.getElementById("jbaudio").play();
+                }
+            };
 
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
-       document.getElementById("jbaudio").load();
-        document.getElementById("jbaudio").pause();
-        //document.getElementById("jbaudio").play();
-        $scope.volumOnorOff=function() {
-            var getvolume = document.getElementById("volume");
+        },200);
 
-            var volumelogo = getvolume.className;
+        })
 
-            if (volumelogo == "button button-icon icon ion-volume-high activated") {
-                console.log("volumelogo");
-                getvolume.className = "button button-icon icon ion-volume-mute";
-                document.getElementById("jbaudio").pause();
+
+.controller('AppCtrl', function($scope, $ionicModal, $timeout,$location) {
+       //navigatie voor rode lijn
+        //search for red line
+        $("#navbond").velocity( { scale: 0,opacity:0},0);
+        $("#navgirl").velocity( { scale: 0,opacity:0},0);
+        $("#navcars").velocity( { scale: 0,opacity:0},0);
+        $("#navmap").velocity( { scale: 0,opacity:0},0);
+        $("#navbond").velocity( { scale: 1,opacity:1},500);
+        $timeout(function(){
+            $("#navgirl").velocity( { scale: 1,opacity:1},500);
+            $timeout(function(){
+                $("#navcars").velocity( { scale: 1,opacity:1},500);
+                $timeout(function(){
+                    $("#navmap").velocity( { scale: 1,opacity:1},500);
+                },100);
+            },100);
+
+        },100);
+
+
+        function redliner(numb)
+        {
+        var i,cname;
+        var getmenu=document.getElementById("menuitemsjbsite");
+        //console.log(getmenu.childNodes[0].childElementCount );
+        for (i=1;i<=(getmenu.childNodes[0].childElementCount*2);i+=2) {
+            //1 3 5 7
+            if(i!=numb)
+            {
+                //console.log("ppppaaaa" + getmenu.childNodes[0].childNodes[i]);
+
+                console.log(getmenu.childNodes[0].childNodes[i].className);
+                switch(getmenu.childNodes[0].childNodes[i].className)
+                {
+                    case "navItemBond redline item":
+                        getmenu.childNodes[0].childNodes[i].className= "navItemBond item";
+                        break;
+                    case "navItemBond item redline":
+                        getmenu.childNodes[0].childNodes[i].className= "navItemBond item";
+                        break;
+
+                    case "navItemCars item redline":
+                        getmenu.childNodes[0].childNodes[i].className= "navItemCars item";
+                        break;
+                    case "navItemMap item redline":
+                        getmenu.childNodes[0].childNodes[i].className= "navItemMap item";
+                        break;
+                }
             }
-            if (volumelogo == "button button-icon icon ion-volume-mute activated") {
-                console.log("volumelogo");
-                getvolume.className = "button button-icon icon ion-volume-high";
-                document.getElementById("jbaudio").play();
+
+
+        }
+            console.log(getmenu.childNodes[0].childNodes[numb] );
+            cname= getmenu.childNodes[0].childNodes[numb].className;
+            var k=cname.split(' ');
+            if(k.length<=2)
+            {
+            getmenu.childNodes[0].childNodes[numb].className= cname +" redline";
             }
-        };
+            }
+
+       $scope.updateline=function(){
+           $timeout(function(){
+               console.log($location.path());
+           switch($location.path()){
+               case "/app/bonds":
+                    redliner(1);
+                   break;
+               case "/app/map":
+                   redliner(7);
+                   break;
+               case "/app/cars":
+                   redliner(5);
+                   break;
+
+
+
+           }
+
+           },200);
+
+       };
+
+
+
+
+
+
+
+
+
+
     })
 
 
     .controller('BondsCtrl', function($scope) {
+
+        $(".bar-stable") .velocity({translateY: -50}, 0);
+
+        $(".bar-stable").velocity({translateY: 0}, 400);
+
         $scope.bonds = [
             {"id": 0},
             {  "id": 1 },
@@ -413,14 +517,27 @@ console.log("ss");
     })
 
 
-    .controller('GirlsCtrl', function($scope,$stateParams) {
+    .controller('GirlsCtrl', function($scope,$stateParams,$timeout) {
 //menu van de girls
+        $("#girlslist").velocity({translateY: 900}, 0);
+
+           $("#girlslist").velocity({translateY: 0}, 400);
+           /* $("#menuitemsjbsite1") .velocity("fadeIn", { duration: 1000 })*/
+
+
 
     })
 
 
 
     .controller('SingleGirlCtrl', function($scope,$stateParams,girlservice) {
+        $(".card") .velocity({translateY: -150}, 0);
+      /*  $(".card").velocity({
+    width: "*=2"
+}, 2000);*/
+
+
+        $(".card").velocity({translateY: 0}, 400);
 
         console.log($stateParams);
         //  [9871,9896,9907,9919,10070,10168,10190,10223,10341,10458,10475,10500,10342,10660,10670,10679,10695,1620,9205,4587,10912,18182,1030261];

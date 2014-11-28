@@ -356,8 +356,11 @@
       width: 60px;
       height: 1.3em;
       margin-left: 2px; }
+.pane{
+    background-color: #faf2f2;
+}
 
-.navItemBond a div {
+.redline a div {
   border-bottom: 2px solid #b10a0a; }
 
 /*      NAVIGATIE ITEMS HOVER    */
@@ -409,7 +412,7 @@
   text-align: center;
   background-color: #faf2f2;
   height: 100%;
-  margin-top: 3%; }
+  margin-top: 45px; }
 
 .bondImage {
   height: 93vh;

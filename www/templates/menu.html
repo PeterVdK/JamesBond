@@ -13,30 +13,25 @@
       <h1 class="title">Left</h1>
     </header>
     -->
-      <button id="volume" class="button button-icon icon ion-volume-high" ng-click="volumOnorOff()"></button>
-      <audio id="jbaudio">
-          <source src="music/James Bond 007 Theme Tune (original).ogg" type="audio/ogg">
-          <source src="music/James Bond 007 Theme Tune (original).mp3" type="audio/mpeg">
-          Your browser does not support the audio element.
-      </audio>
+
     <ion-content class="has-header">
-      <ion-list>
-        <ion-item nav-clear menu-close class="navItemBond">
+      <ion-list id="menuitemsjbsite">
+        <ion-item nav-clear menu-close class="navItemBond redline" id="navbond" ng-click="updateline()">
             <a href="#/app/bonds">
                 <div>BONDS</div>
             </a>
         </ion-item>
-        <ion-item nav-clear menu-close class="navItemGirls">
+        <ion-item nav-clear menu-close class="navItemGirls" id="navgirl" ng-click="updateline()">
             <a href="#/girls/bondgirls">
                 <div>BONDGIRLS</div>
             </a>
         </ion-item>
-        <ion-item nav-clear menu-close class="navItemCars">
+        <ion-item nav-clear menu-close class="navItemCars" id="navcars" ng-click="updateline()">
             <a href="#/app/cars">
                 <div>CARS</div>
             </a>
         </ion-item>
-        <ion-item nav-clear menu-close class="navItemMap">
+        <ion-item nav-clear menu-close class="navItemMap" id="navmap"  ng-click="updateline()">
             <a href="#/app/map">
                 <div>MAP</div>
             </a>
