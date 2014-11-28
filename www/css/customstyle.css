@@ -1014,6 +1014,7 @@ a {
   100% {
     background-position: -0 0; } }
 .globe, .globe:before {
+  display: none;
   position: absolute;
   z-index: 1;
   left: -17%;
@@ -1056,7 +1057,7 @@ a {
   padding-right: 50px; }
 
 .mapList {
-  margin-top: -46%; }
+  margin-top: 2%; }
 
 /*      MEDIAQUERIES    */
 /*mediaquery vanaf 1200px */
@@ -1086,7 +1087,13 @@ a {
       margin: 15% 10.7%; }
 
   .films {
-    margin: 11% 7.7%; } }
+    margin: 11% 7.7%; }
+
+  .carCard {
+    margin-left: -15%; }
+
+  .mapList {
+    margin-top: 12%; } }
 /*950*/
 @media screen and (max-width: 950px) {
   #logo {
@@ -1141,7 +1148,24 @@ a {
       margin: 92% -59.3%; }
 
   .wie {
-    margin: 86% -65%; } }
+    margin: 86% -65%; }
+
+  .carCard {
+    margin-left: -22%;
+    width: 85%; }
+
+  .carCard img {
+    width: 110%; }
+
+  .mapList {
+    margin-top: 44%; }
+
+  .label, .label2, .label3, .label4, .label5, .label6 {
+    font-size: .7em; }
+
+  .label::after, .label2::after, .label3::after, .label4::after, .label5::after, .label6::after {
+    width: 150%;
+    margin-left: -13px; } }
 /*mediaquery vanaf 768px */
 @media screen and (max-width: 768px) {
   #logo {
@@ -1178,12 +1202,44 @@ a {
       margin: 15% 7.7%; }
 
   .films {
-    margin: 10% 5%; } }
+    margin: 10% 5%; }
+
+  .carCard {
+    width: 100%; }
+
+  .carCard img {
+    width: 100%; }
+
+  .mapList {
+    margin-top: 20%; }
+
+  .label, .label2, .label3, .label4, .label5, .label6 {
+    font-size: .8em; }
+
+  .label::after, .label2::after, .label3::after, .label4::after, .label5::after, .label6::after {
+    width: 125%; } }
+/*620*/
 @media screen and (max-width: 620px) {
   .bondNames #leftScroll {
     margin-left: 13px;
-    left: -194px; } }
-/*644*/
+    left: -194px; }
+
+  .carCard {
+    margin-left: -20%;
+    width: 85%; }
+
+  .carCard img {
+    width: 110%; }
+
+  .mapList {
+    margin-top: 40%; }
+
+  .label, .label2, .label3, .label4, .label5, .label6 {
+    font-size: .7em; }
+
+  .label::after, .label2::after, .label3::after, .label4::after, .label5::after, .label6::after {
+    width: 140%; } }
+/*500*/
 @media screen and (max-width: 500px) {
   #logo {
     left: 26%; }
@@ -1195,6 +1251,25 @@ a {
   .bondNames #leftScroll {
     margin-left: 13px;
     left: 19px; }
+
+  .bondImage {
+    margin-top: 10%; }
+
+  .carCard {
+    width: 65%;
+    margin-left: -15%; }
+
+  .carCard img {
+    width: 145%; }
+
+  .mapList {
+    margin-top: 50%; }
+
+  .label, .label2, .label3, .label4, .label5, .label6 {
+    font-size: 0.5em; }
+
+  .label::after, .label2::after, .label3::after, .label4::after, .label5::after, .label6::after {
+    width: 170%; }
 
   .deckgrid[deckgrid]::before {
     /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
@@ -1232,13 +1307,29 @@ a {
 
   .films {
     margin: 15% -9%; } }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
   .bondNames #leftScroll {
     margin-left: 13px;
     left: 70px; }
 
   .bondNames #rightScroll {
     margin-left: 13px;
-    left: 279px; } }
+    left: 279px; }
+
+  .carCard {
+    width: 56%;
+    margin-left: -15%; }
+
+  .carCard img {
+    width: 170%; }
+
+  .mapList {
+    margin-top: 130%; }
+
+  .label, .label2, .label3, .label4, .label5, .label6 {
+    font-size: 0.3em; }
+
+  .label::after, .label2::after, .label3::after, .label4::after, .label5::after, .label6::after {
+    width: 200%; } }
 
 /*# sourceMappingURL=customstyle.css.map */
