@@ -506,7 +506,6 @@ $jbblack:#131211;
 .bondImage{
   height: 93vh;
   z-index: -1;
-
 }
 .bondNames{
   position: absolute;
@@ -1232,6 +1231,7 @@ $distance: 600px;
 }
 
 .globe, .globe:before {
+  display:none;
   position: absolute;
   z-index: 1;
 
@@ -1286,7 +1286,7 @@ $distance: 600px;
 }
 
 .mapList{
-  margin-top: -46%;
+  margin-top: 2%;
 }
 
 /*      MEDIAQUERIES    */
@@ -1327,6 +1327,12 @@ $distance: 600px;
   .films{
     margin: 11% 7.7%;
   }
+  .carCard{
+    margin-left: -15%;
+  }
+  .mapList{
+    margin-top: 12%;
+  }
 }
 
 
@@ -1357,11 +1363,6 @@ $distance: 600px;
   .bondNames #leftScroll{
 margin-left: 53px;
   }
-
-
-
-
-
   // image en naam
   .bondFirstname{
     display:none;
@@ -1403,6 +1404,23 @@ margin-left: 53px;
   }
   .wie{
     margin: 86% -65%;
+  }
+  .carCard{
+    margin-left: -22%;
+    width:85%;
+  }
+  .carCard img{
+    width: 110%;
+  }
+  .mapList{
+    margin-top: 44%;
+  }
+  .label,.label2,.label3,.label4,.label5,.label6 {
+    font-size: .7em;
+  }
+  .label::after,.label2::after,.label3::after,.label4::after,.label5::after,.label6::after  {
+    width: 150%;
+    margin-left:-13px;
   }
 }
 
@@ -1453,8 +1471,24 @@ margin-left: 53px;
   .films{
     margin: 10% 5%;
   }
+  .carCard{
+    width:100%;
+  }
+  .carCard img {
+    width: 100%;
+  }
+  .mapList{
+    margin-top: 20%;
+  }
+  .label,.label2,.label3,.label4,.label5,.label6 {
+    font-size: .8em;
+  }
+  .label::after,.label2::after,.label3::after,.label4::after,.label5::after,.label6::after  {
+    width: 125%;
+  }
 }
 
+/*620*/
 @media screen and (max-width:620px) {
   //pijlen
 
@@ -1462,10 +1496,26 @@ margin-left: 53px;
     margin-left:13px;
     left:-194px;
   }
+  .carCard{
+    margin-left: -20%;
+    width:85%;
+  }
+  .carCard img{
+    width: 110%;
+  }
+  .mapList{
+    margin-top: 40%;
+  }
+  .label,.label2,.label3,.label4,.label5,.label6 {
+    font-size: .7em;
+  }
+  .label::after,.label2::after,.label3::after,.label4::after,.label5::after,.label6::after  {
+    width: 140%;
+  }
 }
 
 
-/*644*/
+/*500*/
 @media screen and (max-width: 500px) {
   #logo{
     left:26%;
@@ -1478,6 +1528,25 @@ margin-left: 53px;
   .bondNames #leftScroll{
     margin-left:13px;
     left:19px;
+  }
+  .bondImage{
+    margin-top: 10%;
+  }
+  .carCard{
+    width:65%;
+    margin-left: -15%;
+  }
+  .carCard img{
+    width: 145%;
+  }
+  .mapList{
+    margin-top: 50%;
+  }
+  .label,.label2,.label3,.label4,.label5,.label6 {
+    font-size: 0.5em;
+  }
+  .label::after,.label2::after,.label3::after,.label4::after,.label5::after,.label6::after  {
+    width: 170%;
   }
 //bondimages
 
@@ -1533,7 +1602,7 @@ margin-left: 53px;
 }
 
 //mediaquery 330px
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
   .bondNames #leftScroll{
     margin-left:13px;
     left:70px;
@@ -1542,5 +1611,20 @@ margin-left: 53px;
     margin-left:13px;
     left:279px;
   }
-
+  .carCard{
+    width:56%;
+    margin-left: -15%;
+  }
+  .carCard img{
+    width: 170%;
+  }
+  .mapList{
+    margin-top: 130%;
+  }
+  .label,.label2,.label3,.label4,.label5,.label6 {
+    font-size: 0.3em;
+  }
+  .label::after,.label2::after,.label3::after,.label4::after,.label5::after,.label6::after  {
+    width: 200%;
+  }
 }

@@ -23,6 +23,41 @@ angular.module('starter.controllers', [])
                 document.getElementById("jbaudio").play();
             }
         };
+
+        $("#navCarDiv").click(function() {
+            RedLineCar();
+        });
+        $("#navMapDiv").click(function() {
+            RedLineMap();
+        });
+        $("#navBondDiv").click(function() {
+            RedLineBond()
+        });
+        $("#navCarA").click(function() {
+            RedLineCar();
+        });
+        $("#navMapA").click(function() {
+            RedLineMap();
+        });
+        $("#navBondA").click(function() {
+            RedLineBond()
+        });
+
+        function RedLineCar(){
+            document.getElementById("navCarDiv").style.borderBottom = "2px solid #b10a0a";
+            document.getElementById("navBondDiv").style.borderBottom = "2px solid transparent";
+            document.getElementById("navMapDiv").style.borderBottom = "2px solid transparent";
+        }
+        function RedLineMap(){
+            document.getElementById("navMapDiv").style.borderBottom = "2px solid #b10a0a";
+            document.getElementById("navBondDiv").style.borderBottom = "2px solid transparent";
+            document.getElementById("navCarDiv").style.borderBottom = "2px solid transparent";
+        }
+        function RedLineBond(){
+            document.getElementById("navBondDiv").style.borderBottom = "2px solid #b10a0a";
+            document.getElementById("navCarDiv").style.borderBottom = "2px solid transparent";
+            document.getElementById("navMapDiv").style.borderBottom = "2px solid transparent";
+        }
     })
 
 
