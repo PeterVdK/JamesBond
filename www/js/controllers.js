@@ -591,7 +591,7 @@ console.log('.card'+time);
             }
 
         },1000);
-
+*/
     })
 
 
