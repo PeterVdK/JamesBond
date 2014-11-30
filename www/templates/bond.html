@@ -20,13 +20,16 @@
                     <p>{{bonds.birthday}}</p>
                     <p>{{bonds.place_of_birth}}</p>
                 </div>
-                <ion-scroll zooming="false" direction="y" style="width: auto; height: 350px" >
+                <!--   <ion-scroll zooming="false" direction="y" style="width: auto; height: 350px" >-->
+                <ion-scroll zooming="false" direction="y" style="width: auto;" >
                     <table class="item item-body item-table">
                         <tr>
                             <td>
+                                <a ng-href="http://www.imdb.com/name/{{bonds.imbdid}}">
                                 <img ng-src="http://image.tmdb.org/t/p/w500/{{bonds.profileimage}}">
+                                </a>
                                 <div class="tabs-secondary tabs-icon-left">
-                                    <a class="tab-item ion-information-circled" href="http://www.imdb.com" style="font-size: 40px">
+                                    <a class="tab-item ion-information-circled" ng-href="http://www.imdb.com/name/{{bonds.imbdid}}" style="font-size: 40px">
 
                                     </a>
                                 </div>

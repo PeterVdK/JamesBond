@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic','akoenig.deckgrid','ngAnimate','angular-velocity','angular-whenScrolled', 'ionic.contrib.ui.tinderCards','starter.controllers','starter.service','leaflet-directive'])
+angular.module('starter', ['ionic','akoenig.deckgrid','ngAnimate','angular-velocity','angular-whenScrolled','starter.controllers','starter.service','leaflet-directive'])
    /* .directive('noScroll', function($document) {
         console.log($document);
         return {

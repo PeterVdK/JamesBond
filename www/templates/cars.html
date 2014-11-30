@@ -11,7 +11,7 @@
     <div class="car">
     <ion-content class="has-header">
 
-
+<div style="color: #ffffff; font-size: 32px; width:100%; font-family: Gulim;"> Do you like this car?</div>
         <div id="cars"></div>
         <div id="control">
             <div class="button no" ng-click="nofunc()">
@@ -25,7 +25,23 @@
                 <span>{{n}}</span>
             </div>
 
-        </div>
+
+            <ion-list ng-show="showmoviescar" style="position: absolute;left: -13px; top:110px; " >
+                <div class="item item-divider">
+                    You need to watch this movie
+                </div>
+
+                <ion-scroll direction="y" style="width: auto; height: 130px">
+
+
+            <ion-item ng-repeat="m in carsfilms track by $index">
+                {{m}}
+
+            </ion-item>
+                </ion-scroll>
+            </ion-list>
+
+
 
 
 

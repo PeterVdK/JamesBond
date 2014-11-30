@@ -90,7 +90,7 @@ angular.module('starter.controllers', [])
             getmenu.childNodes[0].childNodes[numb].className= cname +" redline";
             }
             }
-<<<<<<< HEAD
+
 
        $scope.updateline=function(){
            $timeout(function(){
@@ -114,17 +114,6 @@ angular.module('starter.controllers', [])
 
        };
 
-
-
-
-
-
-
-
-
-
-=======
-        };
 
         $("#navCarDiv").click(function() {
             RedLineCar();
@@ -160,7 +149,7 @@ angular.module('starter.controllers', [])
             document.getElementById("navCarDiv").style.borderBottom = "2px solid transparent";
             document.getElementById("navMapDiv").style.borderBottom = "2px solid transparent";
         }
->>>>>>> origin/master
+
     })
 
 
@@ -337,6 +326,10 @@ angular.module('starter.controllers', [])
     })
 
     .controller('SingleBondCtrl', function($scope,$http,bondservice, $stateParams) {
+        $(".card") .velocity({translateY: -150}, 0);
+
+
+        $(".card").velocity({translateY: 0}, 400);
 
         $scope.bonds=[];
         var retrievedObject1,  retrievedObject2, retrievedObject3,retrievedObject4,retrievedObject5,retrievedObject6;
@@ -385,10 +378,13 @@ break;
                 bondservice.getsinglebond(bondid).then(function (data) {
 
                     $scope.bonds = data;
+
                     $scope.bonds.biografie = $scope.bonds['biography'];
                     $scope.bonds.profileimage = $scope.bonds['profile_path'];
                     $scope.bonds.birthday = $scope.bonds['birthday'];
                     $scope.bonds.name = $scope.bonds['name'];
+                    $scope.bonds.imbdid=$scope.bonds['imdb_id'];
+                    console.log($scope.bonds.imbdid);
                     console.log($scope.bonds.profileimage);
                     console.log("kkkk" +$scope.networkIcon);
                     $scope.bonds.place_of_birth = $scope.bonds['place_of_birth'];
@@ -458,6 +454,7 @@ $scope.linkfunction=function(){
 console.log("ss");
 
                 $scope.pictures = data;
+                console.log($scope.pictures);
                 $timeout(function(){$scope.loading=false;},1000) ;
             });
         }
@@ -466,6 +463,9 @@ console.log("ss");
     .controller('SingleBondMovieCtrl', function($scope, $http,$q,moviesbondservice ,$stateParams,$timeout) {
 
 
+
+        $scope.bondfilm=false;
+        $scope.titlexx="";
         //........................................................
         // the array which represents the list
         $scope.items = ["1. Scroll the list to load more"];
@@ -483,7 +483,10 @@ console.log("ss");
                     newItem = ($scope.items.length+1)+". "+data[line];
                     $scope.items.push(newItem);
                 }
-                $timeout(function(){$scope.loading=false;},1000) ;
+                $timeout(function(){
+
+                    $scope.loading=false;
+                },500) ;
             });
         };
 
@@ -527,31 +530,67 @@ console.log("ss");
         }
 
         function GetTheBondbyId(bondid) {
-
+var i;
             $scope.movies=[];
+
+
             moviesbondservice.getmoviesbond(bondid).then(function (data) {
 
-
+               // http://www.themoviedb.org/movie/1844-entrapment
                 angular.forEach(data,function (key) {
 
                     if(key['poster_path']==null)
                     {
-                        console.log(key['poster_path']);
+                       // console.log(key['poster_path']);
 
                     }
                     else {
-                        console.log(key);
+
+
                         $scope.movies.push(key);
+
                     }
+
                 });
 
-            console.log($scope.movies.length);
+
+
+                for (i = 0; i < $scope.movies.length; i++) {
+                switch($scope.movies[i].title){
+                    case "Dr. No":
+                        console.log("drno)");
+                        $scope.bondfilm=true;
+
+                            //$(".bondfilmke").velocity({scale: 1.5}, 2000);
+                            //??????????????????????????????????????
+                            $scope.titlexx="Dr. No";
 
 
 
+                        break;
+
+                }
+
+                }
+
+console.log( $scope.titlexx);
             });
-        }
 
+        }
+       /* $timeout(function(){
+        var m=document.getElementsByClassName("deckgrid")[0];
+        console.log(m.childElementCount);
+            var time,i;
+            time=500;
+            for (i = 1; i <= m.childElementCount; i++) {
+console.log('.card'+time);
+                $(".cards"+i).velocity({translateX: 900}, 0);
+                $(".cards"+i).removeClass("hidden").addClass("show");
+                $(".cards"+i).velocity({translateX: 0}, time);
+                time+=2000;
+            }
+
+        },1000);
 
     })
 
@@ -571,9 +610,6 @@ console.log("ss");
 
     .controller('SingleGirlCtrl', function($scope,$stateParams,girlservice) {
         $(".card") .velocity({translateY: -150}, 0);
-      /*  $(".card").velocity({
-    width: "*=2"
-}, 2000);*/
 
 
         $(".card").velocity({translateY: 0}, 400);
@@ -772,6 +808,7 @@ console.log(data);
                 $scope.allgirlinfo.profileimage = $scope.allgirlinfo['profile_path'];
                 $scope.allgirlinfo.birthday = $scope.allgirlinfo['birthday'];
                 $scope.allgirlinfo.name = $scope.allgirlinfo['name'];
+                $scope.allgirlinfo.imdbid = $scope.allgirlinfo['imdb_id'];
 
                 $scope.allgirlinfo.place_of_birth = $scope.allgirlinfo['place_of_birth'];
 
@@ -784,7 +821,7 @@ console.log(data);
 //card controller is een controller in de bondgirlctrl om aan de kaarten te kunnen
 
 
-    .controller('CardCtrl', function($scope, TDCardDelegate,$timeout) {
+    .controller('CardCtrl', function($scope,$timeout) {
         /*
         console.log("k");
 
@@ -843,7 +880,7 @@ $timeout(function()
     })
 
 
-    .controller('BondgirlsCtrl', function($scope, $http,$q,$stateParams,bondgirlsservice,TDCardDelegate,$timeout,girlratingservice) {
+    .controller('BondgirlsCtrl', function($scope, $http,$q,$stateParams,bondgirlsservice,$timeout,girlratingservice) {
         var i;
 
         $scope.thegirls=new Array(22);
@@ -1170,6 +1207,7 @@ $timeout(function()
         $scope.markerTD=function(td){
             console.log(td);
             if(td) {
+                var time=0;
                 mor= L.marker([31.7917020,-7.0926200], {icon: yellowIcon}).addTo(map).bindPopup('<b>Morocco</b> <ul><li>The Living Daylights</li></ul>',{closeButton: false}); //Marokko
                 ausTD= L.marker([47.5162310,14.5500720], {icon: yellowIcon}).addTo(map).bindPopup('<b>Austria</b> <ul><li>The Living Daylights</li></ul>',{closeButton: false}); //Oostenrijk
                 svk= L.marker([48.6690260,19.6990240], {icon: yellowIcon}).addTo(map).bindPopup('<b>Slovakia</b> <ul><li>The Living Daylights</li></ul>',{closeButton: false}); //Slovakije
@@ -1216,21 +1254,46 @@ $timeout(function()
         $scope.markerPB=function(pb){
             console.log(pb);
             if(pb) {
-                cub= L.marker([21.5217570,-77.7811670], {icon: purpleIcon}).addTo(map).bindPopup('<b>Cuba</b> <ul><li>GoldenEye</li><li>Die Another Day</li></ul>',{closeButton: false}); //Cuba
-                rusPB= L.marker([61.5240100,70.3187560], {icon: purpleIcon}).addTo(map).bindPopup('<b>Russia</b> <ul><li>GoldenEye</li></ul>',{closeButton: false}); //Rusland
-                fraPB= L.marker([44.2276380,2.2137490], {icon: purpleIcon}).addTo(map).bindPopup('<b>France</b> <ul><li>GoldenEye</li></ul>',{closeButton: false}); //Frankrijk
-                duiPB= L.marker([49.1387263,10.4515280], {icon: purpleIcon}).addTo(map).bindPopup('<b>Germany</b> <ul><li>Tomorrow Never Dies</li></ul>',{closeButton: false}); //Duitsland
-                afgPB= L.marker([31.8732074,63.8427675], {icon: purpleIcon}).addTo(map).bindPopup('<b>Afghanistan</b> <ul><li>Tomorrow Never Dies</li></ul>',{closeButton: false}); //Afghanistan
-                pak= L.marker([30.3753210,69.3451160],{icon: purpleIcon}).addTo(map).bindPopup('<b>Pakistan</b> <ul><li>Tomorrow Never Dies</li></ul>',{closeButton: false}); //Pakistan
-                chnPB= L.marker([34.7138312,89.9571177], {icon: purpleIcon}).addTo(map).bindPopup('<b>China</b> <ul><li>Tomorrow Never Dies</li></ul>',{closeButton: false}); // China
-                thaPB= L.marker([15.8700320,103.4534805], {icon: purpleIcon}).addTo(map).bindPopup('<b>Thailand</b> <ul><li>Tomorrow Never Dies</li></ul>',{closeButton: false}); // Thailand
-                vie= L.marker([14.0583240,108.2771990], {icon: purpleIcon}).addTo(map).bindPopup('<b>Vietnam</b> <ul><li>Tomorrow Never Dies</li></ul>',{closeButton: false}); // Vietnam
-                spaPB= L.marker([43.0134769,-2.7492180], {icon: purpleIcon}).addTo(map).bindPopup('<b>Spain</b> <ul><li>The World Is Not Enough</li></ul>',{closeButton: false}); // Spanje
-                trkPB= L.marker([38.0005572,29.9698865], {icon: purpleIcon}).addTo(map).bindPopup('<b>Turkey</b> <ul><li>The World Is Not Enough</li></ul>',{closeButton: false}); // Turkije
-                aze= L.marker([40.1431050,47.5769270], {icon: purpleIcon}).addTo(map).bindPopup('<b>Azerbaijan</b> <ul><li>The World Is Not Enough</li></ul>',{closeButton: false}); // Azerbeidzjan
-                kaz= L.marker([48.0195730,66.9236840], {icon: purpleIcon}).addTo(map).bindPopup('<b>Kazakhstan</b> <ul><li>The World Is Not Enough</li></ul>',{closeButton: false}); // Kazahkstan
-                ijsPB= L.marker([63.9011058,-19.0208330], {icon: purpleIcon}).addTo(map).bindPopup('<b>Iceland</b> <ul><li>Die Another Day</li></ul>',{closeButton: false}); // IJsland
-                nor= L.marker([78.5536040,15.6702720], {icon: purpleIcon}).addTo(map).bindPopup('<b>Norway (Svalbarg)</b> <ul><li>Die Another Day</li></ul>',{closeButton: false}); // Noorwegen
+
+
+                    cub = L.marker([21.5217570, -77.7811670], {icon: purpleIcon}).addTo(map).bindPopup('<b>Cuba</b> <ul><li>GoldenEye</li><li>Die Another Day</li></ul>', {closeButton: false}); //Cuba
+
+
+                        rusPB= L.marker([61.5240100,70.3187560], {icon: purpleIcon}).addTo(map).bindPopup('<b>Russia</b> <ul><li>GoldenEye</li></ul>',{closeButton: false}); //Rusland
+
+
+                            fraPB= L.marker([44.2276380,2.2137490], {icon: purpleIcon}).addTo(map).bindPopup('<b>France</b> <ul><li>GoldenEye</li></ul>',{closeButton: false}); //Frankrijk
+
+                                duiPB= L.marker([49.1387263,10.4515280], {icon: purpleIcon}).addTo(map).bindPopup('<b>Germany</b> <ul><li>Tomorrow Never Dies</li></ul>',{closeButton: false}); //Duitsland
+
+                                    afgPB= L.marker([31.8732074,63.8427675], {icon: purpleIcon}).addTo(map).bindPopup('<b>Afghanistan</b> <ul><li>Tomorrow Never Dies</li></ul>',{closeButton: false}); //Afghanistan
+
+                                        pak= L.marker([30.3753210,69.3451160],{icon: purpleIcon}).addTo(map).bindPopup('<b>Pakistan</b> <ul><li>Tomorrow Never Dies</li></ul>',{closeButton: false}); //Pakistan
+
+                                            chnPB= L.marker([34.7138312,89.9571177], {icon: purpleIcon}).addTo(map).bindPopup('<b>China</b> <ul><li>Tomorrow Never Dies</li></ul>',{closeButton: false}); // China
+
+                                                thaPB= L.marker([15.8700320,103.4534805], {icon: purpleIcon}).addTo(map).bindPopup('<b>Thailand</b> <ul><li>Tomorrow Never Dies</li></ul>',{closeButton: false}); // Thailand
+
+                                                    vie= L.marker([14.0583240,108.2771990], {icon: purpleIcon}).addTo(map).bindPopup('<b>Vietnam</b> <ul><li>Tomorrow Never Dies</li></ul>',{closeButton: false}); // Vietnam
+
+                                                        spaPB= L.marker([43.0134769,-2.7492180], {icon: purpleIcon}).addTo(map).bindPopup('<b>Spain</b> <ul><li>The World Is Not Enough</li></ul>',{closeButton: false}); // Spanje
+
+                                                            trkPB= L.marker([38.0005572,29.9698865], {icon: purpleIcon}).addTo(map).bindPopup('<b>Turkey</b> <ul><li>The World Is Not Enough</li></ul>',{closeButton: false}); // Turkije
+
+                                                                aze= L.marker([40.1431050,47.5769270], {icon: purpleIcon}).addTo(map).bindPopup('<b>Azerbaijan</b> <ul><li>The World Is Not Enough</li></ul>',{closeButton: false}); // Azerbeidzjan
+
+                                                                    kaz= L.marker([48.0195730,66.9236840], {icon: purpleIcon}).addTo(map).bindPopup('<b>Kazakhstan</b> <ul><li>The World Is Not Enough</li></ul>',{closeButton: false}); // Kazahkstan
+
+                                                                        ijsPB= L.marker([63.9011058,-19.0208330], {icon: purpleIcon}).addTo(map).bindPopup('<b>Iceland</b> <ul><li>Die Another Day</li></ul>',{closeButton: false}); // IJsland
+
+                                                                            nor= L.marker([78.5536040,15.6702720], {icon: purpleIcon}).addTo(map).bindPopup('<b>Norway (Svalbarg)</b> <ul><li>Die Another Day</li></ul>',{closeButton: false}); // Noorwegen
+
+
+
+
+
+
+
             }
             else{
                 map.removeLayer(cub);
@@ -1294,17 +1357,30 @@ $timeout(function()
         $scope.markerDC=function(dc){
             console.log(dc);
             if(dc) {
-                usaDC= L.marker([37.0902400,-110.7128910], {icon: orangeIcon}).addTo(map).bindPopup('<b>USA</b> <ul><li>Casino Royale</li></ul>',{closeButton: false});
-                mad= L.marker([-18.7669470,46.8691070], {icon: orangeIcon}).addTo(map).bindPopup('<b>Madagascar</b> <ul><li>Casino Royale</li></ul>',{closeButton: false});
+
+      usaDC= L.marker([37.0902400,-110.7128910], {icon: orangeIcon}).addTo(map).bindPopup('<b>USA</b> <ul><li>Casino Royale</li></ul>',{closeButton: false});
+
+            mad= L.marker([-18.7669470,46.8691070], {icon: orangeIcon}).addTo(map).bindPopup('<b>Madagascar</b> <ul><li>Casino Royale</li></ul>',{closeButton: false});
+
                 uga= L.marker([1.3733330,32.2902750], {icon: orangeIcon}).addTo(map).bindPopup('<b>Uganda</b> <ul><li>Casino Royale</li></ul>',{closeButton: false});
-                itaDC= L.marker([41.8719400,12.5673800], {icon: orangeIcon}).addTo(map).bindPopup('<b>Italy</b> <ul><li>Casino Royale</li></ul>',{closeButton: false});
-                cze= L.marker([49.8174920,15.4729620], {icon: orangeIcon}).addTo(map).bindPopup('<b>Czech Republic</b> <ul><li>Casino Royale</li></ul>',{closeButton: false});
-                hti= L.marker([18.9711870,-72.2852150],{icon: orangeIcon}).addTo(map).bindPopup('<b>Haïti</b> <ul><li>Quantum Of Solace</li></ul>',{closeButton: false});
-                rusDC= L.marker([66.0191392,133.6195393], {icon: orangeIcon}).addTo(map).bindPopup('<b>Russia</b> <ul><li>Quantum Of Solace</li></ul>',{closeButton: false});
-                bol= L.marker([-16.2901540,-63.5886530], {icon: orangeIcon}).addTo(map).bindPopup('<b>Bolivia</b> <ul><li>Quantum Of Solace</li></ul>',{closeButton: false});
-                ausDC = L.marker([47.5162310,14.5500720], {icon: orangeIcon}).addTo(map).bindPopup('<b>Austria</b> <ul><li>Quantum Of Solace</li></ul>',{closeButton: false});
-                trkDC = L.marker([38.9637450,35.2433220], {icon: orangeIcon}).addTo(map).bindPopup('<b>Turkey</b> <ul><li>Skyfall</li></ul>',{closeButton: false});
-                chnDC = L.marker([35.8616600,104.1953970], {icon: orangeIcon}).addTo(map).bindPopup('<b>China</b> <ul><li>Skyfall</li></ul>',{closeButton: false});
+
+                    itaDC= L.marker([41.8719400,12.5673800], {icon: orangeIcon}).addTo(map).bindPopup('<b>Italy</b> <ul><li>Casino Royale</li></ul>',{closeButton: false});
+
+                        cze= L.marker([49.8174920,15.4729620], {icon: orangeIcon}).addTo(map).bindPopup('<b>Czech Republic</b> <ul><li>Casino Royale</li></ul>',{closeButton: false});
+
+                            hti= L.marker([18.9711870,-72.2852150],{icon: orangeIcon}).addTo(map).bindPopup('<b>Haïti</b> <ul><li>Quantum Of Solace</li></ul>',{closeButton: false});
+
+                                rusDC= L.marker([66.0191392,133.6195393], {icon: orangeIcon}).addTo(map).bindPopup('<b>Russia</b> <ul><li>Quantum Of Solace</li></ul>',{closeButton: false});
+
+                                    bol= L.marker([-16.2901540,-63.5886530], {icon: orangeIcon}).addTo(map).bindPopup('<b>Bolivia</b> <ul><li>Quantum Of Solace</li></ul>',{closeButton: false});
+
+                                        ausDC = L.marker([47.5162310,14.5500720], {icon: orangeIcon}).addTo(map).bindPopup('<b>Austria</b> <ul><li>Quantum Of Solace</li></ul>',{closeButton: false});
+
+                                            trkDC = L.marker([38.9637450,35.2433220], {icon: orangeIcon}).addTo(map).bindPopup('<b>Turkey</b> <ul><li>Skyfall</li></ul>',{closeButton: false});
+
+                                                chnDC = L.marker([35.8616600,104.1953970], {icon: orangeIcon}).addTo(map).bindPopup('<b>China</b> <ul><li>Skyfall</li></ul>',{closeButton: false});
+
+
             }
             else{
                 map.removeLayer(usaDC);
@@ -1376,7 +1452,7 @@ $scope.cars=data;
 
                         var random = this.cars[Math.floor(Math.random() * this.cars.length)];
 
-                        this.wrap.append("<div class='carCard'><img alt='" + random.name + "' src='" + random.image + "' /><span>" + random.merk +" " +random.serie  + "</span></div>");
+                        this.wrap.append("<div class='carCard'><img title='"+ random.id+"' alt='" + random.name + "' src='" + random.image + "' /><span>" + random.merk +" " +random.serie  + "</span></div>");
                     }
                 }
 
@@ -1401,12 +1477,34 @@ $scope.cars=data;
                     }
                 };
                 $scope.naam=[];
-                var getgirlsss,getfirstgril,thegirlname;
+                $scope.carsfilms=[];
+                $scope.showmoviescar=false;
+                console.log($scope.carsfilms);
+                var getcarssss,getfirstcar,idcar,themovie,thecarmovie,i;
 
                 $scope.yesfunc=function() {
                     App.like(true);
 
-
+                    getcarssss =document.getElementById("cars");
+                    getfirstcar =getcarssss.firstChild;
+                    console.log(getfirstcar.childNodes[0].getAttribute("title"));
+                    //1 2 3
+                    idcar=parseFloat(getfirstcar.childNodes[0].getAttribute("title")) -1;
+                    themovie=$scope.cars[idcar].movie;
+                    console.log($scope.cars[idcar].movie);
+                    var m=$scope.cars[idcar].movie.split(',');
+                    for (i = 0; i < m.length; i++) {
+                        console.log(m[i]);
+                        thecarmovie =  $scope.carsfilms.indexOf(m[i]);
+                        if(thecarmovie<0)
+                        {
+                            $scope.carsfilms.push(m[i]);
+                            console.log($scope.carsfilms);
+                        }
+                    }
+                    if( $scope.carsfilms.length>=1){
+                        $scope.showmoviescar=true;
+                    }
 
                     console.log("yesbutton");
                 };
