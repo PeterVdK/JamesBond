@@ -143,6 +143,10 @@ PULSING BUTTON
     top:-11px;
     left:-11px;
 }
+.pulse:hover{
+    width:18px;
+    height:18px;
+}
 
 .dot {
     border: 2px solid #b10a0a;
@@ -662,7 +666,7 @@ PULSING BUTTON
 
 .dotWie {
 
-  border-radius: 9px;
+  border-radius: 0px;
 
   height: 18px;
   margin: 40% -34%;
@@ -1232,7 +1236,7 @@ a {
   .dotPics {
     margin: 15% -50.5%; }
     .dotPics:hover {
-      margin: 15% -49.8%; }
+      margin: 15% -49.8%;}
 
   .pics {
     margin: 11% -53%; }
