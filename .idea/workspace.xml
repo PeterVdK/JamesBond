@@ -2,6 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d4ca2a7-1f20-415d-b465-2e75bae71c62" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/Bondgirls/BarbaraBach.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/Bondgirls/BereniceMarlohe.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/Bondgirls/BrittEkland.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/Bondgirls/CareyLowell.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/Bondgirls/CaroleBouquet.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/Bondgirls/ClaudineAuger.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/Bondgirls/DanielaBianchi.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/Bondgirls/DeniseRichards.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/Bondgirls/DianaRigg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/Bondgirls/EvaGreen.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/Bondgirls/HalleBerry.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/Bondgirls/IzabellaScorupco.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/Bondgirls/JaneSeymour.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/Bondgirls/JillStJohn.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/Bondgirls/LoisChiles.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/Bondgirls/MaryamDabo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/Bondgirls/MaudAdams.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/Bondgirls/MichelleYeoh.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/Bondgirls/MieHama.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/Bondgirls/OlgaKurylenko.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/Bondgirls/TanyaRoberts.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/Bondgirls/UrsulaAndress.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/bondWallpaper.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/bondgirlWallpaper.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/carWallpaper.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/mapWallpaper.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/BondCar.png" afterPath="$PROJECT_DIR$/www/img/BondCar.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/BondNavigation.png" afterPath="$PROJECT_DIR$/www/img/BondNavigation.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/Bondgirl.png" afterPath="$PROJECT_DIR$/www/img/Bondgirl.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/DanielCraig.png" afterPath="$PROJECT_DIR$/www/img/DanielCraig.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/GeorgeLazenby.png" afterPath="$PROJECT_DIR$/www/img/GeorgeLazenby.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/Bondgirls/HonorBlackman.png" afterPath="$PROJECT_DIR$/www/img/Bondgirls/HonorBlackman.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/IMDb.png" afterPath="$PROJECT_DIR$/www/img/IMDb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/PierceBrosnan.png" afterPath="$PROJECT_DIR$/www/img/PierceBrosnan.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/RogerMoore.png" afterPath="$PROJECT_DIR$/www/img/RogerMoore.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/SeanConnery.png" afterPath="$PROJECT_DIR$/www/img/SeanConnery.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/TimothyDalton.png" afterPath="$PROJECT_DIR$/www/img/TimothyDalton.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/TinderNo.png" afterPath="$PROJECT_DIR$/www/img/TinderNo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/TinderYes.png" afterPath="$PROJECT_DIR$/www/img/TinderYes.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/locatie.png" afterPath="$PROJECT_DIR$/www/img/locatie.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/logo_james_bond_site_logo_white.png" afterPath="$PROJECT_DIR$/www/img/logo_james_bond_site_logo_white.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/world_map.png" afterPath="$PROJECT_DIR$/www/img/world_map.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/customstyle.css" afterPath="$PROJECT_DIR$/www/css/customstyle.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -39,28 +81,28 @@
       <file leaf-file-name="cars.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/templates/cars.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="73" max-vertical-offset="750">
+            <state vertical-scroll-proportion="0.0" vertical-offset="47" max-vertical-offset="750">
               <caret line="23" column="58" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.166666" vertical-offset="437" max-vertical-offset="1140">
-              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.25320056" vertical-offset="437" max-vertical-offset="1140">
+              <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="customstyle.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="customstyle.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/css/customstyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.56686044" vertical-offset="1665" max-vertical-offset="23670">
-              <caret line="137" column="29" selection-start-line="137" selection-start-column="29" selection-end-line="137" selection-end-column="29" />
+            <state vertical-scroll-proportion="-9.384615" vertical-offset="7706" max-vertical-offset="23685">
+              <caret line="530" column="13" selection-start-line="530" selection-start-column="13" selection-end-line="530" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -69,8 +111,8 @@
       <file leaf-file-name="bonds.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/templates/bonds.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="735">
-              <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="735">
+              <caret line="18" column="19" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -79,8 +121,8 @@
       <file leaf-file-name="girls.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/templates/girls.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="420">
-              <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="420">
+              <caret line="15" column="88" selection-start-line="15" selection-start-column="88" selection-end-line="15" selection-end-column="88" />
               <folding />
             </state>
           </provider>
@@ -170,7 +212,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -179,50 +220,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JBProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JBProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JBProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JBProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JBProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JBProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -239,14 +239,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -257,14 +249,12 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
-      <option name="cucumberJsArguments" />
-      <option name="executablePath" />
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
       <option name="filePath" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -272,6 +262,16 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" />
+      <option name="executablePath" />
+      <option name="filePath" />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -296,7 +296,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="824" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -310,11 +310,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -660,17 +660,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/girls.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="420">
-          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/cars.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="73" max-vertical-offset="750">
+        <state vertical-scroll-proportion="0.0" vertical-offset="47" max-vertical-offset="750">
           <caret line="23" column="58" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="58" />
           <folding />
         </state>
@@ -684,26 +676,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
+    <entry file="file://$PROJECT_DIR$/www/templates/girls.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.166666" vertical-offset="437" max-vertical-offset="1140">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="420">
+          <caret line="15" column="88" selection-start-line="15" selection-start-column="88" selection-end-line="15" selection-end-column="88" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/bonds.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="735">
-          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="735">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/css/customstyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56686044" vertical-offset="1665" max-vertical-offset="23670">
-          <caret line="137" column="29" selection-start-line="137" selection-start-column="29" selection-end-line="137" selection-end-column="29" />
+        <state vertical-scroll-proportion="-9.384615" vertical-offset="7706" max-vertical-offset="23685">
+          <caret line="530" column="13" selection-start-line="530" selection-start-column="13" selection-end-line="530" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25320056" vertical-offset="437" max-vertical-offset="1140">
+          <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
           <folding />
         </state>
       </provider>
