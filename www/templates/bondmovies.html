@@ -13,16 +13,20 @@
     <ion-content class="has-header">
 
         <div deckgrid class="deckgrid" source="movies" >
-            <div class="a-card cards{{$index}} show" ng-animate="{enter: 'fade-add', leave: 'rotate-leave'}">
+            <div class="a-card cards{{card.id}} " ng-class="{hidden:tt!=kk}" ng-animate="{enter: 'fade-add', leave: 'rotate-leave'}">
 <a ng-href="http://www.themoviedb.org/movie/{{card.id}}-{{card.title}} " >
                 <div class="card">
                     <div class="item item-image">
 
                         <img class="bondfoto fade-add " ng-src="http://image.tmdb.org/t/p/w500/{{card.poster_path}}">
                     </div>
-                    <div class="item item-divider" ng-class="{ bondfilmke: titlexx}">
-                        {{card.title}}
-                    </div>
+
+                        <div class="hovere{{card.id}} hidden" style="position: absolute; z-index:9; background-color: #faf2f2; top:0px; width: 80%;height:90px; border-radius: 0px 0px 10px 0px;">
+                          <div style="color: #131211"> Title: {{card.title}}</div>
+                            <div style="color: #131211">Release date: {{card.release_date}}</div>
+
+                        </div>
+
                 </div>
 </a>
             </div>
