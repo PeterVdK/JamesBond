@@ -412,22 +412,26 @@
   text-align: center;
   background-color: #faf2f2;
   height: 100%;
-  margin-top: 45px; }
+  margin-top: 45px;
+}
 
 .bondImage {
+    position:relative;
   height: 93vh;
-  z-index: -1; }
+  z-index: 10; }
 
 .bondNames {
   position: absolute;
   margin-top: -38em;
-  width: 100%; }
+  width: 100%;
+  }
   .bondNames .bondFirstname {
     font-family: franchise;
     font-size: 5em;
     margin-left: -350px;
     margin-top: 25px;
-    text-shadow: 2px -2px 4px rgba(28, 28, 28, 0.45); }
+    text-shadow: 2px -2px 4px rgba(28, 28, 28, 0.45);
+     }
   .bondNames .bondName {
     font-family: franchise;
     font-size: 5em;
@@ -798,52 +802,14 @@ a {
     -webkit-transform: rotateZ(35deg);
     background: url(http://i.imgur.com/XqQZ4KR.png) no-repeat center 10px; }
 
-#control {
+#controlGirls {
   position: relative;
-  margin: 70px auto 0;
-  width: 250px; }
-  #control .button {
-    width: 65px;
-    height: 65px;
-    background: #eee;
-    position: absolute;
-    top: 5px;
-    border-radius: 50%;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05); }
-    #control .button .trigger {
-      background: white;
-      display: block;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      margin: 0 -5px;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      transition: all .1s;
-      text-align: center;
-      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); }
-      #control .button .trigger:active {
-        transform: translateY(-50%) scale(0.75);
-        transition: all .05s linear; }
-      #control .button .trigger:before {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateY(-50%) translateX(-50%);
-        font-family: 'FontAwesome'; }
-  #control .no {
-    left: 38px; }
-    #control .no .trigger:before {
-      content: "\f00d";
-      font-size: 28px;
-      color: #c33; }
-  #control .yes {
-    right: 30px; }
-    #control .yes .trigger:before {
-      content: "\f004";
-      font-size: 22px;
-      color: #3b7; }
+  margin: 60px auto 0;
+  width: 230px; }
+#controlCars {
+    position: relative;
+    margin: 40px auto 0;
+    width: 230px; }
 
 /*      SCHERM 3 (CARS)    */
 .car {
@@ -904,6 +870,30 @@ a {
   text-align: center;
   line-height: 30px;
   color: #555; }
+
+#tinderYes{
+    margin-left: 40%;
+}
+#tinderYes:hover{
+    width: 28%;
+}
+#tinderNo:hover{
+    width: 28%;
+    margin-left: 1%;
+}
+#watchlist{
+    position:fixed;
+    margin-left: 36.5%;
+    margin-top: -38.2%;
+}
+#watchlistScroll{
+    width: auto;
+    height: 335px;
+}
+.item-divider{
+    background-color: #131211;
+    color: white;
+}
 
 /*      SCHERM 4 (MAP)  */
 .mapList div {
@@ -993,60 +983,6 @@ a {
   left: 20px;
   top: 10px; }
 
-@-webkit-keyframes rotation {
-  0% {
-    background-position: 0 0; }
-  100% {
-    background-position: -400px 0; } }
-@keyframes rotation {
-  0% {
-    background-position: 0 0; }
-  100% {
-    background-position: -400px 0; } }
-@keyframes rotationtwo {
-  0% {
-    background-position: -400px 0; }
-  100% {
-    background-position: -0 0; } }
-@-webkit-keyframes rotationtwo {
-  0% {
-    background-position: -400px 0; }
-  100% {
-    background-position: -0 0; } }
-.globe, .globe:before {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  left: -17%;
-  width: 100px;
-  height: 100px;
-  margin-left: -109px;
-  margin-top: -150px;
-  background-image: url(../img/world_map.png);
-  background-repeat: repeat-x;
-  background-position: top left;
-  -webkit-border-radius: 400px;
-  border-radius: 400px;
-  -moz-border-radius: 400px;
-  background-size: auto 100px;
-  background-color: rgba(0, 0, 0, 0.03);
-  opacity: 0.7;
-  -webkit-animation: rotation 3s infinite;
-  animation: rotation 3s infinite; }
-
-.globe:before {
-  content: "";
-  top: 149%;
-  z-index: 0;
-  -webkit-animation: rotationtwo 3s infinite;
-  animation: rotationtwo 3s infinite;
-  opacity: 0.3;
-  margin-left: 17px; }
-
-.globe {
-  position: relative;
-  margin-top: 15px; }
-
 #map50 {
   width: auto;
   overflow: cover;
@@ -1060,6 +996,20 @@ a {
   margin-top: 2%; }
 
 /*      MEDIAQUERIES    */
+
+/*mediaquery vanaf 1439px */
+@media screen and (max-width: 1439px) {
+    #watchlist {
+        position: fixed;
+        margin-left: -12.5%;
+        margin-top: 2%;
+    }
+
+    #watchlistScroll {
+        width: 550px;
+        height: 130px;
+    }
+}
 /*mediaquery vanaf 1200px */
 @media screen and (max-width: 1200px) {
   #logo {
@@ -1093,7 +1043,12 @@ a {
     margin-left: -15%; }
 
   .mapList {
-    margin-top: 12%; } }
+    margin-top: 12%; }
+
+    #watchlist {
+        margin-left: -19%;
+    }
+}
 /*950*/
 @media screen and (max-width: 950px) {
   #logo {
@@ -1165,7 +1120,16 @@ a {
 
   .label::after, .label2::after, .label3::after, .label4::after, .label5::after, .label6::after {
     width: 150%;
-    margin-left: -13px; } }
+    margin-left: -13px; }
+    #watchlist {
+        margin-left: -20%;
+    }
+    #watchlistScroll{
+        width: 475px;
+    }
+    #controlCars {
+        margin-left: 25%;
+    }}
 /*mediaquery vanaf 768px */
 @media screen and (max-width: 768px) {
   #logo {
@@ -1217,7 +1181,13 @@ a {
     font-size: .8em; }
 
   .label::after, .label2::after, .label3::after, .label4::after, .label5::after, .label6::after {
-    width: 125%; } }
+    width: 125%; }
+    #watchlistScroll{
+        width: 550px;
+    }
+    #controlCars {
+        margin-left: 31%;
+    }}
 /*620*/
 @media screen and (max-width: 620px) {
   .bondNames #leftScroll {
@@ -1238,7 +1208,16 @@ a {
     font-size: .7em; }
 
   .label::after, .label2::after, .label3::after, .label4::after, .label5::after, .label6::after {
-    width: 140%; } }
+    width: 140%; }
+    #watchlist {
+        margin-left: none;
+    }
+    #watchlistScroll{
+        width: 490px;
+    }
+    #controlCars {
+        margin-left: 27%;
+    }}
 /*500*/
 @media screen and (max-width: 500px) {
   #logo {
@@ -1253,7 +1232,7 @@ a {
     left: 19px; }
 
   .bondImage {
-    margin-top: 10%; }
+    margin-top: 0%; }
 
   .carCard {
     width: 65%;
@@ -1306,8 +1285,15 @@ a {
       margin: 23% -4.3%; }
 
   .films {
-    margin: 15% -9%; } }
+    margin: 15% -9%; }
+    #watchlistScroll{
+        width: 360px;
+    }
+}
 @media screen and (max-width: 400px) {
+    #logo{
+        width:50%;
+    }
   .bondNames #leftScroll {
     margin-left: 13px;
     left: 70px; }
@@ -1330,7 +1316,16 @@ a {
     font-size: 0.3em; }
 
   .label::after, .label2::after, .label3::after, .label4::after, .label5::after, .label6::after {
-    width: 200%; } }
+    width: 200%; }
+    #watchlistScroll{
+        width: 310px;
+    }
+    #watchlist{
+        margin-left: -9%;
+    }
+    #controlCars{
+        margin-left: 15%;
+    }}
 
 /*# sourceMappingURL=customstyle.css.map */
 .bondfilmke

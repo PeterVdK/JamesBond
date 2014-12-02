@@ -11,27 +11,22 @@
     <div class="car">
     <ion-content class="has-header">
 
-<div style="color: #ffffff; font-size: 32px; width:100%; font-family: Gulim;"> Do you like this car?</div>
         <div id="cars"></div>
-        <div id="control">
-            <div class="button no" ng-click="nofunc()">
-                <a href="#" class="trigger"></a>
-            </div>
+        <div id="controlCars">
+            <img src="img/TinderNo.png" style="cursor: hand;cursor: pointer;" ng-click="nofunc()" id="tinderNo" />
+            <img src="img/TinderYes.png" style="cursor: hand;cursor: pointer;" ng-click="yesfunc()" id="tinderYes" />
 
-            <div class="button yes"  ng-click="yesfunc()">
-                <a href="#" class="trigger"></a>
-            </div>
             <div ng-repeat="n in naam track by $index"  >
                 <span>{{n}}</span>
             </div>
 
 
-            <ion-list ng-show="showmoviescar" style="position: absolute;left: -13px; top:110px; " >
+            <ion-list ng-show="showmoviescar" id="watchlist">
                 <div class="item item-divider">
-                    You need to watch this movie
+                    Watchlist
                 </div>
 
-                <ion-scroll direction="y" style="width: auto; height: 130px">
+                <ion-scroll direction="y" id="watchlistScroll">
 
 
             <ion-item ng-repeat="m in carsfilms track by $index">
@@ -44,7 +39,7 @@
 
 
 
-
+        </div>
         </ion-content>
-    </div>
+        </div>
     </ion-view>
