@@ -1,4 +1,219 @@
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
+/*JB INTRO*/
+.outer {
+    position: relative;
+
+    width: 1920px;
+    height:912px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 1);
+    z-index: 2;
+    overflow: hidden;
+}
+
+.inner {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 70px;
+
+    top: 40%;
+}
+.inner {
+    left: -20%;
+}
+.inner01 {
+    z-index: 5;
+    animation: whiteMove 3s linear 1s forwards ;
+    -moz-animation: whiteMove 3s linear 1s forwards ;
+    -webkit-animation: whiteMove 3s linear 1s forwards;
+
+}
+.inner02 {
+    z-index: 7;
+    background-color: #fff;
+    content: ' ';
+    animation: whiteMoveBehind 3s linear 1s forwards ;
+    -moz-animation: whiteMoveBehind 3s linear 1s forwards ;
+    -webkit-animation: whiteMoveBehind 3s linear 1s forwards  ;
+}
+
+
+
+/***************/
+/*  animation  */
+/***************/
+@-webkit-keyframes whiteMove /* Safari and Chrome */
+{
+    0%   {left: 0%;-webkit-transform: scale(1);background-color: #fff;}
+
+    50%  {left: 50%;-webkit-transform: scale(1);background-color: #fff;}
+
+    100%  {
+
+
+        left: 50%;-webkit-transform: scale(50);}
+
+
+}
+@keyframes whiteMove {
+    0%   {left: 0%;-webkit-transform: scale(1);}
+    50%  {left: 50%;-webkit-transform: scale(1);}
+
+    100%  {left: 50%; -webkit-transform: scale(50);  }
+
+
+}
+@-webkit-keyframes whiteMoveBehind
+{
+    0%   {left: 0%; z-index: 0;}
+
+    5%  {left: 5%;}
+    6%  {left: 5%;}
+    10%  {left: 5%; z-index: 0;}
+    16%  {left: 5%; z-index: 0;}
+    17%  {left: 5%; display:none; z-index: -1; }
+
+    24%  {left: 25%; z-index: -1;}
+    25%  {left: 25%; z-index: 0;}
+    26%  {left: 25%;}
+    30%  {left: 25%; z-index: 0;}
+    36%  {left: 25%; z-index: 0;}
+    37%  {left: 25%; display:none; z-index: -1; }
+
+    44%  {left: 45%; z-index: -1;}
+    45%  {left: 45%; z-index: 0;}
+    46%  {left: 45%;display:none;}
+    100%  {left: 50%;display:none; z-index: -1;}
+
+}
+@keyframes whiteMoveBehind
+{
+    0%   {left: 0%; z-index: 0;}
+
+    5%  {left: 5%;}
+    6%  {left: 5%;}
+    10%  {left: 5%; z-index: 0;}
+    16%  {left: 5%; z-index: 0;}
+    17%  {left: 5%; display:none; z-index: -1; }
+
+    24%  {left: 25%; z-index: -1;}
+    25%  {left: 25%; z-index: 0;}
+    26%  {left: 25%;}
+    30%  {left: 25%; z-index: 0;}
+    36%  {left: 25%; z-index: 0;}
+    37%  {left: 25%; display:none; z-index: -1; }
+
+    44%  {left: 45%; z-index: -1;}
+    45%  {left: 45%; z-index: 0;}
+    46%  {left: 45%;z-index: -1;}
+    100%  {left: 50%; z-index: -1;}
+
+}
+
+/*.a-card > a > div > .item-image:hover{
+    border-color:#b10a0a;
+}*/
+
+
+
+
+
+/*************/
+PULSING BUTTON
+
+/************/
+.container {
+    margin-top: 20px;
+    margin-left: 30px;
+    position: relative;
+    background: #45453f;
+}
+
+.pulse {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #131211;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    background-color: #b10a0a;
+    z-index: 10;
+    position: absolute;
+    top:-11px;
+    left:-11px;
+}
+
+.dot {
+    border: 2px solid #b10a0a;
+    background: transparent;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px;
+    height: 40px;
+    width: 40px;
+    -webkit-animation: pulse 4s ease-out;
+    -moz-animation: pulse 4s ease-out;
+    animation: pulse 4s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    position: absolute;
+    top: -21px;
+    left: -22px;
+    z-index: 1;
+    opacity: 0;
+}
+
+@-moz-keyframes pulse {
+    0% {
+        -moz-transform: scale(0);
+        opacity: 0.0;
+    }
+    25% {
+        -moz-transform: scale(0);
+        opacity: 0.1;
+    }
+    50% {
+        -moz-transform: scale(0.5);
+        opacity: 0.3;
+    }
+    75% {
+        -moz-transform: scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        -moz-transform: scale(1.5);
+        opacity: 0.0;
+    }
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale(0);
+        opacity: 0.0;
+    }
+    25% {
+        -webkit-transform: scale(0.2);
+        opacity: 0.1;
+    }
+    50% {
+
+        opacity: 0.3;
+    }
+    75% {
+
+        opacity: 0.5;
+    }
+    100% {
+        -webkit-transform: scale(1.5);
+        opacity: 0.0;
+    }
+}
+
+
+
+
 .loadingGirl {
   background-image: url("../img/bondgirlWallpaper.jpg");
   position: absolute;
@@ -446,21 +661,15 @@
     margin-left: 550px; }
 
 .dotWie {
-  background: none repeat scroll 0 0 #3c3c3c;
+
   border-radius: 9px;
-  box-shadow: 0 0 0 3px white;
+
   height: 18px;
   margin: 40% -34%;
   position: absolute;
-  transition: all 0.8s ease 0.1s;
+
   width: 18px;
   display: inline-block; }
-  .dotWie:hover {
-    width: 10px;
-    height: 10px;
-    margin: 40% -33.8%;
-    background: none repeat scroll 0 0 #b10a0a;
-    box-shadow: 0 0 0 10px white; }
 
 .wie {
   position: absolute;
@@ -476,21 +685,16 @@
     text-decoration: none; }
 
 .dotPics {
-  background: none repeat scroll 0 0 #3c3c3c;
+
   border-radius: 9px;
-  box-shadow: 0 0 0 3px white;
+
   height: 18px;
   margin: 8.5% -43.5%;
   position: absolute;
-  transition: all 0.8s ease 0.1s;
+
   width: 18px;
   display: inline-block; }
-  .dotPics:hover {
-    width: 10px;
-    height: 10px;
-    margin: 8.5% -43%;
-    background: none repeat scroll 0 0 #b10a0a;
-    box-shadow: 0 0 0 10px white; }
+
 
 .pics {
   position: absolute;
@@ -506,21 +710,17 @@
     text-decoration: none; }
 
 .dotFilms {
-  background: none repeat scroll 0 0 #3c3c3c;
+
   border-radius: 9px;
-  box-shadow: 0 0 0 3px white;
+
   height: 18px;
   margin: 8.5%;
   position: absolute;
-  transition: all 0.8s ease 0.1s;
+
   width: 18px;
   display: inline-block; }
-  .dotFilms:hover {
-    width: 10px;
-    height: 10px;
-    margin: 8.5%;
-    background: none repeat scroll 0 0 #b10a0a;
-    box-shadow: 0 0 0 10px white; }
+
+
 
 .films {
   position: absolute;
@@ -1012,7 +1212,13 @@ a {
 }
 /*mediaquery vanaf 1200px */
 @media screen and (max-width: 1200px) {
-  #logo {
+    .outer {
+
+
+        width: 1200px;
+        height: 912px;
+    }
+    #logo {
     left: 37%; }
 
   .dotWie {
@@ -1051,6 +1257,12 @@ a {
 }
 /*950*/
 @media screen and (max-width: 950px) {
+    .outer {
+
+
+        width: 950px;
+        height: 912px;
+    }
   #logo {
     left: 32%; }
 
@@ -1132,6 +1344,12 @@ a {
     }}
 /*mediaquery vanaf 768px */
 @media screen and (max-width: 768px) {
+    .outer {
+
+
+        width: 768px;
+        height: 912px;
+    }
   #logo {
     left: 33%; }
 
@@ -1190,6 +1408,12 @@ a {
     }}
 /*620*/
 @media screen and (max-width: 620px) {
+    .outer {
+
+
+        width: 620px;
+        height: 912px;
+    }
   .bondNames #leftScroll {
     margin-left: 13px;
     left: -194px; }
@@ -1220,6 +1444,12 @@ a {
     }}
 /*500*/
 @media screen and (max-width: 500px) {
+    .outer {
+
+
+        width: 500px;
+        height: 912px;
+    }
   #logo {
     left: 26%; }
 
@@ -1293,6 +1523,11 @@ a {
 @media screen and (max-width: 400px) {
     #logo{
         width:50%;
+    .outer {
+
+
+        width: 400px;
+        height: 912px;
     }
   .bondNames #leftScroll {
     margin-left: 13px;

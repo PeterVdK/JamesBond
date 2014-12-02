@@ -48,12 +48,23 @@
   </head>
 
   <body ng-controller="maincontroller"  ng-app="starter">
+  <!--<div id="balk" style="position: fixed; z-index: 5; width: 100%; height: 50px; background-color: #000000;"></div>
   <button style="z-index: 2; float: right;" id="volume" class="button button-icon icon ion-volume-high" ng-click="volumOnorOff()"></button>
+  <div class="outer">
+
+      <div id="barrell" class="inner inner01">
+
+      </div>
+      <div id="behind" class="inner inner02"></div>
+
+  </div>-->
+
+
   <audio id="jbaudio">
       <source src="music/James Bond 007 Theme Tune (original).ogg" type="audio/ogg">
       <source src="music/James Bond 007 Theme Tune (original).mp3" type="audio/mpeg">
       Your browser does not support the audio element.
   </audio>
-    <ion-nav-view></ion-nav-view>
+    <ion-nav-view class="jbsiteall"></ion-nav-view>
   </body>
 </html>

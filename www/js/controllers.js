@@ -2,6 +2,17 @@ angular.module('starter.controllers', [])
 
 
     .controller('maincontroller', function($scope, $ionicModal, $timeout,$location) {
+        $timeout(function(){  $("#behind").addClass("hidden");},2500);
+        $(".jbsiteall").velocity({opacity:0},0);
+        $(".outer").velocity({opacity:1},0);
+        $timeout(function(){
+            $(".outer").velocity({opacity:0},500);
+            $("#balk").velocity({opacity:0},400);
+            $timeout(function(){$("#balk").addClass("hidden");},300);
+            $(".outer").addClass("hidden");
+            $(".jbsiteall").velocity({opacity:1},300);
+        },3000);
+
         console.log("kk");
         $timeout(function(){
             document.getElementById("jbaudio").load();
@@ -373,7 +384,8 @@ $scope.linkfunction=function(){
     })
 
     .controller('SingleBondPictureCtrl', function($scope,$http,picturebondservice, $stateParams,$timeout) {
-
+        $scope.tt=true;
+        $scope.kk=false;
         $scope.ide=$stateParams.bondId;
         $scope.loading=true;
 
@@ -422,12 +434,42 @@ console.log("ss");
                 $timeout(function(){$scope.loading=false;},1000) ;
             });
         }
+
+        //eerst deckgrid ophalen
+        //daarvan de kolomen en van elk van die kolommen de posters
+        var wallposters, i,time, q,teller;
+        teller=1;
+
+        $timeout(function(){
+            wallposters=document.getElementsByClassName("deckgrid")[0];
+            time=500;
+
+            for (q = 0; q < $scope.pictures.length; q++) {
+                console.log($scope.pictures[q]["id"]);
+                teller  =$scope.pictures[q]["id"];
+
+                $(".cards"+teller).velocity({scale: 0}, 0);
+                $(".cards"+teller).removeClass("hidden").addClass("show");
+
+                $(".cards"+teller).velocity({scale: 1.1}, time);
+
+                time+=200;
+                $(".cards"+teller).velocity({scale: 1}, time-300);
+                time+=100;
+
+            }
+            $scope.kk=true;
+
+
+
+        },1000);
+
     })
 
     .controller('SingleBondMovieCtrl', function($scope, $http,$q,moviesbondservice ,$stateParams,$timeout) {
 
-
-
+        $scope.tt=true;
+        $scope.kk=false;
         $scope.bondfilm=false;
         $scope.titlexx="";
         //........................................................
@@ -450,7 +492,7 @@ console.log("ss");
                 $timeout(function(){
 
                     $scope.loading=false;
-                },500) ;
+                },1000) ;
             });
         };
 
@@ -506,7 +548,7 @@ var i;
                     if(key['poster_path']==null)
                     {
                        // console.log(key['poster_path']);
-
+                      console.log($scope.movies);
                     }
                     else {
 
@@ -541,21 +583,57 @@ console.log( $scope.titlexx);
             });
 
         }
-       /* $timeout(function(){
-        var m=document.getElementsByClassName("deckgrid")[0];
-        console.log(m.childElementCount);
-            var time,i;
-            time=500;
-            for (i = 1; i <= m.childElementCount; i++) {
-console.log('.card'+time);
-                $(".cards"+i).velocity({translateX: 900}, 0);
-                $(".cards"+i).removeClass("hidden").addClass("show");
-                $(".cards"+i).velocity({translateX: 0}, time);
-                time+=2000;
-            }
+        //eerst deckgrid ophalen
+        //daarvan de kolomen en van elk van die kolommen de posters
+        var wallposters, i,time, q,teller,arr;
+        teller=1;
+
+      $timeout(function(){
+         wallposters=document.getElementsByClassName("deckgrid")[0];
+          time=500;
+
+               for (q = 0; q < $scope.movies.length; q++) {
+               //console.log($scope.movies[q]["id"]);
+                   teller  =$scope.movies[q]["id"];
+                   $(".cards"+teller).velocity({scale: 0}, 0);
+                   $(".cards"+teller).velocity({opacity: 0}, 0);
+               $(".cards"+teller).removeClass("hidden").addClass("show");
+                   $(".cards"+teller).velocity({scale: 1}, time);
+                   $(".cards"+teller).velocity({opacity: 1}, time);
+                   //for the hover
+                   $('.cards'+teller).mouseenter(function () {
+                       $(this).addClass('hover');
+                       $('.bondfoto').velocity({boxShadowBlur:15},{
+                           duration: 50
+                       });
+                       //console.log(this.className + "  " +teller);
+                       arr=this.className.split(" ");
+
+                       arr=arr[1].split("s");
+
+                       $(".hovere"+arr[1]).removeClass("hidden").addClass("show");
+                       $('.hovere'+arr[1]).velocity('transition.perspectiveDownIn', {duration:500});
+
+                   }).mouseleave(function () {
+
+                       $('.hovere'+arr[1]).velocity("stop");
+                       $('.hovere'+arr[1]).velocity('reverse');
+                       $(this).removeClass('hover');
+                   });
+
+
+
+
+
+
+               time+=200;
+               }
+$scope.kk=true;
+
+
 
         },1000);
-*/
+
     })
 
 
