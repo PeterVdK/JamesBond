@@ -647,7 +647,7 @@ PULSING BUTTON
   .bondNames .bondFirstname {
     font-family: franchise;
     font-size: 5em;
-    margin-left: -350px;
+    margin-left: -400px;
     margin-top: 25px;
     text-shadow: 2px -2px 4px rgba(28, 28, 28, 0.45);
      }
@@ -663,6 +663,10 @@ PULSING BUTTON
   .bondNames #rightScroll {
     margin-top: -140px;
     margin-left: 550px; }
+  .bondNames #leftScroll:hover {
+      border-color: #131211; }
+  .bondNames #rightScroll:hover {
+    border-color: #131211; }
 
 .dotWie {
 
@@ -1086,14 +1090,14 @@ a {
     margin-left: 1%;
 }
 #watchlist{
-    position:fixed;
-    margin-left: 36.5%;
-    margin-top: -38.2%;
+    position:absolute;
+    margin-left: 183.5%;
+    margin-top: -198.2%;
 }
 #watchlistScroll{
     width: auto;
     height: 335px;
-    z-index:100;
+    /*z-index:100; */
 }
 .item-divider{
     background-color: #131211;
@@ -1526,8 +1530,9 @@ a {
     }
 }
 @media screen and (max-width: 400px) {
-    #logo{
-        width:50%;
+    #logo {
+        width: 50%;
+    }
     .outer {
 
 
