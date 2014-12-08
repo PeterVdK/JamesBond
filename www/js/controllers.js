@@ -996,6 +996,30 @@ var girl1, girl2,girl3,girl4,girl5,girl6,girl7,girl8,girl9,girl10,girl11,girl12,
 //OK
 
     .controller('MapsCtrl',['$scope','$stateParams', '$ionicLoading', '$compile', 'leafletEvents', '$timeout' ,function ($scope, $stateParams, $ionicLoading, $compile, leafletEvents, $timeout) {
+$scope.checker=false;
+
+       // thegpsconsole
+
+        $(".mapList").velocity({translateX: 300}, 0);
+        $scope.menugps=function(){
+            if(!$scope.checker)
+            {
+            $scope.checker=true;
+            $(".mapList").velocity({translateX: 0}, 400);
+            $(".buttonclicker").velocity({translateX: -300}, 400);
+            }
+            else
+            {
+                $timeout(function(){
+                    $scope.checker=false;
+                },400);
+
+                $(".buttonclicker").velocity({translateX: 0}, 400);
+                $(".mapList").velocity({translateX: 300}, 400);
+
+            }
+        };
+
 
         $('.flip').click(function() {
             $(this).find('span').toggleClass('active');

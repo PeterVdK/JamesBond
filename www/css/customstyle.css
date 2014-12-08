@@ -950,11 +950,7 @@ PULSING BUTTON
 .bondNames #rightScroll {
     margin-top: -140px;
     margin-left: 550px; }
-  .bondNames #leftScroll:hover {
-      border-color: #131211; }
-  .bondNames #rightScroll:hover {
-    border-color: #131211; }
-}
+
 
 /*.bondNames #leftScroll:hover {
     border-color: #131211;
@@ -1636,7 +1632,7 @@ a {
 
 #map {
     postion: absolute;
-    width: 100%;
+    /*width: 100%;*/
     height: 660px;
     left: 20px;
     top: 10px;
