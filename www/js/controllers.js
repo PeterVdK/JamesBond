@@ -1,8 +1,10 @@
 angular.module('starter.controllers', [])
 
+//OK+MIN
+    .controller('maincontroller',['$scope', '$ionicModal', '$timeout', '$location', function ($scope, $ionicModal, $timeout, $location) {
+        var getvolume,volumelogo;
 
-    .controller('maincontroller', function ($scope, $ionicModal, $timeout, $location) {
-        $timeout(function () {
+      /*  $timeout(function () {
             $("#behind").addClass("hidden");
         }, 2500);
         $(".jbsiteall").velocity({opacity: 0}, 0);
@@ -15,7 +17,7 @@ angular.module('starter.controllers', [])
             }, 300);
             $(".outer").addClass("hidden");
             $(".jbsiteall").velocity({opacity: 1}, 300);
-        }, 3000);
+        }, 3000);*/
 
         console.log("kk");
         $timeout(function () {
@@ -23,17 +25,17 @@ angular.module('starter.controllers', [])
             document.getElementById("jbaudio").pause();
             //document.getElementById("jbaudio").play();
             $scope.volumOnorOff = function () {
-                var getvolume = document.getElementById("volume");
+                getvolume = document.getElementById("volume");
 
-                var volumelogo = getvolume.className;
+                 volumelogo = getvolume.className;
 
                 if (volumelogo == "button button-icon icon ion-volume-high activated") {
-                    console.log("volumelogo");
+                    //console.log("volumelogo");
                     getvolume.className = "button button-icon icon ion-volume-mute";
                     document.getElementById("jbaudio").pause();
                 }
                 if (volumelogo == "button button-icon icon ion-volume-mute activated") {
-                    console.log("volumelogo");
+                    //console.log("volumelogo");
                     getvolume.className = "button button-icon icon ion-volume-high";
                     document.getElementById("jbaudio").play();
                 }
@@ -42,10 +44,10 @@ angular.module('starter.controllers', [])
 
         }, 200);
 
-    })
+    }])
 
-
-    .controller('AppCtrl', function ($scope, $ionicModal, $timeout, $location) {
+//OK+MIN
+    .controller('AppCtrl',['$scope', '$ionicModal', '$timeout', '$location', function ($scope, $ionicModal, $timeout, $location) {
         //navigatie voor rode lijn
         //search for red line
         $("#navbond").velocity({ scale: 0, opacity: 0}, 0);
@@ -66,15 +68,15 @@ angular.module('starter.controllers', [])
 
 
         function redliner(numb) {
-            var i, cname;
-            var getmenu = document.getElementById("menuitemsjbsite");
+            var i, cname,getmenu,k;
+            getmenu = document.getElementById("menuitemsjbsite");
             //console.log(getmenu.childNodes[0].childElementCount );
             for (i = 1; i <= (getmenu.childNodes[0].childElementCount * 2); i += 2) {
                 //1 3 5 7
                 if (i != numb) {
-                    //console.log("ppppaaaa" + getmenu.childNodes[0].childNodes[i]);
 
-                    console.log(getmenu.childNodes[0].childNodes[i].className);
+
+                    //console.log(getmenu.childNodes[0].childNodes[i].className);
                     switch (getmenu.childNodes[0].childNodes[i].className) {
                         case "navItemBond redline item":
                             getmenu.childNodes[0].childNodes[i].className = "navItemBond item";
@@ -94,9 +96,9 @@ angular.module('starter.controllers', [])
 
 
             }
-            console.log(getmenu.childNodes[0].childNodes[numb]);
+            //console.log(getmenu.childNodes[0].childNodes[numb]);
             cname = getmenu.childNodes[0].childNodes[numb].className;
-            var k = cname.split(' ');
+            k = cname.split(' ');
             if (k.length <= 2) {
                 getmenu.childNodes[0].childNodes[numb].className = cname + " redline";
             }
@@ -124,10 +126,13 @@ angular.module('starter.controllers', [])
 
         };
 
-    })
+    }])
 
+//OK+MIN
+    .controller('BondsCtrl',['$scope', function ($scope) {
 
-    .controller('BondsCtrl', function ($scope) {
+        var img, i;
+
 
         $(".bar-stable").velocity({translateY: -50}, 0);
 
@@ -157,16 +162,16 @@ angular.module('starter.controllers', [])
 
 
         $scope.nextImage = function (element) {
-            var img = document.getElementById(element);
+            img = document.getElementById(element);
 
-            for (var i = 0; i < $scope.bonds.length; i++) {
+            for ( i = 0; i < $scope.bonds.length; i++) {
 
                 if ($scope.bonds[i].imagesrc.src == img.src) {
 
 
                     $scope.jbnimber = i + 1;
-                    console.log($scope.jbnimber);
-                    console.log($scope.bonds);
+                    //console.log($scope.jbnimber);
+                   // console.log($scope.bonds);
                     if (i === $scope.bonds.length - 1) {
                         document.getElementById(element).className = "bondImage fade";
                         setTimeout(function () {
@@ -183,12 +188,12 @@ angular.module('starter.controllers', [])
                             }
                             $scope.changeName(i);
                         }, 350);
-                        console.log(i);
+                       // console.log(i);
                         break;
                     }
 
 
-                    console.log(document.getElementById(element));
+                   // console.log(document.getElementById(element));
                     document.getElementById(element).className = "bondImage fade";
                     setTimeout(function () {
                         document.getElementById(element).src = $scope.bonds[i + 1].imagesrc.src;
@@ -212,18 +217,18 @@ angular.module('starter.controllers', [])
         }
 
         $scope.previousImage = function (element) {
-            var img = document.getElementById(element);
+            img = document.getElementById(element);
 
             for (var i = 0; i < $scope.bonds.length; i++) {
                 if ($scope.bonds[i].imagesrc.src == img.src) {
-                    console.log($scope.jbnimber);
+                   // console.log($scope.jbnimber);
                     $scope.jbnimber = i - 1;
                     if ($scope.jbnimber == -1) {
                         $scope.jbnimber = 5;
                     }
-                    console.log($scope.jbnimber);
+                  //  console.log($scope.jbnimber);
                     if (i === 0) {
-                        console.log("mm2");
+                     //   console.log("mm2");
                         document.getElementById(element).className = "bondImage fade";
                         setTimeout(function () {
                             document.getElementById(element).src = $scope.bonds[5].imagesrc.src;
@@ -233,7 +238,7 @@ angular.module('starter.controllers', [])
                                 document.getElementById(element).className = "bondImage fade-in-not-out";
                             }
                             else {
-                                console.log("mm3");
+                          //      console.log("mm3");
                                 document.getElementById(element).className = "bondImage fade-in-not-out-in";
 
                             }
@@ -296,12 +301,12 @@ angular.module('starter.controllers', [])
                     break;
             }
         }
-    })
+    }])
 
-    .controller('SingleBondCtrl', function ($scope, $http, bondservice, $stateParams) {
+    //OK+MIN
+    .controller('SingleBondCtrl',['$scope', '$http', 'bondservice', '$stateParams', function ($scope, $http, bondservice, $stateParams) {
+
         $(".card").velocity({translateY: -150}, 0);
-
-
         $(".card").velocity({translateY: 0}, 400);
 
         $scope.bonds = [];
@@ -355,9 +360,9 @@ angular.module('starter.controllers', [])
                     $scope.bonds.birthday = $scope.bonds['birthday'];
                     $scope.bonds.name = $scope.bonds['name'];
                     $scope.bonds.imbdid = $scope.bonds['imdb_id'];
-                    console.log($scope.bonds.imbdid);
-                    console.log($scope.bonds.profileimage);
-                    console.log("kkkk" + $scope.networkIcon);
+                   // console.log($scope.bonds.imbdid);
+                   // console.log($scope.bonds.profileimage);
+                  //  console.log("kkkk" + $scope.networkIcon);
                     $scope.bonds.place_of_birth = $scope.bonds['place_of_birth'];
 
                     storage = localStorage.setItem(storager, JSON.stringify($scope.bonds));
@@ -366,25 +371,26 @@ angular.module('starter.controllers', [])
             else {
 
                 $scope.bonds = JSON.parse(objectretriever);
-                console.log("kkk");
-                console.log('retrievedObject: ', JSON.parse(objectretriever));
+               // console.log("kkk");
+               // console.log('retrievedObject: ', JSON.parse(objectretriever));
             }
 
 
         }
 
         $scope.linkfunction = function () {
-            console.log("loplop");
+           // console.log("loplop");
         };
 
 
-    })
-
-    .controller('SingleBondPictureCtrl', function ($scope, $http, picturebondservice, $stateParams, $timeout) {
+    }])
+//OK+MIN
+    .controller('SingleBondPictureCtrl',['$scope', '$http', 'picturebondservice', '$stateParams', '$timeout', function ($scope, $http, picturebondservice, $stateParams, $timeout) {
         $scope.tt = true;
         $scope.kk = false;
         $scope.ide = $stateParams.bondId;
         $scope.loading = true;
+        var wallposters, i, time, q, teller;
 
         switch ($scope.ide) {
             case "0":
@@ -423,10 +429,10 @@ angular.module('starter.controllers', [])
 
             picturebondservice.getpicturesbond(bondid).then(function (data) {
 
-                console.log("ss");
+             //   console.log("ss");
 
                 $scope.pictures = data;
-                console.log($scope.pictures);
+               // console.log($scope.pictures);
                 $timeout(function () {
                     $scope.loading = false;
                 }, 1000);
@@ -435,7 +441,7 @@ angular.module('starter.controllers', [])
 
         //eerst deckgrid ophalen
         //daarvan de kolomen en van elk van die kolommen de posters
-        var wallposters, i, time, q, teller;
+
         teller = 1;
 
         $timeout(function () {
@@ -443,7 +449,7 @@ angular.module('starter.controllers', [])
             time = 500;
 
             for (q = 0; q < $scope.pictures.length; q++) {
-                console.log($scope.pictures[q]["id"]);
+                //console.log($scope.pictures[q]["id"]);
                 teller = $scope.pictures[q]["id"];
 
                 $(".cards" + teller).velocity({scale: 0}, 0);
@@ -461,10 +467,11 @@ angular.module('starter.controllers', [])
 
         }, 1000);
 
-    })
+    }])
 
-    .controller('SingleBondMovieCtrl', function ($scope, $http, $q, moviesbondservice, $stateParams, $timeout) {
-
+    //OK+MIN
+    .controller('SingleBondMovieCtrl',['$scope', '$http', '$q', 'moviesbondservice', '$stateParams', '$timeout', function ($scope, $http, $q, moviesbondservice, $stateParams, $timeout) {
+        var i, wallposters, time, q, teller, arr;
         $scope.tt = true;
         $scope.kk = false;
         $scope.bondfilm = false;
@@ -532,7 +539,7 @@ angular.module('starter.controllers', [])
         }
 
         function GetTheBondbyId(bondid) {
-            var i;
+
             $scope.movies = [];
 
 
@@ -543,7 +550,7 @@ angular.module('starter.controllers', [])
 
                     if (key['poster_path'] == null) {
                         // console.log(key['poster_path']);
-                        console.log($scope.movies);
+                        //console.log($scope.movies);
                     }
                     else {
 
@@ -555,31 +562,14 @@ angular.module('starter.controllers', [])
                 });
 
 
-                for (i = 0; i < $scope.movies.length; i++) {
-                    switch ($scope.movies[i].title) {
-                        case "Dr. No":
-                            console.log("drno)");
-                            $scope.bondfilm = true;
 
-                            //$(".bondfilmke").velocity({scale: 1.5}, 2000);
-                            //??????????????????????????????????????
-                            $scope.titlexx = "Dr. No";
-
-
-                            break;
-
-                    }
-
-                }
-
-                console.log($scope.titlexx);
             });
 
         }
 
         //eerst deckgrid ophalen
         //daarvan de kolomen en van elk van die kolommen de posters
-        var wallposters, i, time, q, teller, arr;
+
         teller = 1;
 
         $timeout(function () {
@@ -611,7 +601,7 @@ angular.module('starter.controllers', [])
                 }).mouseleave(function () {
 
                     $('.hovere' + arr[1]).velocity("stop");
-                    $('.hovere' + arr[1]).velocity('reverse');
+                    $('.hovere' + arr[1]).velocity('reverse', { duration: 2000 });
                     $(this).removeClass('hover');
                 });
 
@@ -623,21 +613,21 @@ angular.module('starter.controllers', [])
 
         }, 1000);
 
-    })
+    }])
 
-
-    .controller('GirlsCtrl', function ($scope, $stateParams, $timeout) {
-//menu van de girls
+//OK+MIN
+    .controller('GirlsCtrl', ['$scope', '$stateParams', '$timeout',  function ($scope, $stateParams, $timeout) {
+        //menu van de girls
         $("#girlslist").velocity({translateY: 900}, 0);
 
         $("#girlslist").velocity({translateY: 0}, 400);
         /* $("#menuitemsjbsite1") .velocity("fadeIn", { duration: 1000 })*/
 
 
-    })
+    }])
 
-
-    .controller('SingleGirlCtrl', function ($scope, $stateParams, girlservice) {
+//OK+MIN
+    .controller('SingleGirlCtrl',['$scope', '$stateParams', 'girlservice', function ($scope, $stateParams, girlservice) {
         $(".card").velocity({translateY: -150}, 0);
 
 
@@ -645,30 +635,30 @@ angular.module('starter.controllers', [])
 
         console.log($stateParams);
         //  [9871,9896,9907,9919,10070,10168,10190,10223,10341,10458,10475,10500,10342,10660,10670,10679,10695,1620,9205,4587,10912,18182,1030261];
-
-        var girl1 = document.getElementById("navGirl1");
-        var girl2 = document.getElementById("navGirl2");
-        var girl3 = document.getElementById("navGirl3");
-        var girl4 = document.getElementById("navGirl4");
-        var girl5 = document.getElementById("navGirl5");
-        var girl6 = document.getElementById("navGirl6");
-        var girl7 = document.getElementById("navGirl7");
-        var girl8 = document.getElementById("navGirl8");
-        var girl9 = document.getElementById("navGirl9");
-        var girl10 = document.getElementById("navGirl10");
-        var girl11 = document.getElementById("navGirl11");
-        var girl12 = document.getElementById("navGirl12");
-        var girl13 = document.getElementById("navGirl13");
-        var girl14 = document.getElementById("navGirl14");
-        var girl15 = document.getElementById("navGirl15");
-        var girl16 = document.getElementById("navGirl16");
-        var girl17 = document.getElementById("navGirl17");
-        var girl18 = document.getElementById("navGirl18");
-        var girl19 = document.getElementById("navGirl19");
-        var girl20 = document.getElementById("navGirl20");
-        var girl21 = document.getElementById("navGirl21");
-        var girl22 = document.getElementById("navGirl22");
-        var girl23 = document.getElementById("navGirl23");
+var girl1, girl2,girl3,girl4,girl5,girl6,girl7,girl8,girl9,girl10,girl11,girl12,girl13,girl14,girl15,girl16,girl17,girl18,girl19,girl20,girl21,girl22,girl23;
+        girl1 = document.getElementById("navGirl1");
+        girl2 = document.getElementById("navGirl2");
+        girl3 = document.getElementById("navGirl3");
+        girl4 = document.getElementById("navGirl4");
+         girl5 = document.getElementById("navGirl5");
+        girl6 = document.getElementById("navGirl6");
+        girl7 = document.getElementById("navGirl7");
+        girl8 = document.getElementById("navGirl8");
+         girl9 = document.getElementById("navGirl9");
+         girl10 = document.getElementById("navGirl10");
+         girl11 = document.getElementById("navGirl11");
+         girl12 = document.getElementById("navGirl12");
+         girl13 = document.getElementById("navGirl13");
+         girl14 = document.getElementById("navGirl14");
+         girl15 = document.getElementById("navGirl15");
+         girl16 = document.getElementById("navGirl16");
+         girl17 = document.getElementById("navGirl17");
+         girl18 = document.getElementById("navGirl18");
+         girl19 = document.getElementById("navGirl19");
+         girl20 = document.getElementById("navGirl20");
+         girl21 = document.getElementById("navGirl21");
+         girl22 = document.getElementById("navGirl22");
+         girl23 = document.getElementById("navGirl23");
 
 
         function RemoveUnderline() {
@@ -827,9 +817,9 @@ angular.module('starter.controllers', [])
 
             girlservice.getsinglegirl(girlid).then(function (data) {
 
-                console.log(data);
+               // console.log(data);
 
-
+                $scope.checkerBIO=false;
                 $scope.allgirlinfo = data;
                 $scope.allgirlinfo.biografie = $scope.allgirlinfo['biography'];
                 $scope.allgirlinfo.profileimage = $scope.allgirlinfo['profile_path'];
@@ -838,76 +828,23 @@ angular.module('starter.controllers', [])
                 $scope.allgirlinfo.imdbid = $scope.allgirlinfo['imdb_id'];
 
                 $scope.allgirlinfo.place_of_birth = $scope.allgirlinfo['place_of_birth'];
+                if($scope.allgirlinfo.biografie===" ")
+                {
+                    $scope.checkerBIO=true;
+                  //  console.log("dqsdazdazdazeazzz");
+                }
 
             });
         }
-    })
+    }])
 
+//OK+MIN
 
-//card controller is een controller in de bondgirlctrl om aan de kaarten te kunnen
+    .controller('BondgirlsCtrl',[ '$scope', '$http', '$q', '$stateParams', 'bondgirlsservice', '$timeout', 'girlratingservice', function ($scope, $http, $q, $stateParams, bondgirlsservice, $timeout, girlratingservice) {
 
-
-    .controller('CardCtrl', function ($scope, $timeout) {
-        /*
-         console.log("k");
-
-         $scope.lastgirl=document.getElementsByClassName("td-cards")[0].lastChild;
-
-
-         $timeout(function()
-         {
-
-         var getid;
-
-
-
-         $scope.destroythecard = function() {
-         getid=$scope.lastgirl.previousElementSibling.className;
-         //start 5 en eindig bij  8 7 6
-
-         getid= getid.split("-",2);
-         console.log(getid[1]);
-         $scope.cardSwipedLeft(getid[1]);
-
-         var no = document.getElementById("triggerNo");
-         no.style.backgroundColor = "red";
-         };
-
-         $scope.addthecard = function() {
-         getid=$scope.lastgirl.previousElementSibling.className;
-         //start 5 en eindig bij  8 7 6
-
-         getid= getid.split("-",2);
-         console.log(getid[1]);
-         $scope.cardSwipedRight(getid[1]);
-
-         var yes = document.getElementById("triggerYes");
-         yes.style.backgroundColor = "green";
-         };
-
-         $scope.cardSwipedLeft = function(index) {
-         console.log('LEFT SWIPE');
-         console.log(index);
-         $scope.cardDestroyed(index);
-
-         };
-         $scope.cardSwipedRight = function(index) {
-         console.log('RIGHT SWIPE');
-         console.log(index);
-         $scope.addCard(index);
-         };
-
-
-         },0);
-
-
-
-         */
-    })
-
-
-    .controller('BondgirlsCtrl', function ($scope, $http, $q, $stateParams, bondgirlsservice, $timeout, girlratingservice) {
-        var i;
+        var d, n,i,Girl,random,getgirl,getgirlsss, getfirstgirl, thegirlname ,leeftijd,animationEndEvent,
+            d = new Date();
+        n = d.getFullYear();
 
         $scope.thegirls = new Array(22);
         $scope.thegirls = [9871, 9896, 9907, 9919, 10070, 10168, 10190, 10223, 10341, 10458, 10475, 10500, 10342, 10660, 10670, 10679, 10695, 1620, 9205, 4587, 10912, 18182, 1030261];
@@ -916,9 +853,9 @@ angular.module('starter.controllers', [])
         $scope.cardTypes = [];
 
         for (i = 0; i < $scope.thegirls.length; i++) {
-            console.log("1");
+            //console.log("1");
             bondgirlsservice.getbondgirls($scope.thegirls[i]).then(function (data) {
-                console.log(data + "    " + i);
+                //console.log(data + "    " + i);
                 $scope.cardTypes.push(data);
 
                 if ($scope.cardTypes.length == 23) {
@@ -944,16 +881,14 @@ angular.module('starter.controllers', [])
 
             $scope.cards = Array.prototype.slice.call(cardTypes, 0);
 
-            var animationEndEvent = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
-            var d, n, leeftijd,
-                d = new Date();
-            n = d.getFullYear();
-            var Girl = {
+            animationEndEvent = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
+
+            Girl = {
                 wrap: $('#girls'),
                 girls: $scope.cards,
                 add: function () {
 
-                    var random = this.girls[Math.floor(Math.random() * this.girls.length)];
+                    random = this.girls[Math.floor(Math.random() * this.girls.length)];
                     leeftijd = n - random.birthday.substring(0, 4);
                     this.wrap.append("<div class='girlCard'><img alt='" + random.name + "' src='" + random.profile_path + "' /><span>" + random.name + " , " + leeftijd + "</span></div>");
                 }
@@ -968,9 +903,9 @@ angular.module('starter.controllers', [])
                     var self = this;
                     if (!this.blocked) {
                         this.blocked = true;
-                        var getgirl = document.getElementsByClassName("girlCard")[0];
+                        getgirl = document.getElementsByClassName("girlCard")[0];
                         $('.girlCard').eq(0).addClass(animate).one(animationEndEvent, function () {
-                            console.log("kkkk");
+                            //console.log("kkkk");
                             $(this).remove();
 
                             Girl.add();
@@ -981,7 +916,7 @@ angular.module('starter.controllers', [])
             };
             $scope.naam = [];
 
-            var getgirlsss, getfirstgirl, thegirlname;
+
 
             $scope.yesfunc = function () {
                 App.like(true);
@@ -994,8 +929,8 @@ angular.module('starter.controllers', [])
                 girlratingservice.girlrating().then(function (data) {
 
                     for (var i = 0; i < data.length; i++) {
-                        console.log(thegirlname + "   " + data[i].Naam);
-                        console.log("no");
+                        //console.log(thegirlname + "   " + data[i].Naam);
+                       // console.log("no");
                         if (data[i].Naam == thegirlname.split(" , ")[0]) {
                             var nieuwe_punten = parseFloat(data[i].Punten) + 1;
                             data[i].Punten = String(nieuwe_punten);
@@ -1010,16 +945,15 @@ angular.module('starter.controllers', [])
                 function changeThemarks(nieuwe_punten, id) {
 
 
-                    //http://stackoverflow.com/questions/21477881/use-javascript-to-update-a-json-file
-                    //hoe moet ik dit nu opslaan in een JSON???????
-                    console.log("hier is het id" + id);
+
+                   // console.log("hier is het id" + id);
                 }
 
-                console.log(thegirlname.split(" , ")[0]);
+                //console.log(thegirlname.split(" , ")[0]);
 
                 pushtoarray(thegirlname.split(" , ")[0]);
 
-                console.log(Girl);
+                //console.log(Girl);
                 console.log("yesbutton");
             };
             $scope.nofunc = function () {
@@ -1030,7 +964,7 @@ angular.module('starter.controllers', [])
 
             function pushtoarray(denaamvandegirl) {
                 $scope.naam.push(denaamvandegirl);
-                console.log($scope.naam);
+               // console.log($scope.naam);
             }
 
             $(document).ready(function () {
@@ -1041,17 +975,18 @@ angular.module('starter.controllers', [])
             })
 
         }
-    })
+    }])
+//OK
 
-
-    .controller('MapsCtrl', function ($scope, $stateParams, $ionicLoading, $compile, leafletEvents, $timeout) {
-        console.log("kk");
+    .controller('MapsCtrl',['$scope','$stateParams', '$ionicLoading', '$compile', 'leafletEvents', '$timeout' ,function ($scope, $stateParams, $ionicLoading, $compile, leafletEvents, $timeout) {
+        //console.log("kk");
+        var map,hqIcon,greenIcon,redIcon,yellowIcon,purpleIcon,orangeIcon;
         $scope.loading = true;
 
-        var map = L.map('map').setView([0, 50], 2);
+        map = L.map('map').setView([0, 50], 2);
         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png?{foo}', {foo: 'bar'}).addTo(map);
 
-        var hqIcon = L.icon({
+        hqIcon = L.icon({
             iconUrl: 'http://icons.iconarchive.com/icons/hydrattz/multipurpose-alphabet/256/Letter-M-black-icon.png',
             iconRetinaUrl: 'http://icons.iconarchive.com/icons/hydrattz/multipurpose-alphabet/256/Letter-M-black-icon.png',
             iconAnchor: [5, 20],
@@ -1070,7 +1005,7 @@ angular.module('starter.controllers', [])
 
         //Markers Sean Connery
         $scope.markerSC = function (sc) {
-            console.log(sc);
+           // console.log(sc);
             if (sc) {
                 jam = L.marker([18.1095810, -77.2975080], {icon: greenIcon}).addTo(map).bindPopup('<b>Jamaica</b> <ul><li>Dr. No</li></ul>', {closeButton: false}); //Jamaica
                 srv = L.marker([44.0165210, 21.0058590], {icon: greenIcon}).addTo(map).bindPopup('<b>Serbia</b> <ul><li>From Russia With Love</li></ul>', {closeButton: false}); //Servië
@@ -1183,7 +1118,7 @@ angular.module('starter.controllers', [])
             });
         };
 
-        var greenIcon = L.icon({
+        greenIcon = L.icon({
             iconUrl: 'http://test.gisline.no/runeberegner2/lib/leaflet/images/marker-icon_green.png',
             iconRetinaUrl: 'http://test.gisline.no/runeberegner2/lib/leaflet/images/marker-icon_green.png',
             iconAnchor: [5, 40],
@@ -1219,7 +1154,7 @@ angular.module('starter.controllers', [])
 
         //Markers Roger Moore
         $scope.markerRM = function (rm) {
-            console.log(rm);
+           // console.log(rm);
             if (rm) {
                 usaRM = L.marker([37.0902400, -100.7128910], {icon: redIcon}).addTo(map).bindPopup('<b>USA</b> <ul><li>Live And Let Die</li><li>Moonraker</li></ul>', {closeButton: false}); //USA
                 chnRM = L.marker([35.8616600, 104.1953970], {icon: redIcon}).addTo(map).bindPopup('<b>China</b> <ul><li>The Man With The Golden Gun</li></ul>', {closeButton: false}); //China
@@ -1331,7 +1266,7 @@ angular.module('starter.controllers', [])
             });
         };
 
-        var redIcon = L.icon({
+       redIcon = L.icon({
             iconUrl: 'http://www.abqjournal.com/maps/js/images/marker-red.png',
             iconRetinaUrl: 'http://www.abqjournal.com/maps/js/images/marker-red.png',
             iconAnchor: [5, 20],
@@ -1341,7 +1276,7 @@ angular.module('starter.controllers', [])
 
         //Markers Timothy Dalton
         $scope.markerTD = function (td) {
-            console.log(td);
+           // console.log(td);
             if (td) {
                 var time = 0;
                 mor = L.marker([31.7917020, -7.0926200], {icon: yellowIcon}).addTo(map).bindPopup('<b>Morocco</b> <ul><li>The Living Daylights</li></ul>', {closeButton: false}); //Marokko
@@ -1406,7 +1341,7 @@ angular.module('starter.controllers', [])
             });
         };
 
-        var yellowIcon = L.icon({
+        yellowIcon = L.icon({
             iconUrl: 'http://www.inss-conf.org/2012/leaflet/images/marker_y.png',
             iconRetinaUrl: 'http://www.inss-conf.org/2012/leaflet/images/marker_y.png',
             iconAnchor: [5, 20],
@@ -1416,7 +1351,7 @@ angular.module('starter.controllers', [])
 
         //Markers Pierce Brosnan
         $scope.markerPB = function (pb) {
-            console.log(pb);
+            //console.log(pb);
             if (pb) {
 
 
@@ -1564,7 +1499,7 @@ angular.module('starter.controllers', [])
             });
         };
 
-        var purpleIcon = L.icon({
+         purpleIcon = L.icon({
             iconUrl: 'http://stuff.samat.org/Test-Cases/Leaflet/881-Marker-Subclassing/marker-icon-purple.png',
             iconRetinaUrl: 'http://stuff.samat.org/Test-Cases/Leaflet/881-Marker-Subclassing/marker-icon-purple.png',
             iconAnchor: [5, 20],
@@ -1574,7 +1509,7 @@ angular.module('starter.controllers', [])
 
         //Markers Daniel Craig
         $scope.markerDC = function (dc) {
-            console.log(dc);
+            //console.log(dc);
             if (dc) {
 
                 usaDC = L.marker([37.0902400, -110.7128910], {icon: orangeIcon}).addTo(map).bindPopup('<b>USA</b> <ul><li>Casino Royale</li></ul>', {closeButton: false});
@@ -1683,7 +1618,7 @@ angular.module('starter.controllers', [])
             });
         };
 
-        var orangeIcon = L.icon({
+        orangeIcon = L.icon({
             iconUrl: 'http://46.105.103.225/wstatic/images/marker-orange.png',
             iconRetinaUrl: 'http://46.105.103.225/wstatic/images/marker-orange.png',
             iconAnchor: [5, 20],
@@ -1695,33 +1630,35 @@ angular.module('starter.controllers', [])
             $scope.loading = false;
         }, 1000);
 
-    })
+    }])
 
-    .controller('CarsCtrl', function ($scope, $stateParams, carsservice, $timeout) {
+    .controller('CarsCtrl', ['$scope', '$stateParams', 'carsservice', '$timeout' , function ($scope, $stateParams, carsservice, $timeout) {
+        var animationEndEvent,Car,random,App,getcarssss, getfirstcar, idcar, themovie, thecarmovie, i, d, n, leeftijd,
+            d = new Date();
+        n = d.getFullYear();
         $scope.cars = [];
         $scope.loading = true;
 
+
         carsservice.getcars().then(function (data) {
             $scope.cars = data;
-            console.log($scope.cars);
+           // console.log($scope.cars);
 
             if ($scope.cars.length == 21) {
-                var animationEndEvent = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
-                var d, n, leeftijd,
-                    d = new Date();
-                n = d.getFullYear();
-                var Car = {
+                animationEndEvent = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
+
+                Car = {
                     wrap: $('#cars'),
                     cars: $scope.cars,
                     add: function () {
 
-                        var random = this.cars[Math.floor(Math.random() * this.cars.length)];
+                        random = this.cars[Math.floor(Math.random() * this.cars.length)];
 
                         this.wrap.append("<div class='carCard'><img title='" + random.id + "' alt='" + random.name + "' src='" + random.image + "' /><span>" + random.merk + " " + random.serie + "</span></div>");
                     }
                 }
 
-                var App = {
+                App = {
                     yesButton: $('.button.yes .trigger'),
                     noButton: $('.button.no .trigger'),
                     blocked: false,
@@ -1732,7 +1669,7 @@ angular.module('starter.controllers', [])
                             this.blocked = true;
                             var getcar = document.getElementsByClassName("carCard")[0];
                             $('.carCard').eq(0).addClass(animate).one(animationEndEvent, function () {
-                                console.log("kkkk");
+                                //console.log("kkkk");
                                 $(this).remove();
 
                                 Car.add();
@@ -1744,42 +1681,42 @@ angular.module('starter.controllers', [])
                 $scope.naam = [];
                 $scope.carsfilms = [];
                 $scope.showmoviescar = false;
-                console.log($scope.carsfilms);
-                var getcarssss, getfirstcar, idcar, themovie, thecarmovie, i;
+                //console.log($scope.carsfilms);
+
 
                 $scope.yesfunc = function () {
                     App.like(true);
 
                     getcarssss = document.getElementById("cars");
                     getfirstcar = getcarssss.firstChild;
-                    console.log(getfirstcar.childNodes[0].getAttribute("title"));
+                    //console.log(getfirstcar.childNodes[0].getAttribute("title"));
                     //1 2 3
                     idcar = parseFloat(getfirstcar.childNodes[0].getAttribute("title")) - 1;
                     themovie = $scope.cars[idcar].movie;
-                    console.log($scope.cars[idcar].movie);
+                    //console.log($scope.cars[idcar].movie);
                     var m = $scope.cars[idcar].movie.split(',');
                     for (i = 0; i < m.length; i++) {
-                        console.log(m[i]);
+                        //console.log(m[i]);
                         thecarmovie = $scope.carsfilms.indexOf(m[i]);
                         if (thecarmovie < 0) {
                             $scope.carsfilms.push(m[i]);
-                            console.log($scope.carsfilms);
+                           // console.log($scope.carsfilms);
                         }
                     }
                     if ($scope.carsfilms.length >= 1) {
                         $scope.showmoviescar = true;
                     }
 
-                    console.log("yesbutton");
+                   // console.log("yesbutton");
                 };
                 $scope.nofunc = function () {
                     App.like(false);
-                    console.log("nobutton");
+                   // console.log("nobutton");
                 };
 
                 function pushtoarray(denaamvandecar) {
                     $scope.naam.push(denaamvandecar);
-                    console.log($scope.naam);
+                   // console.log($scope.naam);
                 }
 
                 $(document).ready(function () {
@@ -1797,7 +1734,7 @@ angular.module('starter.controllers', [])
                 $scope.loading.true;
             }
         });
-    })
+    }])
 
 
 
