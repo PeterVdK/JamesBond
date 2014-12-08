@@ -682,7 +682,7 @@ $scope.kk=true;
         var girl21 = document.getElementById("navGirl21");
         var girl22 = document.getElementById("navGirl22");
         var girl23 = document.getElementById("navGirl23");
-
+        var girl24 = document.getElementById("navGirl24");
 
 
         function RemoveUnderline(){
@@ -709,6 +709,7 @@ $scope.kk=true;
             girl21.style.borderBottom = "2px solid transparent";
             girl22.style.borderBottom = "2px solid transparent";
             girl23.style.borderBottom = "2px solid transparent";
+            girl24.style.borderBottom = "2px solid transparent";
         }
 
         switch ($stateParams.girlId)
@@ -833,6 +834,11 @@ $scope.kk=true;
                 RemoveUnderline();
                 girl23.style.borderBottom = "2px solid #b10a0a";
                 break;
+            case "24":
+                GetTheGirlbyId(28782);
+                RemoveUnderline();
+                girl24.style.borderBottom = "2px solid #b10a0a";
+                break;
         }
 
         $scope.allgirlinfo=[];
@@ -926,7 +932,7 @@ $timeout(function()
         var i;
 
         $scope.thegirls=new Array(22);
-        $scope.thegirls=[9871,9896,9907,9919,10070,10168,10190,10223,10341,10458,10475,10500,10342,10660,10670,10679,10695,1620,9205,4587,10912,18182,1030261];
+        $scope.thegirls=[9871,9896,9907,9919,10070,10168,10190,10223,10341,10458,10475,10500,10342,10660,10670,10679,10695,1620,9205,4587,10912,18182,1030261,28782];
 
         $scope.loading=true;
         $scope.cardTypes=[];
@@ -937,7 +943,7 @@ $timeout(function()
                 console.log(data + "    "+i);
                 $scope.cardTypes.push(data);
 
-                if($scope.cardTypes.length==23)
+                if($scope.cardTypes.length==24)
                 {
                     girls();
 
@@ -1483,7 +1489,7 @@ $timeout(function()
 $scope.cars=data;
            console.log($scope.cars);
 
-            if($scope.cars.length == 21){
+            if($scope.cars.length == 22){
                 var animationEndEvent = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
                 var d, n,leeftijd,
                     d = new Date();

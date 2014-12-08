@@ -140,5 +140,11 @@
 "serie":"DBS V12",
     "image": "http://www.jtiprestige.co.uk/files/car-uploads/Aston-Martin-DBS4.jpg",
 "movie":"Casino Royale,Quantum of Solace"
-  } 
+  } ,  {
+    "id": "22",
+    "merk": "Aston Martin",
+    "serie":"DB10",
+    "image": "http://media.autoweek.nl/m/sf7yzcqbzi9v_600.jpg",
+    "movie":"Spectre"
+    }
 ]
