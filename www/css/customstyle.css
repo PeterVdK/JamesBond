@@ -439,23 +439,14 @@ PULSING BUTTON
 }
 
 .navGirl1, .navGirl2, .navGirl3, .navGirl4, .navGirl5, .navGirl6, .navGirl7, .navGirl8, .navGirl9, .navGirl10, .navGirl11, .navGirl12, .navGirl13,
-<<<<<<< HEAD
 .navGirl14, .navGirl15, .navGirl16, .navGirl17, .navGirl18, .navGirl19, .navGirl20, .navGirl21, .navGirl22, .navGirl23, .navGirl24 {
-  background-image: url("../img/Bondgirls/UrsulaAndress.png");
-  padding-top: 90px;
-  background-size: 110%; }
-  .navGirl1 a, .navGirl2 a, .navGirl3 a, .navGirl4 a, .navGirl5 a, .navGirl6 a, .navGirl7 a, .navGirl8 a, .navGirl9 a, .navGirl10 a, .navGirl11 a, .navGirl12 a, .navGirl13 a,
-  .navGirl14 a, .navGirl15 a, .navGirl16 a, .navGirl17 a, .navGirl18 a, .navGirl19 a, .navGirl20 a, .navGirl21 a, .navGirl22 a, .navGirl23 a, .navGirl24 a {
-=======
-.navGirl14, .navGirl15, .navGirl16, .navGirl17, .navGirl18, .navGirl19, .navGirl20, .navGirl21, .navGirl22, .navGirl23 {
     background-image: url("../img/Bondgirls/UrsulaAndress.png");
     padding-top: 90px;
     background-size: 110%;
 }
 
 .navGirl1 a, .navGirl2 a, .navGirl3 a, .navGirl4 a, .navGirl5 a, .navGirl6 a, .navGirl7 a, .navGirl8 a, .navGirl9 a, .navGirl10 a, .navGirl11 a, .navGirl12 a, .navGirl13 a,
-.navGirl14 a, .navGirl15 a, .navGirl16 a, .navGirl17 a, .navGirl18 a, .navGirl19 a, .navGirl20 a, .navGirl21 a, .navGirl22 a, .navGirl23 a {
->>>>>>> 843c87be513e7a742c1707f618c8667ff266b197
+.navGirl14 a, .navGirl15 a, .navGirl16 a, .navGirl17 a, .navGirl18 a, .navGirl19 a, .navGirl20 a, .navGirl21 a, .navGirl22 a, .navGirl23 a, .navGirl24 a {
     background-color: transparent;
     position: absolute;
     top: 0px;
@@ -468,26 +459,15 @@ PULSING BUTTON
     text-decoration: none;
     font-family: Gulim;
     font-size: 30px;
-<<<<<<< HEAD
     letter-spacing: -2px; }
-    .navGirl1 a div, .navGirl2 a div, .navGirl3 a div, .navGirl4 a div, .navGirl5 a div, .navGirl6 a div, .navGirl7 a div, .navGirl8 a div, .navGirl9 a div, .navGirl10 a div, .navGirl11 a div, .navGirl12 a div, .navGirl13 a div,
-    .navGirl14 a div, .navGirl15 a div, .navGirl16 a div, .navGirl17 a div, .navGirl18 a div, .navGirl19 a div, .navGirl20 a div, .navGirl21 a div, .navGirl22 a div, .navGirl23 a div, .navGirl24 a div {
-      background: transparent;
-      width: 240px;
-      height: 1.3em;
-      margin-left: 2px; }
-=======
-    letter-spacing: -2px;
-}
 
 .navGirl1 a div, .navGirl2 a div, .navGirl3 a div, .navGirl4 a div, .navGirl5 a div, .navGirl6 a div, .navGirl7 a div, .navGirl8 a div, .navGirl9 a div, .navGirl10 a div, .navGirl11 a div, .navGirl12 a div, .navGirl13 a div,
-.navGirl14 a div, .navGirl15 a div, .navGirl16 a div, .navGirl17 a div, .navGirl18 a div, .navGirl19 a div, .navGirl20 a div, .navGirl21 a div, .navGirl22 a div, .navGirl23 a div {
+.navGirl14 a div, .navGirl15 a div, .navGirl16 a div, .navGirl17 a div, .navGirl18 a div, .navGirl19 a div, .navGirl20 a div, .navGirl21 a div, .navGirl22 a div, .navGirl23 a div, .navGirl24 a div {
     background: transparent;
     width: 240px;
     height: 1.3em;
     margin-left: 2px;
 }
->>>>>>> 843c87be513e7a742c1707f618c8667ff266b197
 
 .navGirl2 {
     background-image: url("../img/Bondgirls/DanielaBianchi.png");
@@ -864,36 +844,21 @@ PULSING BUTTON
 .navGirl2 a div:hover, .navGirl3 a div:hover, .navGirl4 a div:hover, .navGirl5 a div:hover, .navGirl6 a div:hover, .navGirl7 a div:hover,
 .navGirl8 a div:hover, .navGirl9 a div:hover, .navGirl10 a div:hover, .navGirl11 a div:hover, .navGirl12 a div:hover, .navGirl13 a div:hover,
 .navGirl14 a div:hover, .navGirl15 a div:hover, .navGirl16 a div:hover, .navGirl17 a div:hover, .navGirl18 a div:hover, .navGirl19 a div:hover,
-<<<<<<< HEAD
-.navGirl20 a div:hover, .navGirl21 a div:hover, .navGirl22 a div:hover, .navGirl23 a div:hover,.navGirl24 a div:hover {
-  border-bottom: 2px solid transparent;
-  animation: underlineNav 2s forwards;
-  -o-animation: underlineNav 2s forwards;
-  -webkit-animation: underlineNav 2s forwards; }
-=======
-.navGirl20 a div:hover, .navGirl21 a div:hover, .navGirl22 a div:hover, .navGirl23 a div:hover {
+.navGirl20 a div:hover, .navGirl21 a div:hover, .navGirl22 a div:hover, .navGirl23 a div:hover, .navGirl24 a div:hover {
     border-bottom: 2px solid transparent;
     animation: underlineNav 2s forwards;
     -o-animation: underlineNav 2s forwards;
     -webkit-animation: underlineNav 2s forwards;
 }
->>>>>>> 843c87be513e7a742c1707f618c8667ff266b197
 
 .navItemMap:hover, .navItemGirls:hover, .navItemBond:hover, .navItemCars:hover, .navGirl1:hover, .navGirl2:hover, .navGirl3:hover, .navGirl4:hover,
 .navGirl5:hover, .navGirl6:hover, .navGirl7:hover, .navGirl8:hover, .navGirl9:hover, .navGirl10:hover, .navGirl11:hover, .navGirl12:hover, .navGirl13:hover,
 .navGirl14:hover, .navGirl15:hover, .navGirl16:hover, .navGirl17:hover, .navGirl18:hover, .navGirl19:hover, .navGirl20:hover, .navGirl21:hover,
-<<<<<<< HEAD
-.navGirl22:hover, .navGirl23:hover,.navGirl24:hover {
-  animation: scaleNav 2s forwards;
-  -o-animation: scaleNav 2s forwards;
-  -webkit-animation: scaleNav 2s forwards; }
-=======
-.navGirl22:hover, .navGirl23:hover {
+.navGirl22:hover, .navGirl23:hover, .navGirl24:hover {
     animation: scaleNav 2s forwards;
     -o-animation: scaleNav 2s forwards;
     -webkit-animation: scaleNav 2s forwards;
 }
->>>>>>> 843c87be513e7a742c1707f618c8667ff266b197
 
 /*      NAVIGATIE ITEMS KEYFRAMES    */
 @-webkit-keyframes underlineNav {
@@ -984,14 +949,11 @@ PULSING BUTTON
 
 .bondNames #rightScroll {
     margin-top: -140px;
-<<<<<<< HEAD
     margin-left: 550px; }
   .bondNames #leftScroll:hover {
       border-color: #131211; }
   .bondNames #rightScroll:hover {
     border-color: #131211; }
-=======
-    margin-left: 550px;
 }
 
 /*.bondNames #leftScroll:hover {
@@ -1006,7 +968,6 @@ PULSING BUTTON
 font-size: 35px;
     text-shadow: 1px 3px 7px #000000;
 }
->>>>>>> 843c87be513e7a742c1707f618c8667ff266b197
 
 .dotWie {
 
@@ -1531,14 +1492,9 @@ a {
     width: 28%;
     margin-left: 1%;
 }
-<<<<<<< HEAD
-#watchlist{
-    position:absolute;
-=======
 
 #watchlist {
     position: absolute;
->>>>>>> 843c87be513e7a742c1707f618c8667ff266b197
     margin-left: 183.5%;
     margin-top: -198.2%;
 }

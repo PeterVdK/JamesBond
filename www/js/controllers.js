@@ -635,37 +635,8 @@ angular.module('starter.controllers', [])
 
         console.log($stateParams);
         //  [9871,9896,9907,9919,10070,10168,10190,10223,10341,10458,10475,10500,10342,10660,10670,10679,10695,1620,9205,4587,10912,18182,1030261];
-<<<<<<< HEAD
 
-        var girl1 = document.getElementById("navGirl1");
-        var girl2 = document.getElementById("navGirl2");
-        var girl3 = document.getElementById("navGirl3");
-        var girl4 = document.getElementById("navGirl4");
-        var girl5 = document.getElementById("navGirl5");
-        var girl6 = document.getElementById("navGirl6");
-        var girl7 = document.getElementById("navGirl7");
-        var girl8 = document.getElementById("navGirl8");
-        var girl9 = document.getElementById("navGirl9");
-        var girl10 = document.getElementById("navGirl10");
-        var girl11 = document.getElementById("navGirl11");
-        var girl12 = document.getElementById("navGirl12");
-        var girl13 = document.getElementById("navGirl13");
-        var girl14 = document.getElementById("navGirl14");
-        var girl15 = document.getElementById("navGirl15");
-        var girl16 = document.getElementById("navGirl16");
-        var girl17 = document.getElementById("navGirl17");
-        var girl18 = document.getElementById("navGirl18");
-        var girl19 = document.getElementById("navGirl19");
-        var girl20 = document.getElementById("navGirl20");
-        var girl21 = document.getElementById("navGirl21");
-        var girl22 = document.getElementById("navGirl22");
-        var girl23 = document.getElementById("navGirl23");
-        var girl24 = document.getElementById("navGirl24");
-
-
-        function RemoveUnderline(){
-=======
-var girl1, girl2,girl3,girl4,girl5,girl6,girl7,girl8,girl9,girl10,girl11,girl12,girl13,girl14,girl15,girl16,girl17,girl18,girl19,girl20,girl21,girl22,girl23;
+var girl1, girl2,girl3,girl4,girl5,girl6,girl7,girl8,girl9,girl10,girl11,girl12,girl13,girl14,girl15,girl16,girl17,girl18,girl19,girl20,girl21,girl22,girl23,girl24;
         girl1 = document.getElementById("navGirl1");
         girl2 = document.getElementById("navGirl2");
         girl3 = document.getElementById("navGirl3");
@@ -689,10 +660,10 @@ var girl1, girl2,girl3,girl4,girl5,girl6,girl7,girl8,girl9,girl10,girl11,girl12,
          girl21 = document.getElementById("navGirl21");
          girl22 = document.getElementById("navGirl22");
          girl23 = document.getElementById("navGirl23");
+         girl24 = document.getElementById("navGirl24");
 
 
         function RemoveUnderline() {
->>>>>>> 843c87be513e7a742c1707f618c8667ff266b197
             girl1.style.borderBottom = "2px solid transparent";
             girl2.style.borderBottom = "2px solid transparent";
             girl3.style.borderBottom = "2px solid transparent";
@@ -877,51 +848,23 @@ var girl1, girl2,girl3,girl4,girl5,girl6,girl7,girl8,girl9,girl10,girl11,girl12,
 
 //OK+MIN
 
-    .controller('BondgirlsCtrl',[ '$scope', '$http', '$q', '$stateParams', 'bondgirlsservice', '$timeout', 'girlratingservice', function ($scope, $http, $q, $stateParams, bondgirlsservice, $timeout, girlratingservice) {
 
+
+    .controller('BondgirlsCtrl', ["$scope", "$http","$q","$stateParams","bondgirlsservice","$timeout","girlratingservice",function($scope, $http,$q,$stateParams,bondgirlsservice,$timeout,girlratingservice) {
         var d, n,i,Girl,random,getgirl,getgirlsss, getfirstgirl, thegirlname ,leeftijd,animationEndEvent,
             d = new Date();
         n = d.getFullYear();
-
-        $scope.thegirls = new Array(22);
-        $scope.thegirls = [9871, 9896, 9907, 9919, 10070, 10168, 10190, 10223, 10341, 10458, 10475, 10500, 10342, 10660, 10670, 10679, 10695, 1620, 9205, 4587, 10912, 18182, 1030261];
-
-        $scope.loading = true;
-        $scope.cardTypes = [];
-
-<<<<<<< HEAD
-
-*/
-    })
-
-
-    .controller('BondgirlsCtrl', function($scope, $http,$q,$stateParams,bondgirlsservice,$timeout,girlratingservice) {
-        var i;
-
-        $scope.thegirls=new Array(22);
+        $scope.thegirls=new Array(24);
         $scope.thegirls=[9871,9896,9907,9919,10070,10168,10190,10223,10341,10458,10475,10500,10342,10660,10670,10679,10695,1620,9205,4587,10912,18182,1030261,28782];
 
         $scope.loading=true;
         $scope.cardTypes=[];
 
-        for (i = 0; i <  $scope.thegirls.length; i++) {
-            console.log( "1");
-=======
         for (i = 0; i < $scope.thegirls.length; i++) {
-            //console.log("1");
->>>>>>> 843c87be513e7a742c1707f618c8667ff266b197
             bondgirlsservice.getbondgirls($scope.thegirls[i]).then(function (data) {
-                //console.log(data + "    " + i);
                 $scope.cardTypes.push(data);
-
-<<<<<<< HEAD
-                if($scope.cardTypes.length==24)
-                {
-=======
-                if ($scope.cardTypes.length == 23) {
->>>>>>> 843c87be513e7a742c1707f618c8667ff266b197
+                if ($scope.cardTypes.length == 24) {
                     girls();
-
                     $timeout(function () {
                         $scope.loading = false;
                     }, 1000);
@@ -1702,25 +1645,13 @@ var girl1, girl2,girl3,girl4,girl5,girl6,girl7,girl8,girl9,girl10,girl11,girl12,
 
 
         carsservice.getcars().then(function (data) {
-<<<<<<< HEAD
-$scope.cars=data;
-           console.log($scope.cars);
-
-            if($scope.cars.length == 22){
-                var animationEndEvent = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
-                var d, n,leeftijd,
-                    d = new Date();
-                n= d.getFullYear();
-                var Car = {
-=======
             $scope.cars = data;
            // console.log($scope.cars);
 
-            if ($scope.cars.length == 21) {
+            if ($scope.cars.length == 22) {
                 animationEndEvent = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
 
                 Car = {
->>>>>>> 843c87be513e7a742c1707f618c8667ff266b197
                     wrap: $('#cars'),
                     cars: $scope.cars,
                     add: function () {
