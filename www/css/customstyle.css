@@ -1585,6 +1585,35 @@ a {
     background: rgba(230, 122, 0, 0.2);
     border: 3px solid rgba(230, 122, 0, 0.8);
 }
+/* Toggle */
+.flip span {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: Gulim;
+    text-align: center;
+    position: absolute;
+    padding: 5px;
+    transform: scale(1,-1);
+    z-index: 2;
+    transform-origin: top center;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+    margin-top: 40px;
+    opacity:0;
+}
+.flip span.active {
+    background: tomato;
+    color: #fff;
+    z-index: 3;
+    opacity: 1;
+    transform-origin: bottom center;
+    transform: scale(1,1);
+}
+.flip span.off {
+    background: limegreen;
+}
+/* Einde toggle */
 
 .leaflet-popup-content-wrapper {
     background-color: red;
@@ -1827,6 +1856,11 @@ a {
     #controlCars {
         margin-left: 25%;
     }
+    .flip span{
+        margin-top: 25px;
+        margin-left: -7%;
+        width: 130%;
+    }
 }
 
 /*mediaquery vanaf 768px */
@@ -2066,6 +2100,11 @@ a {
     #watchlistScroll {
         width: 360px;
     }
+    .flip span{
+        margin-top: 25px;
+        margin-left: -20%;
+        width: 160%;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -2120,6 +2159,12 @@ a {
 
     #controlCars {
         margin-left: 15%;
+    }
+    .flip span{
+        font-size: 8px;
+        margin-top: 15px;
+        margin-left: -45%;
+        width: 190%;
     }
 }
 

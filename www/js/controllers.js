@@ -44,6 +44,20 @@ angular.module('starter.controllers', [])
 
         }, 200);
 
+        $(document).ready(function(){
+            var switched = false;
+            $(".switch").click(function(){
+                if(switched){
+                    $(".toggle").animate({left:'0em'});
+                    switched = false;
+                }
+                else{
+                    $(".toggle").animate({left:'2em'});
+                    switched = true;
+                }
+            });
+        });
+
     }])
 
 //OK+MIN
@@ -125,7 +139,6 @@ angular.module('starter.controllers', [])
             }, 200);
 
         };
-
     }])
 
 //OK+MIN
@@ -983,9 +996,14 @@ var girl1, girl2,girl3,girl4,girl5,girl6,girl7,girl8,girl9,girl10,girl11,girl12,
 //OK
 
     .controller('MapsCtrl',['$scope','$stateParams', '$ionicLoading', '$compile', 'leafletEvents', '$timeout' ,function ($scope, $stateParams, $ionicLoading, $compile, leafletEvents, $timeout) {
+
+        $('.flip').click(function() {
+            $(this).find('span').toggleClass('active');
+        });
         //console.log("kk");
         var map,MeIcon,hqIcon,greenIcon,redIcon,yellowIcon,purpleIcon,orangeIcon;
         var loadingMap = document.getElementById("loadingMap");
+
         $scope.loading = true;
 
         map = L.map('map');
@@ -1022,11 +1040,17 @@ var girl1, girl2,girl3,girl4,girl5,girl6,girl7,girl8,girl9,girl10,girl11,girl12,
                 if($(window).width() > 1380){
                     loadingMap.style.display = "block";
                 }
-                loadingMap.style.display = "block";
+                else
+                    loadingMap.style.display = "none";
+
                 setTimeout(function () {
                     loadingMap.style.display = "none";
                 }, 7000);
+
+                document.getElementById("off").style.pointerEvents = "none";
+
                 navigator.geolocation.getCurrentPosition(showPosition);
+
             } else {
                 alert("Geolocation is not supported by this browser.");
             }
@@ -1037,6 +1061,7 @@ var girl1, girl2,girl3,girl4,girl5,girl6,girl7,girl8,girl9,girl10,girl11,girl12,
             map.setView([position.coords.latitude, position.coords.longitude+2], 6);
 
             loadingMap.style.display = "none";
+            document.getElementById("off").style.pointerEvents = "auto";
 
             myPos.on('mouseover', function (e) {
                 myPos.openPopup();
@@ -1044,6 +1069,12 @@ var girl1, girl2,girl3,girl4,girl5,girl6,girl7,girl8,girl9,girl10,girl11,girl12,
             myPos.on('mouseout', function (e) {
                 myPos.closePopup();
             });
+        }
+
+        $scope.removeLocation = function(){
+            map.removeLayer(myPos);
+            map.setView([0, 50], 2);
+
         }
 
         //Markers Sean Connery

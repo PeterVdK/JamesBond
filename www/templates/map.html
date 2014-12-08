@@ -50,7 +50,12 @@
                                ng-model="DCvalue">
                         <label class="label6" for="checkbox-btn6" class="checkbox2" type="checkbox">Craig</label>
                     </div>
-                    <button ng-click="getLocation()">Where am I?</button>
+                    <!--<button ng-click="getLocation()">Where am I?</button> -->
+                    <div class="flip">
+                        <span class="active" id="active" ng-click="getLocation()">OFF</span>
+                        <span class="off" id="off" ng-click="removeLocation()">ON</span>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
