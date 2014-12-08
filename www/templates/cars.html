@@ -3,43 +3,41 @@
     <ion-nav-buttons side="left">
         <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
 
-        <img id="logo" class="Responsive image"  src="img/logo_james_bond_site_logo_white.png"/>
+        <img id="logo" class="Responsive image" src="img/logo_james_bond_site_logo_white.png"/>
     </ion-nav-buttons>
     <div ng-show="loading" class="loadingCars">
         <span class="ion-loading-c" style="font-size: 100px;"></span>
     </div>
     <div class="car">
-    <ion-content class="has-header">
+        <ion-content class="has-header">
 
-        <div id="cars"></div>
-        <div id="controlCars">
-            <img src="img/TinderNo.png" style="cursor: hand;cursor: pointer;" ng-click="nofunc()" id="tinderNo" />
-            <img src="img/TinderYes.png" style="cursor: hand;cursor: pointer;" ng-click="yesfunc()" id="tinderYes" />
+            <div id="cars"></div>
+            <div id="controlCars">
+                <img src="img/TinderNo.png" style="cursor: hand;cursor: pointer;" ng-click="nofunc()" id="tinderNo"/>
+                <img src="img/TinderYes.png" style="cursor: hand;cursor: pointer;" ng-click="yesfunc()" id="tinderYes"/>
 
-            <div ng-repeat="n in naam track by $index"  >
-                <span>{{n}}</span>
-            </div>
-
-
-            <ion-list ng-show="showmoviescar" id="watchlist">
-                <div class="item item-divider">
-                    Watchlist
+                <div ng-repeat="n in naam track by $index">
+                    <span>{{n}}</span>
                 </div>
 
-                <ion-scroll direction="y" id="watchlistScroll">
+
+                <ion-list ng-show="showmoviescar" id="watchlist">
+                    <div class="item item-divider">
+                        Watchlist
+                    </div>
+
+                    <ion-scroll direction="y" id="watchlistScroll">
 
 
-            <ion-item ng-repeat="m in carsfilms track by $index">
-                {{m}}
+                        <ion-item ng-repeat="m in carsfilms track by $index">
+                            {{m}}
 
-            </ion-item>
-                </ion-scroll>
-            </ion-list>
-
-
+                        </ion-item>
+                    </ion-scroll>
+                </ion-list>
 
 
-        </div>
+            </div>
         </ion-content>
-        </div>
-    </ion-view>
+    </div>
+</ion-view>
