@@ -984,15 +984,17 @@ var girl1, girl2,girl3,girl4,girl5,girl6,girl7,girl8,girl9,girl10,girl11,girl12,
 
     .controller('MapsCtrl',['$scope','$stateParams', '$ionicLoading', '$compile', 'leafletEvents', '$timeout' ,function ($scope, $stateParams, $ionicLoading, $compile, leafletEvents, $timeout) {
         //console.log("kk");
-        var map,hqIcon,greenIcon,redIcon,yellowIcon,purpleIcon,orangeIcon;
+        var map,MeIcon,hqIcon,greenIcon,redIcon,yellowIcon,purpleIcon,orangeIcon;
+        var loadingMap = document.getElementById("loadingMap");
         $scope.loading = true;
 
-        map = L.map('map').setView([0, 50], 2);
+        map = L.map('map');
+        map.setView([0, 50], 2);
         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png?{foo}', {foo: 'bar'}).addTo(map);
 
         hqIcon = L.icon({
-            iconUrl: 'http://icons.iconarchive.com/icons/hydrattz/multipurpose-alphabet/256/Letter-M-black-icon.png',
-            iconRetinaUrl: 'http://icons.iconarchive.com/icons/hydrattz/multipurpose-alphabet/256/Letter-M-black-icon.png',
+            iconUrl: 'img/HQIcon.png',
+            iconRetinaUrl: 'img/HQIcon.png',
             iconAnchor: [5, 20],
             popupAnchor: [0, -30],
             iconSize: [25, 25]
@@ -1007,9 +1009,47 @@ var girl1, girl2,girl3,girl4,girl5,girl6,girl7,girl8,girl9,girl10,girl11,girl12,
             hq.closePopup();
         });
 
+        MeIcon = L.icon({
+            iconUrl: 'img/myLocation.png',
+            iconRetinaUrl: 'img/myLocation.png',
+            iconAnchor: [5, 20],
+            popupAnchor: [0, -30],
+            iconSize: [25, 25]
+        });
+
+        $scope.getLocation = function(){
+            if (navigator.geolocation) {
+                if($(window).width() > 1380){
+                    loadingMap.style.display = "block";
+                }
+                loadingMap.style.display = "block";
+                setTimeout(function () {
+                    loadingMap.style.display = "none";
+                }, 7000);
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+        function showPosition(position) {
+            myPos = L.marker([position.coords.latitude, position.coords.longitude], {icon: MeIcon}).addTo(map).bindPopup('<b>My location</b>', {closeButton: false});
+            map.setView([position.coords.latitude, position.coords.longitude+2], 6);
+
+            loadingMap.style.display = "none";
+
+            myPos.on('mouseover', function (e) {
+                myPos.openPopup();
+            });
+            myPos.on('mouseout', function (e) {
+                myPos.closePopup();
+            });
+        }
+
         //Markers Sean Connery
         $scope.markerSC = function (sc) {
-           // console.log(sc);
+            map.setView([0, 50], 2);
+            // console.log(sc);
             if (sc) {
                 jam = L.marker([18.1095810, -77.2975080], {icon: greenIcon}).addTo(map).bindPopup('<b>Jamaica</b> <ul><li>Dr. No</li></ul>', {closeButton: false}); //Jamaica
                 srv = L.marker([44.0165210, 21.0058590], {icon: greenIcon}).addTo(map).bindPopup('<b>Serbia</b> <ul><li>From Russia With Love</li></ul>', {closeButton: false}); //Servië
@@ -1123,8 +1163,8 @@ var girl1, girl2,girl3,girl4,girl5,girl6,girl7,girl8,girl9,girl10,girl11,girl12,
         };
 
         greenIcon = L.icon({
-            iconUrl: 'http://test.gisline.no/runeberegner2/lib/leaflet/images/marker-icon_green.png',
-            iconRetinaUrl: 'http://test.gisline.no/runeberegner2/lib/leaflet/images/marker-icon_green.png',
+            iconUrl: 'img/GreenIcon.png',
+            iconRetinaUrl: 'img/GreenIcon.png',
             iconAnchor: [5, 40],
             popupAnchor: [0, -30],
             iconSize: [25, 41]
@@ -1132,7 +1172,7 @@ var girl1, girl2,girl3,girl4,girl5,girl6,girl7,girl8,girl9,girl10,girl11,girl12,
 
         //Markers George Lazenby
         $scope.markerGL = function (gl) {
-            console.log(gl);
+            map.setView([0, 50], 2);
             if (gl) {
                 por = L.marker([39.3998720, -8.2244540]).addTo(map).bindPopup('<strong>Portugal</strong> <ul><li>On Her Majestys Service</li></ul>'); //Portugal
                 zwiGL = L.marker([46.8181880, 9.2275120]).addTo(map).bindPopup('<strong>Switzerland</strong> <ul><li>On Her Majestys Service</li></ul>'); //Zwitserland
@@ -1271,8 +1311,8 @@ var girl1, girl2,girl3,girl4,girl5,girl6,girl7,girl8,girl9,girl10,girl11,girl12,
         };
 
        redIcon = L.icon({
-            iconUrl: 'http://www.abqjournal.com/maps/js/images/marker-red.png',
-            iconRetinaUrl: 'http://www.abqjournal.com/maps/js/images/marker-red.png',
+            iconUrl: 'img/RedIcon.png',
+            iconRetinaUrl: 'img/RedIcon.png',
             iconAnchor: [5, 20],
             popupAnchor: [0, -30],
             iconSize: [25, 41]
@@ -1280,7 +1320,7 @@ var girl1, girl2,girl3,girl4,girl5,girl6,girl7,girl8,girl9,girl10,girl11,girl12,
 
         //Markers Timothy Dalton
         $scope.markerTD = function (td) {
-           // console.log(td);
+            map.setView([0, 50], 2);
             if (td) {
                 var time = 0;
                 mor = L.marker([31.7917020, -7.0926200], {icon: yellowIcon}).addTo(map).bindPopup('<b>Morocco</b> <ul><li>The Living Daylights</li></ul>', {closeButton: false}); //Marokko
@@ -1346,8 +1386,8 @@ var girl1, girl2,girl3,girl4,girl5,girl6,girl7,girl8,girl9,girl10,girl11,girl12,
         };
 
         yellowIcon = L.icon({
-            iconUrl: 'http://www.inss-conf.org/2012/leaflet/images/marker_y.png',
-            iconRetinaUrl: 'http://www.inss-conf.org/2012/leaflet/images/marker_y.png',
+            iconUrl: 'img/YellowIcon.png',
+            iconRetinaUrl: 'img/YellowIcon.png',
             iconAnchor: [5, 20],
             popupAnchor: [0, -30],
             iconSize: [25, 41]
@@ -1355,7 +1395,7 @@ var girl1, girl2,girl3,girl4,girl5,girl6,girl7,girl8,girl9,girl10,girl11,girl12,
 
         //Markers Pierce Brosnan
         $scope.markerPB = function (pb) {
-            //console.log(pb);
+            map.setView([0, 50], 2);
             if (pb) {
 
 
@@ -1504,8 +1544,8 @@ var girl1, girl2,girl3,girl4,girl5,girl6,girl7,girl8,girl9,girl10,girl11,girl12,
         };
 
          purpleIcon = L.icon({
-            iconUrl: 'http://stuff.samat.org/Test-Cases/Leaflet/881-Marker-Subclassing/marker-icon-purple.png',
-            iconRetinaUrl: 'http://stuff.samat.org/Test-Cases/Leaflet/881-Marker-Subclassing/marker-icon-purple.png',
+            iconUrl: 'img/PurpleIcon.png',
+            iconRetinaUrl: 'img/PurpleIcon.png',
             iconAnchor: [5, 20],
             popupAnchor: [0, -30],
             iconSize: [25, 41]
@@ -1513,7 +1553,7 @@ var girl1, girl2,girl3,girl4,girl5,girl6,girl7,girl8,girl9,girl10,girl11,girl12,
 
         //Markers Daniel Craig
         $scope.markerDC = function (dc) {
-            //console.log(dc);
+            map.setView([0, 50], 2);
             if (dc) {
 
                 usaDC = L.marker([37.0902400, -110.7128910], {icon: orangeIcon}).addTo(map).bindPopup('<b>USA</b> <ul><li>Casino Royale</li></ul>', {closeButton: false});
@@ -1623,8 +1663,8 @@ var girl1, girl2,girl3,girl4,girl5,girl6,girl7,girl8,girl9,girl10,girl11,girl12,
         };
 
         orangeIcon = L.icon({
-            iconUrl: 'http://46.105.103.225/wstatic/images/marker-orange.png',
-            iconRetinaUrl: 'http://46.105.103.225/wstatic/images/marker-orange.png',
+            iconUrl: 'img/OrangeIcon.png',
+            iconRetinaUrl: 'img/OrangeIcon.png',
             iconAnchor: [5, 20],
             popupAnchor: [0, -30],
             iconSize: [25, 41]

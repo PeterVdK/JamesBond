@@ -13,12 +13,12 @@
             <div class="col col-75" id="map50">
 
                 <div id="map"></div>
-
-
+                <div id="loadingMap" style="position: absolute;margin-top: -10%;margin-left: 58%;">
+                    <img src="img/loadingBar.gif" />
+                </div>
             </div>
 
             <div class="col col-25" id="map25">
-                <div class="globe"></div>
                 <div class="mapList">
                     <div>
                         <input id="checkbox-btn" class="checkbox" type="checkbox" ng-change="markerSC(SCvalue)"
@@ -50,6 +50,7 @@
                                ng-model="DCvalue">
                         <label class="label6" for="checkbox-btn6" class="checkbox2" type="checkbox">Craig</label>
                     </div>
+                    <button ng-click="getLocation()">Where am I?</button>
                 </div>
             </div>
         </div>
