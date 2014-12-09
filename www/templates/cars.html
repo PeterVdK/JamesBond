@@ -9,7 +9,7 @@
         <span class="ion-loading-c" style="font-size: 100px;"></span>
     </div>
     <div class="car">
-        <ion-content class="has-header">
+        <ion-content class="has-header" ng-show="showwer" ng-hide="!showwer">
 
             <div id="cars"></div>
             <div id="controlCars">
@@ -25,7 +25,7 @@
                     <div class="item item-divider">
                         Watchlist
                     </div>
-
+<span class="ion-arrow-up-c" ng-hide="!zieverderpijl" ng-show="zieverderpijl" style=" opacity: 0; position: absolute; z-index:1; bottom: 0px; left: 113px;font-size: 44px;"></span>
                     <ion-scroll direction="y" id="watchlistScroll">
 
 
