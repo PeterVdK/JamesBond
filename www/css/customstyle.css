@@ -1,6 +1,7 @@
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
 
 /*JB INTRO*/
+
 .outer {
     position: relative;
 
@@ -1396,7 +1397,9 @@ a {
 
 #controlCars {
     position: relative;
-    margin: 50px 585px 0;
+    /*margin: */
+    margin-left: 40%;
+    margin-top: 4%;
     width: 230px;
 }
 
@@ -1497,7 +1500,7 @@ a {
 
 #watchlistScroll {
     width: auto;
-    height: 356px;
+    height: 350px;
     /*z-index:100; */
 }
 
@@ -1841,6 +1844,7 @@ a {
 
     #controlCars {
         margin-left: 25%;
+        margin-top: 8%;
     }
     .flip span{
         margin-top: 25px;
@@ -2105,6 +2109,7 @@ a {
 
     #controlCars {
         margin-left: 15%;
+        margin-top: 15%;
     }
 }
 
