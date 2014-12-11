@@ -4,20 +4,21 @@ angular.module('starter.controllers', [])
     .controller('maincontroller',['$scope', '$ionicModal', '$timeout', '$location', function ($scope, $ionicModal, $timeout, $location) {
         var getvolume,volumelogo;
 
-      /*  $timeout(function () {
+       $timeout(function () {
             $("#behind").addClass("hidden");
         }, 2500);
         $(".jbsiteall").velocity({opacity: 0}, 0);
         $(".outer").velocity({opacity: 1}, 0);
         $timeout(function () {
-            $(".outer").velocity({opacity: 0}, 500);
-            $("#balk").velocity({opacity: 0}, 400);
+            $(".outer").velocity({opacity: 0}, 400);
+            $("#balk").velocity({opacity: 0}, 300);
             $timeout(function () {
                 $("#balk").addClass("hidden");
-            }, 300);
-            $(".outer").addClass("hidden");
+                $(".outer").addClass("hidden");
+            }, 400);
+
             $(".jbsiteall").velocity({opacity: 1}, 300);
-        }, 3000);*/
+        }, 2800);
 
         console.log("kk");
         $timeout(function () {
@@ -484,6 +485,12 @@ angular.module('starter.controllers', [])
 
     //OK+MIN
     .controller('SingleBondMovieCtrl',['$scope', '$http', '$q', 'moviesbondservice', '$stateParams', '$timeout', function ($scope, $http, $q, moviesbondservice, $stateParams, $timeout) {
+       $scope.showwer=false;
+
+        $timeout(function(){
+            $scope.showwer=true;
+        },500);
+
         var i, wallposters, time, q, teller, arr;
         $scope.tt = true;
         $scope.kk = false;
@@ -864,6 +871,11 @@ var girl1, girl2,girl3,girl4,girl5,girl6,girl7,girl8,girl9,girl10,girl11,girl12,
 
 
     .controller('BondgirlsCtrl', ["$scope", "$http","$q","$stateParams","bondgirlsservice","$timeout","girlratingservice",function($scope, $http,$q,$stateParams,bondgirlsservice,$timeout,girlratingservice) {
+        $scope.showwer=false;
+
+        $timeout(function(){
+            $scope.showwer=true;
+        },500);
         var d, n,i,Girl,random,getgirl,getgirlsss, getfirstgirl, thegirlname ,leeftijd,animationEndEvent,
             d = new Date();
         n = d.getFullYear();
@@ -996,7 +1008,13 @@ var girl1, girl2,girl3,girl4,girl5,girl6,girl7,girl8,girl9,girl10,girl11,girl12,
 //OK
 
     .controller('MapsCtrl',['$scope','$stateParams', '$ionicLoading', '$compile', 'leafletEvents', '$timeout' ,function ($scope, $stateParams, $ionicLoading, $compile, leafletEvents, $timeout) {
-$scope.checker=false;
+        $scope.showwer=false;
+
+        $timeout(function(){
+            $scope.showwer=true;
+        },500);
+
+        $scope.checker=false;
 
        // thegpsconsole
 
@@ -1735,6 +1753,17 @@ $scope.checker=false;
     }])
 
     .controller('CarsCtrl', ['$scope', '$stateParams', 'carsservice', '$timeout' , function ($scope, $stateParams, carsservice, $timeout) {
+        $scope.showwer=false;
+$scope.zieverderpijl=false;
+        $timeout(function(){
+            $scope.showwer=true;
+        },500);
+        $scope.naam = [];
+        $scope.carsfilms = [];
+
+
+
+
         var animationEndEvent,Car,random,App,getcarssss, getfirstcar, idcar, themovie, thecarmovie, i, d, n, leeftijd,
             d = new Date();
         n = d.getFullYear();
@@ -1780,8 +1809,7 @@ $scope.checker=false;
                         }
                     }
                 };
-                $scope.naam = [];
-                $scope.carsfilms = [];
+
                 $scope.showmoviescar = false;
                 //console.log($scope.carsfilms);
 
@@ -1807,6 +1835,23 @@ $scope.checker=false;
                     }
                     if ($scope.carsfilms.length >= 1) {
                         $scope.showmoviescar = true;
+                    }
+                    console.log($scope.carsfilms.length);
+                    if( $scope.carsfilms.length==7)
+                    {
+                        $scope.zieverderpijl=true;
+$(".ion-arrow-up-c").velocity({opacity:1},800);
+
+                        $timeout(function(){
+                            $(".ion-arrow-up-c").velocity({opacity:0},800);
+                            $timeout(function(){
+                                $scope.zieverderpijl=false;
+                            },800);
+
+                        },2000);
+
+
+
                     }
 
                    // console.log("yesbutton");
