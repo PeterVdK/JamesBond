@@ -1069,9 +1069,12 @@ $scope.checker=false;
 
                 setTimeout(function () {
                     loadingMap.style.display = "none";
+                    document.getElementById("off").style.pointerEvents = "auto";
+                    document.getElementById("active").style.pointerEvents = "none";
                 }, 7000);
 
                 document.getElementById("off").style.pointerEvents = "none";
+                document.getElementById("active").style.pointerEvents = "none";
 
                 navigator.geolocation.getCurrentPosition(showPosition);
 
