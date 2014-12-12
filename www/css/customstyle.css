@@ -1391,7 +1391,7 @@ a {
 
 #controlGirls {
     position: relative;
-    margin: 60px auto 0;
+    margin: 70px auto 0;
     width: 230px;
 }
 
@@ -1492,15 +1492,15 @@ a {
     margin-left: 1%;
 }
 
-#watchlist {
-    position: absolute;
-    margin-left: 183.5%;
-    margin-top: -198.2%;
+#watchlist .list{
+    width: 122%;
+    margin-left: 180%;
+    margin-top: -197%;
 }
 
 #watchlistScroll {
     width: auto;
-    height: 350px;
+    height: 337px;
     /*z-index:100; */
 }
 
@@ -1673,14 +1673,13 @@ a {
 
 /*mediaquery vanaf 1439px */
 @media screen and (max-width: 1439px) {
-    #watchlist {
-        position: fixed;
-        margin-left: -12.5%;
-        margin-top: 2%;
+    #watchlist .list{
+        width: 239%;
+        margin-left: -67%%;
+        margin-top: 5%;
     }
 
     #watchlistScroll {
-        width: 550px;
         height: 130px;
     }
 }
@@ -1737,8 +1736,8 @@ a {
         margin-left: -15%;
     }
 
-    #watchlist {
-        margin-left: -19%;
+    #watchlist .list{
+        margin-left: -88%;
     }
 }
 
@@ -1834,12 +1833,9 @@ a {
         width: 110%;
     }
 
-    #watchlist {
-        margin-left: -20%;
-    }
-
-    #watchlistScroll {
-        width: 475px;
+    #watchlist .list{
+        margin-left: -48%;
+        width: 202%;
     }
 
     #controlCars {
@@ -1929,8 +1925,9 @@ a {
         width: 100%;
     }
 
-    #watchlistScroll {
-        width: 550px;
+    #watchlist .list{
+        margin-left: -68%;
+        width: 243%;
     }
 
     #controlCars {
@@ -1960,12 +1957,9 @@ a {
         width: 110%;
     }
 
-    #watchlist {
-        margin-left: none;
-    }
-
-    #watchlistScroll {
-        width: 490px;
+    #watchlist .list{
+        margin-left: -50%;
+        width: 206%;
     }
 
     #controlCars {
@@ -2062,8 +2056,9 @@ a {
         margin: 15% -9%;
     }
 
-    #watchlistScroll {
-        width: 360px;
+    #watchlist .list{
+        margin-left: -38%;
+        width: 159%;
     }
     .mapList{
         margin-top: 5%;
@@ -2099,12 +2094,9 @@ a {
     .carCard img {
         width: 170%;
     }
-    #watchlistScroll {
-        width: 310px;
-    }
-
-    #watchlist {
-        margin-left: -9%;
+    #watchlist .list{
+        margin-left: -16%;
+        width: 135%;
     }
 
     #controlCars {
