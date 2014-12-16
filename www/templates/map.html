@@ -109,9 +109,13 @@
             </div>
             <!--<button ng-click="getLocation()">Where am I?</button> -->
             <div class="flip">
-                <span class="active" id="active" ng-click="getLocation()">OFF</span>
-                <span class="off" id="off" ng-click="removeLocation()">ON</span>
+                <span class="active" id="active" ng-click="getLocation()">Show my location</span>
+                <span class="off" id="off" ng-click="removeLocation()">Hide my location</span>
             </div>
+            <button id="infoMap" class="button button-icon icon ion-ios7-information" data-toggle="tooltip" data-placement="left"
+                    title="If you click on one of the Bonds you'll see markers that show which countries he has visited in the movies.
+                    You can also put your own location on the map.">
+            </button>
         </div>
         </div>
     </div>

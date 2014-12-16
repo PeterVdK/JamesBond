@@ -1042,6 +1042,13 @@ var girl1, girl2,girl3,girl4,girl5,girl6,girl7,girl8,girl9,girl10,girl11,girl12,
         $('.flip').click(function() {
             $(this).find('span').toggleClass('active');
         });
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+
+            $().tooltip({
+                template: '<div class="tooltip infoTooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+            })
+        })
         //console.log("kk");
         var map,MeIcon,hqIcon,greenIcon,redIcon,yellowIcon,purpleIcon,orangeIcon;
         var loadingMap = document.getElementById("loadingMap");
