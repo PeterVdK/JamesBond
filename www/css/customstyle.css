@@ -1,4 +1,5 @@
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
+@import url(http://fonts.googleapis.com/css?family=Lato);
 
 /*JB INTRO*/
 
@@ -124,8 +125,13 @@
     }
     51%{
         opacity: 0;
-        left:25%;
-        display: none;
+        left:30%;
+
+    }
+    100%{
+        opacity: 0;
+        left:30%;
+
     }
 
 
@@ -133,72 +139,53 @@
 }
 
 @keyframes whiteMoveBehind {
-    0% {
-        left: 0%;
-        z-index: 0;
+
+    0%{
+        opacity: 0;
+
+    }
+    9%{
+        opacity: 0;
+        left: 10%;
+    }
+    10%{
+        opacity: 1;
+        left:10%;
     }
 
-    5% {
-        left: 5%;
+    20%{
+        opacity: 1;
+        left:10%;
     }
-    6% {
-        left: 5%;
-    }
-    10% {
-        left: 5%;
-        z-index: 0;
-    }
-    16% {
-        left: 5%;
-        z-index: 0;
-    }
-    17% {
-        left: 5%;
-        display: none;
-        z-index: -1;
+    21%{
+        opacity: 0;
+        left:10%;
     }
 
-    24% {
-        left: 25%;
-        z-index: -1;
+    32%{
+        opacity: 0;
+
     }
-    25% {
-        left: 25%;
-        z-index: 0;
+    33%{
+        opacity: 1;
+        left:30%;
     }
-    26% {
-        left: 25%;
+    50%{
+        opacity: 1;
+        left:30%;
+
     }
-    30% {
-        left: 25%;
-        z-index: 0;
+    51%{
+        opacity: 0;
+        left:30%;
+
     }
-    36% {
-        left: 25%;
-        z-index: 0;
-    }
-    37% {
-        left: 25%;
-        display: none;
-        z-index: -1;
+    100%{
+        opacity: 0;
+        left:30%;
+
     }
 
-    44% {
-        left: 45%;
-        z-index: -1;
-    }
-    45% {
-        left: 45%;
-        z-index: 0;
-    }
-    46% {
-        left: 45%;
-        z-index: -1;
-    }
-    100% {
-        left: 50%;
-        z-index: -1;
-    }
 
 }
 
@@ -913,16 +900,19 @@ font-size: 35px;
     width: 18px;
     display: inline-block;
 }
-
+.fontj{
+    font-family: 'Lato',sans-serif;
+}
 .wie {
     position: absolute;
     margin: 37% -36.5%;
     background-color: transparent;
     color: black;
-    font-family: Gulim;
+
     text-decoration: none;
     font-size: 15px;
     transition: all 0.8s ease 0.1s;
+
 }
 
 .wie:hover {
@@ -947,7 +937,7 @@ font-size: 35px;
     margin: 5.5% -45.3%;
     background-color: transparent;
     color: black;
-    font-family: Gulim;
+
     text-decoration: none;
     font-size: 15px;
     transition: all 0.8s ease 0.1s;
@@ -975,7 +965,7 @@ font-size: 35px;
     margin: 7% 8.5%;
     background-color: transparent;
     color: black;
-    font-family: Gulim;
+
     text-decoration: none;
     font-size: 15px;
     transition: all 0.8s ease 0.1s;
@@ -1027,7 +1017,7 @@ font-size: 35px;
     margin: 4.3em 5.5em;
     background-color: transparent;
     color: black;
-    font-family: Gulim;
+
     text-decoration: none;
     font-size: 15px;
     transition: all 0.8s ease 0.1s;
@@ -1213,7 +1203,7 @@ a {
     background: white;
     width: 100%;
     padding: 10px;
-    font: 24px "Gulim";
+    font: 24px "Lato";
     text-align: center;
     line-height: 30px;
     color: #555;
@@ -1398,7 +1388,7 @@ a {
     background: white;
     width: 100%;
     padding: 10px;
-    font: 24px "Gulim";
+    font: 24px "Lato";
     text-align: center;
     line-height: 30px;
     color: #555;
@@ -1514,7 +1504,7 @@ a {
     display: block;
     width: 100%;
     height: auto;
-    font-family: Gulim;
+    font-family: Lato;
     text-align: center;
     position: absolute;
     padding: 5px;
