@@ -13,6 +13,69 @@
 
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
 
+    <style>
+        .bond {
+            background-image: url(./img/bondWallpaper.jpg);
+            background-size: cover;
+            height: 100%;
+        }
+        .girl {
+            background-image: url(./img/bondgirlWallpaper.png);
+            background-size: cover;
+            height: 100%;
+        }
+        .car {
+            background-image: url(./img/carWallpaper.jpg);
+            background-size: cover;
+            height: 100%;
+        }
+        .locatie {
+            background-image: url("./img/mapWallpaper.jpg");
+            background-size: cover;
+            height: 100%;
+            margin-top: 3%;
+        }
+        .loadingGirl {
+            background-image: url("./img/bondgirlWallpaper.png");
+            position: absolute;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+        }
+
+        .loadingBond {
+            background-image: url("./img/bondWallpaper.jpg");
+            position: absolute;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+        }
+
+        .loadingCars {
+            background-image: url("./img/carWallpaper.jpg");
+            position: absolute;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+        }
+
+        .loadingMap {
+            background-image: url("./img/mapWallpaper.jpg");
+            position: absolute;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+        }
+
+    </style>
 
 </head>
 
@@ -20,7 +83,7 @@
 
 
 <div id="balk" style="position: fixed; z-index: 5; width: 100%; height: 50px; background-color: #000000;"></div>
-<button style="z-index: 2; float: right;" id="volume" class="button button-icon icon ion-volume-high" ng-click="volumOnorOff()"></button>
+<button style="z-index: 2;" id="volume" class="button button-icon icon ion-volume-high" ng-click="volumOnorOff()"></button>
 <div class="outer">
 
     <div id="barrell" class="inner inner01">

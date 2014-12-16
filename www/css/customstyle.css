@@ -1,6 +1,7 @@
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
 
 /*JB INTRO*/
+
 .outer {
     position: relative;
 
@@ -300,46 +301,6 @@ PULSING BUTTON
         -webkit-transform: scale(1.5);
         opacity: 0.0;
     }
-}
-
-.loadingGirl {
-    background-image: url("../img/bondgirlWallpaper.png");
-    position: absolute;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    z-index: 100;
-}
-
-.loadingBond {
-    background-image: url("../img/bondWallpaper.png");
-    position: absolute;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    z-index: 100;
-}
-
-.loadingCars {
-    background-image: url("../img/carWallpaper.png");
-    position: absolute;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    z-index: 100;
-}
-
-.loadingMap {
-    background-image: url("../img/mapWallpaper.png");
-    position: absolute;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    z-index: 100;
 }
 
 .loadingGirl span, .loadingBond span, .loadingCars span, .loadingMap span {
@@ -1077,12 +1038,6 @@ font-size: 35px;
     text-decoration: none;
 }
 
-.bond {
-    background-image: url(../img/bondWallpaper.png);
-    background-size: cover;
-    height: 100%;
-}
-
 .card {
     opacity: 0.85;
 }
@@ -1142,6 +1097,7 @@ font-size: 35px;
     height: 34px;
     position: absolute;
     left: 41%;
+    top:4px;
 }
 
 /*side-menu*/
@@ -1179,15 +1135,12 @@ font-size: 35px;
 #volume {
     display: block;
     color: #faf2f2;
+    position: absolute;
+    top: 0px;
+    right: 0px;
 }
 
 /*      SCHERM 2 (BONDGIRLS)    */
-.girl {
-    background-image: url(../img/bondgirlWallpaper.png);
-    background-size: cover;
-    height: 100%;
-}
-
 [class*="fontawesome-"]:before {
     font-family: 'FontAwesome', sans-serif;
 }
@@ -1366,26 +1319,25 @@ a {
 
 #controlGirls {
     position: relative;
-    margin: 60px auto 0;
+    margin: 70px auto 0;
     width: 230px;
 }
 
 #controlCars {
     position: relative;
-    margin: 50px 585px 0;
+    /*margin: */
+    margin-left: 40%;
+    margin-top: 4%;
     width: 230px;
 }
 
 /*      SCHERM 3 (CARS)    */
-.car {
-    background-image: url(../img/carWallpaper.png);
-    background-size: cover;
-    height: 100%;
-}
-
 #cars, .carCard {
     width: 570px;
     height: 370px;
+}
+.carCard{
+    position:absolute;
 }
 
 #cars {
@@ -1465,15 +1417,15 @@ a {
     margin-left: 1%;
 }
 
-#watchlist {
-    position: absolute;
-    margin-left: 183.5%;
-    margin-top: -198.2%;
+#watchlist .list{
+    width: 122%;
+    margin-left: 180%;
+    margin-top: -197%;
 }
 
 #watchlistScroll {
     width: auto;
-    height: 356px;
+    height: 337px;
     /*z-index:100; */
 }
 
@@ -1587,15 +1539,20 @@ a {
 }
 /* Einde toggle */
 
-.leaflet-popup-content-wrapper {
-    background-color: red;
+#infoMap{
+    margin-top: 40%;
+    float:right;
+    color: #CCC;
+}
+.tooltip-inner{
+    background-color: #131211;
+    color: white;
+    text-align: left;
+    opacity: 0.8;
 }
 
-.locatie {
-    background-image: url("../img/mapWallpaper.png");
-    background-size: cover;
-    height: 100%;
-    margin-top: 3%;
+.leaflet-popup-content-wrapper {
+    background-color: red;
 }
 
 .leaflet-control-zoom {
@@ -1612,6 +1569,10 @@ a {
     height: 660px;
     left: 20px;
     top: 10px;
+    margin-left: -13%;
+    width: 117%;
+    margin-top: -5%;
+    height:100vh;
 }
 
 #map50 {
@@ -1626,13 +1587,15 @@ a {
 }
 
 .mapList {
-    margin-top: 2%;
+    background-color: rgba(0,0,0,0.5);
+    height: 100vh;
+    padding: 25px;
 }
 
 #loadingMap{
     position:absolute;
     margin-top: -10%;
-    margin-left: 58%;
+    margin-left: 0%;
     display: none;
 }
 
@@ -1640,14 +1603,13 @@ a {
 
 /*mediaquery vanaf 1439px */
 @media screen and (max-width: 1439px) {
-    #watchlist {
-        position: fixed;
-        margin-left: -12.5%;
-        margin-top: 2%;
+    #watchlist .list{
+        width: 239%;
+        margin-left: -67%;
+        margin-top: 5%;
     }
 
     #watchlistScroll {
-        width: 550px;
         height: 130px;
     }
 }
@@ -1700,17 +1662,14 @@ a {
         margin: 11% 7.7%;
     }
 
-    .carCard {
-        margin-left: -15%;
+    #watchlist .list{
+        margin-left: -88%;
     }
 
-    .mapList {
-        margin-top: 12%;
+    #cars{
+        margin: 0 0 0 15%;
     }
 
-    #watchlist {
-        margin-left: -19%;
-    }
 }
 
 /*950*/
@@ -1796,38 +1755,27 @@ a {
         margin: 86% -65%;
     }
 
+    #cars{
+        margin: 0 0 0 4%;
+        width: 90%;
+    }
+
     .carCard {
-        margin-left: -22%;
-        width: 85%;
+        width: 100%;
     }
 
     .carCard img {
         width: 110%;
     }
 
-    .mapList {
-        margin-top: 44%;
-    }
-
-    .label, .label2, .label3, .label4, .label5, .label6 {
-        font-size: .7em;
-    }
-
-    .label::after, .label2::after, .label3::after, .label4::after, .label5::after, .label6::after {
-        width: 150%;
-        margin-left: -13px;
-    }
-
-    #watchlist {
-        margin-left: -20%;
-    }
-
-    #watchlistScroll {
-        width: 475px;
+    #watchlist .list{
+        margin-left: -48%;
+        width: 202%;
     }
 
     #controlCars {
         margin-left: 25%;
+        margin-top: 8%;
     }
     .flip span{
         margin-top: 25px;
@@ -1912,20 +1860,9 @@ a {
         width: 100%;
     }
 
-    .mapList {
-        margin-top: 20%;
-    }
-
-    .label, .label2, .label3, .label4, .label5, .label6 {
-        font-size: .8em;
-    }
-
-    .label::after, .label2::after, .label3::after, .label4::after, .label5::after, .label6::after {
-        width: 125%;
-    }
-
-    #watchlistScroll {
-        width: 550px;
+    #watchlist .list{
+        margin-left: -68%;
+        width: 243%;
     }
 
     #controlCars {
@@ -1947,32 +1884,16 @@ a {
     }
 
     .carCard {
-        margin-left: -20%;
-        width: 85%;
+        width: 100%;
     }
 
     .carCard img {
         width: 110%;
     }
 
-    .mapList {
-        margin-top: 40%;
-    }
-
-    .label, .label2, .label3, .label4, .label5, .label6 {
-        font-size: .7em;
-    }
-
-    .label::after, .label2::after, .label3::after, .label4::after, .label5::after, .label6::after {
-        width: 140%;
-    }
-
-    #watchlist {
-        margin-left: none;
-    }
-
-    #watchlistScroll {
-        width: 490px;
+    #watchlist .list{
+        margin-left: -50%;
+        width: 206%;
     }
 
     #controlCars {
@@ -2009,24 +1930,11 @@ a {
     }
 
     .carCard {
-        width: 65%;
-        margin-left: -15%;
+        width: 100%;
     }
 
     .carCard img {
         width: 145%;
-    }
-
-    .mapList {
-        margin-top: 50%;
-    }
-
-    .label, .label2, .label3, .label4, .label5, .label6 {
-        font-size: 0.5em;
-    }
-
-    .label::after, .label2::after, .label3::after, .label4::after, .label5::after, .label6::after {
-        width: 170%;
     }
 
     .deckgrid[deckgrid]::before {
@@ -2081,13 +1989,12 @@ a {
         margin: 15% -9%;
     }
 
-    #watchlistScroll {
-        width: 360px;
+    #watchlist .list{
+        margin-left: -38%;
+        width: 159%;
     }
-    .flip span{
-        margin-top: 25px;
-        margin-left: -20%;
-        width: 160%;
+    .mapList{
+        margin-top: 5%;
     }
 }
 
@@ -2113,42 +2020,20 @@ a {
     }
 
     .carCard {
-        width: 56%;
-        margin-left: -15%;
+        width: 100%;
     }
 
     .carCard img {
         width: 170%;
     }
-
-    .mapList {
-        margin-top: 130%;
-    }
-
-    .label, .label2, .label3, .label4, .label5, .label6 {
-        font-size: 0.3em;
-    }
-
-    .label::after, .label2::after, .label3::after, .label4::after, .label5::after, .label6::after {
-        width: 200%;
-    }
-
-    #watchlistScroll {
-        width: 310px;
-    }
-
-    #watchlist {
-        margin-left: -9%;
+    #watchlist .list{
+        margin-left: -16%;
+        width: 135%;
     }
 
     #controlCars {
         margin-left: 15%;
-    }
-    .flip span{
-        font-size: 8px;
-        margin-top: 15px;
-        margin-left: -45%;
-        width: 190%;
+        margin-top: 15%;
     }
 }
 

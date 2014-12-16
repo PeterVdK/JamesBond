@@ -66,16 +66,16 @@
         <div id="map50" style="position: absolute; width: 100%; padding: 20px;">
 
             <div id="map" style="left: 26px; margin-right: 71px; "></div>
-            <div id="loadingMap" style="position: absolute;margin-top: -10%;margin-left: 58%;">
+            <div id="loadingMap">
                 <img src="img/loadingBar.gif"/>
             </div>
 
         </div>
-        <div ng-click="menugps()" class="buttonclicker" style="position: absolute; background-color: rgba(0,0,0,0.5); height: 30px; width:60px; top:79px; right:65px;">
+        <div ng-click="menugps()" class="buttonclicker" style="position: absolute; background-color: rgba(0,0,0,0.5); height: 30px; width:60px; top:79px; right:0px;">
 <span class="ion-more" style="color: #ffffff; top:-10px; left:10px; font-size: 38px; position: relative; "></span>
         </div>
-        <div class="thegpsconsole" ng-hide="!checker" ng-show="checker" style="position: absolute; width: 300px; height: 900px; right: 65px;  overflow: hidden;">
-        <div class="mapList" style=" background-color: rgba(0,0,0,0.5); height: 660px; padding: 25px; margin-top: 30px;">
+        <div class="thegpsconsole" ng-hide="!checker" ng-show="checker" style="position: absolute; width: 300px; height: 900px; right: 0px;  overflow: hidden;">
+        <div class="mapList">
 
             <div>
                 <input id="checkbox-btn" class="checkbox" type="checkbox" ng-change="markerSC(SCvalue)"
@@ -109,9 +109,13 @@
             </div>
             <!--<button ng-click="getLocation()">Where am I?</button> -->
             <div class="flip">
-                <span class="active" id="active" ng-click="getLocation()">OFF</span>
-                <span class="off" id="off" ng-click="removeLocation()">ON</span>
+                <span class="active" id="active" ng-click="getLocation()">Show my location</span>
+                <span class="off" id="off" ng-click="removeLocation()">Hide my location</span>
             </div>
+            <button id="infoMap" class="button button-icon icon ion-ios7-information" data-toggle="tooltip" data-placement="left"
+                    title="If you click on one of the Bonds you'll see markers that show which countries he has visited in the movies.
+                    You can also put your own location on the map.">
+            </button>
         </div>
         </div>
     </div>
