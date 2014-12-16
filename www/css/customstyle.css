@@ -1,5 +1,15 @@
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
 
+@font-face {
+    font-family: 'BondnameFont';
+    src: url('../fonts/franchise-free-bold-webfont.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/franchise-free-bold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/franchise-free-bold-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/franchise-free-bold-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+    url('../fonts/franchise-free-bold-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/franchise-free-bold-webfont.otf')  format('opentype');
+}
+
 /*JB INTRO*/
 
 .outer {
@@ -864,7 +874,7 @@ PULSING BUTTON
 }
 
 .bondNames .bondFirstname {
-    font-family: franchise;
+    font-family: 'bondnamefont', sans-serif;
     font-size: 5em;
     margin-left: -400px;
     margin-top: 25px;
@@ -872,7 +882,7 @@ PULSING BUTTON
 }
 
 .bondNames .bondName {
-    font-family: franchise;
+    font-family: 'bondnamefont', sans-serif;
     font-size: 5em;
     margin-left: 370px;
     margin-top: -30px;
