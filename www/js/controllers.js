@@ -12,13 +12,14 @@ angular.module('starter.controllers', [])
         $timeout(function () {
             $(".outer").velocity({opacity: 0}, 400);
             $("#balk").velocity({opacity: 0}, 300);
+            $(".inner02").addClass("hidden");
             $timeout(function () {
                 $("#balk").addClass("hidden");
                 $(".outer").addClass("hidden");
-            }, 400);
+            }, 200);
 
-            $(".jbsiteall").velocity({opacity: 1}, 300);
-        }, 2800);
+            $(".jbsiteall").velocity({opacity: 1}, 100);
+        }, 2600);
 
         console.log("kk");
         $timeout(function () {
