@@ -10,8 +10,8 @@ angular.module('starter.controllers', [])
         $(".jbsiteall").velocity({opacity: 0}, 0);
         $(".outer").velocity({opacity: 1}, 0);
         $timeout(function () {
-            $(".outer").velocity({opacity: 0}, 400);
-            $("#balk").velocity({opacity: 0}, 300);
+            $(".outer").velocity({opacity: 0}, 300);
+            $("#balk").velocity({opacity: 0}, 100);
             $(".inner02").addClass("hidden");
             $timeout(function () {
                 $("#balk").addClass("hidden");
@@ -24,7 +24,7 @@ angular.module('starter.controllers', [])
         console.log("kk");
         $timeout(function () {
             document.getElementById("jbaudio").load();
-            document.getElementById("jbaudio").pause();
+            document.getElementById("jbaudio").play();
             //document.getElementById("jbaudio").play();
             $scope.volumOnorOff = function () {
                 getvolume = document.getElementById("volume");
