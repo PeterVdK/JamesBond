@@ -6,7 +6,7 @@
         <img id="logo" class="Responsive image" src="img/logo_james_bond_site_logo_white.png" title="Logo"/>
     </ion-nav-buttons>
     <div ng-show="loading" class="loadingBond">
-        <span class="ion-loading-c" style="font-size: 100px;"></span>
+        <span class="ion-loading-c"></span>
     </div>
     <div class="bond">
 
@@ -23,14 +23,13 @@
                                      ng-src="http://image.tmdb.org/t/p/w500/{{card.poster_path}}" alt="Image not available">
                             </div>
 
-                            <div class="hovere{{card.id}} hidden"
-                                 style="position: absolute; z-index:9; background-color: rgba(0,0,0, 0.6);; top:0px; overflow: hidden; border-radius: 0px 0px 10px 0px; border: solid white 1px;">
-                                <dl style="color: white;" class="dl-horizontal">
-                                    <dt style="text-align: left;">Title: </dt>
-                                    <dd style="margin-left: 0px;">{{card.title}}</dd>
+                            <div class="hovere{{card.id}} hidden">
+                                <dl class="dl-horizontal">
+                                    <dt>Title: </dt>
+                                    <dd>{{card.title}}</dd>
 
-                                    <dt style="text-align: left;">Release date:  </dt>
-                                    <dd  style="margin-left: 0px;">{{card.release_date}}</dd>
+                                    <dt>Release date:  </dt>
+                                    <dd>{{card.release_date}}</dd>
                                 </dl>
 
 
