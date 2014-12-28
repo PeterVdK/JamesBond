@@ -7,6 +7,7 @@ angular.module('starter', ['ionic', 'akoenig.deckgrid', 'angular-velocity', 'sta
 
             .state('app', {
                 url: "/app",
+                cache: false,
                 abstract: true,
                 templateUrl: "templates/menu.html",
                 controller: 'AppCtrl'
@@ -74,6 +75,7 @@ angular.module('starter', ['ionic', 'akoenig.deckgrid', 'angular-velocity', 'sta
 
             .state('girls', {
                 url: "/girls",
+                cache: false,
                 abstract: true,
                 templateUrl: "templates/menuGirl.html",
                 controller: 'GirlsCtrl'

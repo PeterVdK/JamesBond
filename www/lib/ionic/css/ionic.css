@@ -7009,5 +7009,6 @@ a.button {
 [nav-bar="stage"] .title, [nav-bar="stage"] .buttons, [nav-bar="stage"] .back-text {
   position: absolute;
   opacity: 0;
+    display: none;
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }

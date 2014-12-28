@@ -3,7 +3,7 @@
         <a id="backbutton" href="#/app/bonds"><span class="ion-chevron-left"></span></a>
         <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
 
-        <img id="logo" class="Responsive image"  src="img/logo_james_bond_site_logo_white.png"/>
+        <img id="logo" class="Responsive image"  src="img/logo_james_bond_site_logo_white.png" title="Logo"/>
     </ion-nav-buttons>
     <div ng-show="loading" class="loadingBond">
         <span class="ion-loading-c" style="font-size: 100px;"></span>
@@ -18,7 +18,7 @@
                 <div class="card">
                     <div class="item item-image  ">
 
-                        <img class="bondfoto" ng-src="http://image.tmdb.org/t/p/w500/{{card.file_path}}">
+                        <img class="bondfoto" ng-src="http://image.tmdb.org/t/p/w500/{{card.file_path}}"  title="James bond image" alt="Image not available">
                     </div>
 
                 </div>

@@ -1040,6 +1040,7 @@ font-size: 35px;
 
 .card {
     opacity: 0.85;
+    position: relative;
 }
 
 .item-body img {
@@ -1552,7 +1553,7 @@ a {
 }
 
 .leaflet-popup-content-wrapper {
-    background-color: red;
+    background-color: #ffffff;
 }
 
 .leaflet-control-zoom {
@@ -1783,7 +1784,7 @@ a {
         width: 130%;
     }
     .bondNames #leftScroll{
-        margin-left:50px ;
+        margin-left:27px ;
     }
     .bondNames #rightScroll{
         margin-left:350px ;
@@ -1792,6 +1793,13 @@ a {
 
 /*mediaquery vanaf 768px */
 @media screen and (max-width: 768px) {
+.back-text:after{
+    display: none;
+}
+    .button
+    {
+        background-color: transparent;
+    }
     .bondNames #rightScroll{
         margin-left: 100px;
     }
@@ -1807,7 +1815,7 @@ a {
 
     .bar.bar-stable .button {
         color: #faf2f2;
-        display: block;
+        display: inline-block;
     }
 
     .scrollBonds {
@@ -1999,6 +2007,7 @@ a {
 }
 
 @media screen and (max-width: 400px) {
+
     #logo {
         width: 50%;
     }
@@ -2010,13 +2019,15 @@ a {
     }
 
     .bondNames #leftScroll {
-        margin-left: 13px;
-        left: 70px;
+        margin-left: 0px;
+        left:-34%;
+        width: 50px;
     }
 
     .bondNames #rightScroll {
-        margin-left: 13px;
-        left: 279px;
+        margin-left: 0px;
+        width: 50px;
+        left:44%;
     }
 
     .carCard {
@@ -2041,3 +2052,4 @@ a {
 .bondfilmke {
     font-size: 50px;
 }
+
