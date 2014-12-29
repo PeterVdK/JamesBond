@@ -6,15 +6,15 @@
         <img id="logo" class="Responsive image" src="img/logo_james_bond_site_logo_white.png" title="Logo"/>
     </ion-nav-buttons>
     <div ng-show="loading" class="loadingCars">
-        <span class="ion-loading-c" style="font-size: 100px;"></span>
+        <span class="ion-loading-c"></span>
     </div>
     <div class="car">
         <ion-content class="has-header" ng-show="showwer" ng-hide="!showwer">
 
             <div id="cars"></div>
             <div id="controlCars">
-                <img src="img/TinderNo.png" style="cursor: hand;cursor: pointer;" ng-click="nofunc()" id="tinderNo" title="Vote No"/>
-                <img src="img/TinderYes.png" style="cursor: hand;cursor: pointer;" ng-click="yesfunc()" id="tinderYes" title="Vote Yes"/>
+                <img src="img/TinderNo.png" ng-click="nofunc()" id="tinderNo" title="Vote No"/>
+                <img src="img/TinderYes.png" ng-click="yesfunc()" id="tinderYes" title="Vote Yes"/>
 
                 <div ng-repeat="n in naam track by $index">
                     <span>{{n}}</span>
@@ -25,7 +25,7 @@
                     <div class="item item-divider">
                         Watchlist
                     </div>
-<span class="ion-arrow-up-c" ng-hide="!zieverderpijl" ng-show="zieverderpijl" style=" opacity: 0; position: absolute; z-index:1; bottom: 0px; left: 113px;font-size: 44px;"></span>
+<span class="ion-arrow-up-c" ng-hide="!zieverderpijl" ng-show="zieverderpijl" class="zieverderpijl"></span>
                     <ion-scroll direction="y" id="watchlistScroll">
 
 
